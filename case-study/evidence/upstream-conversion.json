@@ -1,0 +1,85 @@
+[
+  {
+    "arm": "upstream",
+    "case": "plain JSON",
+    "input": "name,qty\nA,1",
+    "output": "[{\"name\":\"A\",\"qty\":1}]",
+    "status": "",
+    "inputPreserved": true,
+    "exact": true
+  },
+  {
+    "arm": "upstream",
+    "case": "quoted text is valid JSON",
+    "input": "name,note\nA,\"say \"\"hello\"\"\"",
+    "output": "[{\"name\":\"A\",\"note\":\"say \"hello\"\"}]",
+    "status": "",
+    "inputPreserved": true,
+    "parseError": "Expected ',' or '}' after property value in JSON at position 26 (line 1 column 27)",
+    "exact": false
+  },
+  {
+    "arm": "upstream",
+    "case": "backslash survives JSON",
+    "input": "name,path\nA,C:\\temp\\notes",
+    "output": "[{\"name\":\"A\",\"path\":\"C:\\temp\\notes\"}]",
+    "status": "",
+    "inputPreserved": true,
+    "exact": false
+  },
+  {
+    "arm": "upstream",
+    "case": "multiline cell survives JSON",
+    "input": "name,note\nA,\"one\ntwo\"",
+    "output": "[{\"name\":\"A\",\"note\":\"one\\ntwo\"}]",
+    "status": "",
+    "inputPreserved": true,
+    "exact": true
+  },
+  {
+    "arm": "upstream",
+    "case": "incomplete quote after valid output",
+    "input": "name,qty\n\"open,1",
+    "output": "[{\"name\":null,\"qty\":1}]",
+    "status": "",
+    "inputPreserved": true,
+    "invalidExpected": true
+  },
+  {
+    "arm": "upstream",
+    "case": "empty clears output",
+    "input": "",
+    "output": "[{\"name\":null,\"qty\":1}]",
+    "status": "",
+    "inputPreserved": true,
+    "emptyExpected": true
+  },
+  {
+    "arm": "upstream",
+    "case": "ragged row",
+    "input": "name,qty\nA",
+    "output": "!!Error parsing row 0. Wrong number of columns.!!\n\n[{\"name\":\"A\",\"qty\":\"\"}]",
+    "status": "",
+    "inputPreserved": true,
+    "parseError": "Unexpected token '!', \"!!Error pa\"... is not valid JSON",
+    "invalidExpected": true
+  },
+  {
+    "arm": "upstream",
+    "case": "duplicate header does not silently lose cell",
+    "input": "name,name\nA,B",
+    "output": "[{\"name\":\"A\",\"name\":\"B\"}]",
+    "status": "",
+    "inputPreserved": true,
+    "invalidExpected": true
+  },
+  {
+    "arm": "upstream",
+    "case": "repair",
+    "input": "name,qty\nB,2",
+    "output": "[{\"name\":\"B\",\"qty\":2}]",
+    "status": "",
+    "inputPreserved": true,
+    "exact": true
+  }
+]

@@ -1,0 +1,365 @@
+[
+  {
+    "arm": "upstream",
+    "case": "ordinary",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "A",
+          "1"
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "int"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "upstream",
+    "case": "tab with quoted comma",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "A,B"
+        ]
+      ],
+      "headerNames": [
+        "name\\tqty"
+      ],
+      "headerTypes": [
+        "string"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "upstream",
+    "case": "escaped quote",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "A\"B",
+          "1"
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "int"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "upstream",
+    "case": "quoted newline",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "A\\nB",
+          "1"
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "int"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "upstream",
+    "case": "empty quoted field",
+    "kind": "valid",
+    "error": "Cannot read properties of undefined (reading 'replace')"
+  },
+  {
+    "arm": "upstream",
+    "case": "lone quote",
+    "kind": "invalid",
+    "error": "Script execution timed out after 100ms"
+  },
+  {
+    "arm": "upstream",
+    "case": "unfinished row quote",
+    "kind": "invalid",
+    "result": {
+      "dataGrid": [
+        [
+          "",
+          "1"
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "int",
+        "int"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "upstream",
+    "case": "trailing text after quote",
+    "kind": "invalid",
+    "result": {
+      "dataGrid": [
+        [
+          "A",
+          "1"
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "int"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "upstream",
+    "case": "bare quote in field",
+    "kind": "invalid",
+    "result": {
+      "dataGrid": [
+        [
+          "A",
+          "1"
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "int"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "upstream",
+    "case": "short row",
+    "kind": "invalid",
+    "result": {
+      "dataGrid": [
+        [
+          "A"
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "string"
+      ],
+      "errors": "!!Error parsing row 0. Wrong number of columns.!!\n\n"
+    }
+  },
+  {
+    "arm": "upstream",
+    "case": "long row",
+    "kind": "invalid",
+    "result": {
+      "dataGrid": [
+        [
+          "A",
+          "1",
+          "extra"
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "int"
+      ],
+      "errors": "!!Error parsing row 0. Wrong number of columns.!!\n\n"
+    }
+  },
+  {
+    "arm": "upstream",
+    "case": "CRLF",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "A",
+          "1"
+        ],
+        [
+          ""
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "string"
+      ],
+      "errors": "!!Error parsing row 1. Wrong number of columns.!!\n\n"
+    }
+  },
+  {
+    "arm": "upstream",
+    "case": "all strings",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "A",
+          "ready"
+        ],
+        [
+          "B",
+          "done"
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "status"
+      ],
+      "headerTypes": [
+        "string",
+        "string"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "upstream",
+    "case": "numeric comma mode",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "A",
+          "1.5"
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "float"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "upstream",
+    "case": "comma text in dot mode",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "A",
+          "1.5"
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "float"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "upstream",
+    "case": "headers only",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "string"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "upstream",
+    "case": "BOM paste",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "A",
+          "1"
+        ]
+      ],
+      "headerNames": [
+        "﻿name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "int"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "upstream",
+    "case": "trailing empty field",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "A",
+          ""
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "int"
+      ],
+      "errors": ""
+    }
+  }
+]

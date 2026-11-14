@@ -1,0 +1,14 @@
+{
+  "round_one": {
+    "decision_x": "control",
+    "decision_y": "skill",
+    "review_x": "skill",
+    "review_y": "control"
+  },
+  "round_two": {
+    "decision_x": "skill",
+    "decision_y": "control",
+    "review_x": "control",
+    "review_y": "skill"
+  }
+}

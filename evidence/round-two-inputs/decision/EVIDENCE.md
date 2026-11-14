@@ -1,0 +1,13 @@
+# CartonTrack planning brief
+
+CartonTrack sells inventory reconciliation software to small food distributors. It has 24 customers paying a combined $32,000 monthly. Customers upload warehouse count files, reconcile discrepancies, and approve adjustments before export to their accounting system.
+
+An existing customer paying $3,200 monthly requests a direct accounting integration that automatically posts adjustments. Its finance lead says manual exports delay month-end close and has offered $9,000 for implementation. The offer is in an email, not a signed order; the lead cannot approve ongoing subscription increases. Renewal is in five months. Sales also lists two prospects requesting “accounting integration,” but neither has specified automatic posting or scheduled a buying decision.
+
+Last month this customer's staff created 44 export files. Thirty-six were imported without changes. Eight were edited first: five to correct warehouse mappings and three to remove adjustments awaiting manager approval. The customer says its close takes two extra days, but no measurement separates export handling from approvals and accounting review. In an observed session, an experienced analyst spent 18 minutes downloading, renaming, and importing four files. The analyst said the batch was unusually clean.
+
+Product telemetry across all customers shows 190 exports last month, of which 61 were downloaded more than once. Telemetry cannot distinguish retries, sharing, or corrected exports. Seven customers use the accounting product named in the request; the other 17 use four different products.
+
+One engineer has four weeks available. A second is committed to a required supplier-file format change. The integration estimate is three weeks for authentication and posting plus an unestimated reconciliation and duplicate-prevention effort. The accounting API supports draft journals that require approval in its own UI. Draft posting would still require the analyst to switch tools. The API's supported transaction types have not been compared with this customer's exports.
+
+An alternative export package could include stable batch identifiers, mapping validation, and approval status in one week using existing data. It would not eliminate importing files. Current product approvals are optional; making them mandatory for every customer would change existing workflows. Support can join two pilot sessions next month but cannot reconcile customer books. The general manager wants more repeatable product revenue, not a new integration-services business, but would accept a narrowly scoped paid pilot if obligations are explicit.

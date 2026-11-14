@@ -1,0 +1,17 @@
+[
+  {
+    "arm": "control",
+    "copied": "[{\"name\":\"A\",\"note\":\"say \"hello\"\"}]",
+    "error": "Expected ',' or '}' after property value in JSON at position 26 (line 1 column 27)"
+  },
+  {
+    "arm": "skill",
+    "copied": "[\n  {\n    \"name\": \"A\",\n    \"note\": \"say \\\"hello\\\"\"\n  }\n]",
+    "parsed": [
+      {
+        "name": "A",
+        "note": "say \"hello\""
+      }
+    ]
+  }
+]

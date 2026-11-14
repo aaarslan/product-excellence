@@ -1,0 +1,181 @@
+[
+  {
+    "case": {
+      "value": "9007199254740993",
+      "blocked": true
+    },
+    "output": "[{\"key\":\"A\",\"value\":2}]",
+    "status": "Row 2, column 2: this value cannot be represented safely in numeric JSON mode. Enable ‘JSON: keep all cell values as text’ to preserve the exact cells, or edit the value. Output is unchanged: last successful json conversion, not the current input/settings.",
+    "prior": "[{\"key\":\"A\",\"value\":2}]"
+  },
+  {
+    "case": {
+      "value": "-9007199254740993",
+      "blocked": true
+    },
+    "output": "[{\"key\":\"A\",\"value\":2}]",
+    "status": "Row 2, column 2: this value cannot be represented safely in numeric JSON mode. Enable ‘JSON: keep all cell values as text’ to preserve the exact cells, or edit the value. Output is unchanged: last successful json conversion, not the current input/settings.",
+    "prior": "[{\"key\":\"A\",\"value\":2}]"
+  },
+  {
+    "case": {
+      "value": "0.100000000000000005",
+      "blocked": true
+    },
+    "output": "[{\"key\":\"A\",\"value\":2}]",
+    "status": "Row 2, column 2: this value cannot be represented safely in numeric JSON mode. Enable ‘JSON: keep all cell values as text’ to preserve the exact cells, or edit the value. Output is unchanged: last successful json conversion, not the current input/settings.",
+    "prior": "[{\"key\":\"A\",\"value\":2}]"
+  },
+  {
+    "case": {
+      "value": "123456789.123456789",
+      "blocked": true
+    },
+    "output": "[{\"key\":\"A\",\"value\":2}]",
+    "status": "Row 2, column 2: this value cannot be represented safely in numeric JSON mode. Enable ‘JSON: keep all cell values as text’ to preserve the exact cells, or edit the value. Output is unchanged: last successful json conversion, not the current input/settings.",
+    "prior": "[{\"key\":\"A\",\"value\":2}]"
+  },
+  {
+    "case": {
+      "value": "0.000000000000000000000000000000001",
+      "expected": 1e-33
+    },
+    "output": "[{\"key\":\"A\",\"value\":1e-33}]",
+    "status": "Converted 1 row, 2 columns. Select the output to copy.",
+    "prior": "[{\"key\":\"A\",\"value\":2}]"
+  },
+  {
+    "case": {
+      "value": "1e-324",
+      "blocked": true
+    },
+    "output": "[{\"key\":\"A\",\"value\":2}]",
+    "status": "Row 2, column 2: this value cannot be represented safely in numeric JSON mode. Enable ‘JSON: keep all cell values as text’ to preserve the exact cells, or edit the value. Output is unchanged: last successful json conversion, not the current input/settings.",
+    "prior": "[{\"key\":\"A\",\"value\":2}]"
+  },
+  {
+    "case": {
+      "value": "4e-324",
+      "blocked": true
+    },
+    "output": "[{\"key\":\"A\",\"value\":2}]",
+    "status": "Row 2, column 2: this value cannot be represented safely in numeric JSON mode. Enable ‘JSON: keep all cell values as text’ to preserve the exact cells, or edit the value. Output is unchanged: last successful json conversion, not the current input/settings.",
+    "prior": "[{\"key\":\"A\",\"value\":2}]"
+  },
+  {
+    "case": {
+      "value": "5e-324",
+      "expected": 5e-324
+    },
+    "output": "[{\"key\":\"A\",\"value\":5e-324}]",
+    "status": "Converted 1 row, 2 columns. Select the output to copy.",
+    "prior": "[{\"key\":\"A\",\"value\":2}]"
+  },
+  {
+    "case": {
+      "value": "-0",
+      "blocked": true
+    },
+    "output": "[{\"key\":\"A\",\"value\":2}]",
+    "status": "Row 2, column 2: this value cannot be represented safely in numeric JSON mode. Enable ‘JSON: keep all cell values as text’ to preserve the exact cells, or edit the value. Output is unchanged: last successful json conversion, not the current input/settings.",
+    "prior": "[{\"key\":\"A\",\"value\":2}]"
+  },
+  {
+    "case": {
+      "value": "00123",
+      "expected": 123
+    },
+    "output": "[{\"key\":\"A\",\"value\":123}]",
+    "status": "Converted 1 row, 2 columns. Select the output to copy.",
+    "prior": "[{\"key\":\"A\",\"value\":2}]"
+  },
+  {
+    "case": {
+      "value": "000.12500",
+      "expected": 0.125
+    },
+    "output": "[{\"key\":\"A\",\"value\":0.125}]",
+    "status": "Converted 1 row, 2 columns. Select the output to copy.",
+    "prior": "[{\"key\":\"A\",\"value\":2}]"
+  },
+  {
+    "case": {
+      "value": " 42 ",
+      "expected": 42
+    },
+    "output": "[{\"key\":\"A\",\"value\":42}]",
+    "status": "Converted 1 row, 2 columns. Select the output to copy.",
+    "prior": "[{\"key\":\"A\",\"value\":2}]"
+  },
+  {
+    "case": {
+      "value": "9007199254740993",
+      "text": true,
+      "expected": "9007199254740993"
+    },
+    "output": "[{\"key\":\"A\",\"value\":\"9007199254740993\"}]",
+    "status": "Converted 1 row, 2 columns. All JSON cell values are text. Select the output to copy.",
+    "prior": "[{\"key\":\"A\",\"value\":2}]"
+  },
+  {
+    "case": {
+      "value": "00123",
+      "text": true,
+      "expected": "00123"
+    },
+    "output": "[{\"key\":\"A\",\"value\":\"00123\"}]",
+    "status": "Converted 1 row, 2 columns. All JSON cell values are text. Select the output to copy.",
+    "prior": "[{\"key\":\"A\",\"value\":2}]"
+  },
+  {
+    "case": {
+      "value": " 42 ",
+      "text": true,
+      "expected": " 42 "
+    },
+    "output": "[{\"key\":\"A\",\"value\":\" 42 \"}]",
+    "status": "Converted 1 row, 2 columns. All JSON cell values are text. Select the output to copy.",
+    "prior": "[{\"key\":\"A\",\"value\":2}]"
+  },
+  {
+    "case": {
+      "value": "",
+      "text": true,
+      "expected": ""
+    },
+    "output": "[{\"key\":\"A\",\"value\":\"\"}]",
+    "status": "Converted 1 row, 2 columns. All JSON cell values are text. Select the output to copy.",
+    "prior": "[{\"key\":\"A\",\"value\":2}]"
+  },
+  {
+    "case": {
+      "value": "1,234567890123456789",
+      "text": true,
+      "expected": "1,234567890123456789",
+      "decimal": "comma"
+    },
+    "output": "[{\"key\":\"A\",\"value\":\"1,234567890123456789\"}]",
+    "status": "Converted 1 row, 2 columns. All JSON cell values are text. Select the output to copy.",
+    "prior": "[{\"key\":\"A\",\"value\":2}]"
+  },
+  {
+    "case": {
+      "value": "a\n\tb\\c\"d",
+      "text": true,
+      "expected": "a\n\tb\\c\"d"
+    },
+    "output": "[{\"key\":\"A\",\"value\":\"a\\n\\tb\\\\c\\\"d\"}]",
+    "status": "Converted 1 row, 2 columns. All JSON cell values are text. Select the output to copy.",
+    "prior": "[{\"key\":\"A\",\"value\":2}]"
+  },
+  {
+    "case": {
+      "value": " 00123\r\n ",
+      "text": true,
+      "expected": " 00123\r\n "
+    },
+    "output": "[{\"key\":\"A\",\"value\":\" 00123\\r\\n \"}]",
+    "status": "Converted 1 row, 2 columns. All JSON cell values are text. Select the output to copy.",
+    "prior": "[{\"key\":\"A\",\"value\":2}]"
+  }
+]

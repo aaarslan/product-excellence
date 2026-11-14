@@ -1,0 +1,100 @@
+[
+  {
+    "arm": "control",
+    "name": "plain",
+    "input": "name,qty\nA,1",
+    "output": "[{\"name\":\"A\",\"qty\":1}]",
+    "status": "Updated: 1 data rows, 2 columns. Select output to copy."
+  },
+  {
+    "arm": "control",
+    "name": "incomplete",
+    "input": "name,qty\n\"open,1",
+    "output": "[{\"name\":\"A\",\"qty\":1}]",
+    "status": "Row 2: missing closing quote. Finish the quoted field to update output. Showing previous output, not the current input or settings."
+  },
+  {
+    "arm": "control",
+    "name": "repair",
+    "input": "name,qty\n\"A,B\",2",
+    "output": "[{\"name\":\"A,B\",\"qty\":2}]",
+    "status": "Updated: 1 data rows, 2 columns. Select output to copy."
+  },
+  {
+    "arm": "control",
+    "name": "clear",
+    "input": "",
+    "output": "",
+    "status": "Paste CSV or spreadsheet cells above to begin."
+  },
+  {
+    "arm": "control",
+    "name": "quotes",
+    "input": "name,note\nA,\"say \"\"hello\"\"\"",
+    "output": "[{\"name\":\"A\",\"note\":\"say \"hello\"\"}]",
+    "status": "Updated: 1 data rows, 2 columns. Select output to copy."
+  },
+  {
+    "arm": "control",
+    "name": "backslash",
+    "input": "name,path\nA,C:\\temp\\notes",
+    "output": "[{\"name\":\"A\",\"path\":\"C:\\temp\\notes\"}]",
+    "status": "Updated: 1 data rows, 2 columns. Select output to copy."
+  },
+  {
+    "arm": "control",
+    "name": "duplicate",
+    "input": "name,name\nA,B",
+    "output": "[{\"name\":\"A\",\"name\":\"B\"}]",
+    "status": "Updated: 1 data rows, 2 columns. Select output to copy."
+  },
+  {
+    "arm": "skill",
+    "name": "plain",
+    "input": "name,qty\nA,1",
+    "output": "[\n  {\n    \"name\": \"A\",\n    \"qty\": 1\n  }\n]",
+    "status": "Converted 1 rows, 2 columns. Select the output to copy."
+  },
+  {
+    "arm": "skill",
+    "name": "incomplete",
+    "input": "name,qty\n\"open,1",
+    "output": "[\n  {\n    \"name\": \"A\",\n    \"qty\": 1\n  }\n]",
+    "status": "Row 2: finish the quoted cell with a closing quote. Output is unchanged: last successful JSON - Properties conversion, not the current input/settings."
+  },
+  {
+    "arm": "skill",
+    "name": "repair",
+    "input": "name,qty\n\"A,B\",2",
+    "output": "[\n  {\n    \"name\": \"A,B\",\n    \"qty\": 2\n  }\n]",
+    "status": "Converted 1 rows, 2 columns. Select the output to copy."
+  },
+  {
+    "arm": "skill",
+    "name": "clear",
+    "input": "",
+    "output": "",
+    "status": "Paste CSV or spreadsheet cells to begin."
+  },
+  {
+    "arm": "skill",
+    "name": "quotes",
+    "input": "name,note\nA,\"say \"\"hello\"\"\"",
+    "output": "[\n  {\n    \"name\": \"A\",\n    \"note\": \"say \\\"hello\\\"\"\n  }\n]",
+    "status": "Converted 1 rows, 2 columns. Select the output to copy."
+  },
+  {
+    "arm": "skill",
+    "name": "backslash",
+    "input": "name,path\nA,C:\\temp\\notes",
+    "output": "[\n  {\n    \"name\": \"A\",\n    \"path\": \"C:\\\\temp\\\\notes\"\n  }\n]",
+    "status": "Converted 1 rows, 2 columns. Select the output to copy."
+  },
+  {
+    "arm": "skill",
+    "name": "duplicate",
+    "input": "name,name\nA,B",
+    "output": "[\n  {\n    \"name\": \"A\",\n    \"path\": \"C:\\\\temp\\\\notes\"\n  }\n]",
+    "status": "Duplicate header: name. Give each column a unique name or choose JSON - Row Arrays. Output is unchanged: last successful JSON - Properties conversion, not the current input/settings."
+  }
+]

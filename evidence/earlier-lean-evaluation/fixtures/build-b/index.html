@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rental quote</title>
+<style>
+*{box-sizing:border-box}
+body{font-family:system-ui;max-width:32rem;margin:2rem auto;padding:1rem;color:#172033;background:#fff}
+label,input,button,output{display:block}
+label{font-weight:600;margin:1rem 0 .5rem}
+input,button{font:inherit;min-height:2.75rem;border-radius:.375rem}
+input{width:100%;padding:.625rem;border:1px solid #637086}
+button{margin:1rem 0;padding:.625rem 1rem;background:#173f8a;color:#fff;border:0;cursor:pointer}
+:focus-visible{outline:3px solid #1469ce;outline-offset:3px}
+input[aria-invalid="true"]{border:2px solid #ad1625}
+#quantity-help{color:#48556b}
+#quantity-error{color:#ad1625}
+output{margin-top:1rem;min-height:1.5rem;overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<main>
+<h1>Rental quote</h1>
+<form id="quote-form" novalidate>
+<label for="quantity">Equipment units</label>
+<input id="quantity" name="quantity" type="number" value="1" min="1" step="1" required aria-describedby="quantity-help quantity-error" aria-invalid="false">
+<p id="quantity-help">Enter a whole number of units, at least 1.</p>
+<p id="quantity-error" role="alert"></p>
+<button id="quote-submit" type="submit">Get quote</button>
+</form>
+<output id="quote-result" for="quantity" role="status" aria-live="polite" aria-atomic="true" aria-busy="false"></output>
+</main>
+<script src="quote-service.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

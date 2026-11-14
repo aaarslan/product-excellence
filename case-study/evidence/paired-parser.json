@@ -1,0 +1,625 @@
+[
+  {
+    "arm": "control",
+    "case": "ordinary",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "A",
+          "1"
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "int"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "control",
+    "case": "tab with quoted comma",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [],
+      "headerNames": [],
+      "headerTypes": [],
+      "errors": "Row 2: unexpected text after a closing quote. Add a delimiter or remove the extra text."
+    }
+  },
+  {
+    "arm": "control",
+    "case": "escaped quote",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "A\"B",
+          "1"
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "int"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "control",
+    "case": "quoted newline",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "A\\nB",
+          "1"
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "int"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "control",
+    "case": "empty quoted field",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "",
+          "1"
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "int",
+        "int"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "control",
+    "case": "lone quote",
+    "kind": "invalid",
+    "result": {
+      "dataGrid": [],
+      "headerNames": [],
+      "headerTypes": [],
+      "errors": "Row 1: missing closing quote. Finish the quoted field to update output."
+    }
+  },
+  {
+    "arm": "control",
+    "case": "unfinished row quote",
+    "kind": "invalid",
+    "result": {
+      "dataGrid": [],
+      "headerNames": [],
+      "headerTypes": [],
+      "errors": "Row 2: missing closing quote. Finish the quoted field to update output."
+    }
+  },
+  {
+    "arm": "control",
+    "case": "trailing text after quote",
+    "kind": "invalid",
+    "result": {
+      "dataGrid": [],
+      "headerNames": [],
+      "headerTypes": [],
+      "errors": "Row 2: unexpected text after a closing quote. Add a delimiter or remove the extra text."
+    }
+  },
+  {
+    "arm": "control",
+    "case": "bare quote in field",
+    "kind": "invalid",
+    "result": {
+      "dataGrid": [],
+      "headerNames": [],
+      "headerTypes": [],
+      "errors": "Row 2: quote inside an unquoted field. Wrap the field in quotes and double any quotes inside it."
+    }
+  },
+  {
+    "arm": "control",
+    "case": "short row",
+    "kind": "invalid",
+    "result": {
+      "dataGrid": [
+        [
+          "A"
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "string"
+      ],
+      "errors": "!!Row 2: expected 2 columns, found 1. Check the delimiter or finish this row.!!\n\n"
+    }
+  },
+  {
+    "arm": "control",
+    "case": "long row",
+    "kind": "invalid",
+    "result": {
+      "dataGrid": [
+        [
+          "A",
+          "1",
+          "extra"
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "int"
+      ],
+      "errors": "!!Row 2: expected 2 columns, found 3. Check the delimiter or finish this row.!!\n\n"
+    }
+  },
+  {
+    "arm": "control",
+    "case": "CRLF",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "A",
+          "1"
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "int"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "control",
+    "case": "all strings",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "A",
+          "ready"
+        ],
+        [
+          "B",
+          "done"
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "status"
+      ],
+      "headerTypes": [
+        "string",
+        "string"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "control",
+    "case": "numeric comma mode",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "A",
+          "1.5"
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "float"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "control",
+    "case": "comma text in dot mode",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "A",
+          "1,5"
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "string"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "control",
+    "case": "headers only",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "string"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "control",
+    "case": "BOM paste",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "A",
+          "1"
+        ]
+      ],
+      "headerNames": [
+        "﻿name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "int"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "control",
+    "case": "trailing empty field",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "A",
+          ""
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "int"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "skill",
+    "case": "ordinary",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "A",
+          "1"
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "int"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "skill",
+    "case": "tab with quoted comma",
+    "kind": "valid",
+    "error": "Row 2: unexpected text after a closing quote. Separate the next cell with a delimiter."
+  },
+  {
+    "arm": "skill",
+    "case": "escaped quote",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "A\"B",
+          "1"
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "int"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "skill",
+    "case": "quoted newline",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "A\\nB",
+          "1"
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "int"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "skill",
+    "case": "empty quoted field",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "",
+          "1"
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "int",
+        "int"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "skill",
+    "case": "lone quote",
+    "kind": "invalid",
+    "error": "Row 1: finish the quoted cell with a closing quote."
+  },
+  {
+    "arm": "skill",
+    "case": "unfinished row quote",
+    "kind": "invalid",
+    "error": "Row 2: finish the quoted cell with a closing quote."
+  },
+  {
+    "arm": "skill",
+    "case": "trailing text after quote",
+    "kind": "invalid",
+    "error": "Row 2: unexpected text after a closing quote. Separate the next cell with a delimiter."
+  },
+  {
+    "arm": "skill",
+    "case": "bare quote in field",
+    "kind": "invalid",
+    "error": "Row 2: wrap the whole cell in quotes and double any quotes inside it."
+  },
+  {
+    "arm": "skill",
+    "case": "short row",
+    "kind": "invalid",
+    "error": "Row 2 has 1 columns; expected 2. Check the delimiter or finish editing this row."
+  },
+  {
+    "arm": "skill",
+    "case": "long row",
+    "kind": "invalid",
+    "error": "Row 2 has 3 columns; expected 2. Check the delimiter or finish editing this row."
+  },
+  {
+    "arm": "skill",
+    "case": "CRLF",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "A",
+          "1"
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "int"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "skill",
+    "case": "all strings",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "A",
+          "ready"
+        ],
+        [
+          "B",
+          "done"
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "status"
+      ],
+      "headerTypes": [
+        "string",
+        "string"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "skill",
+    "case": "numeric comma mode",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "A",
+          "1.5"
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "float"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "skill",
+    "case": "comma text in dot mode",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "A",
+          "1,5"
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "string"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "skill",
+    "case": "headers only",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "string"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "skill",
+    "case": "BOM paste",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "A",
+          "1"
+        ]
+      ],
+      "headerNames": [
+        "﻿name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "int"
+      ],
+      "errors": ""
+    }
+  },
+  {
+    "arm": "skill",
+    "case": "trailing empty field",
+    "kind": "valid",
+    "result": {
+      "dataGrid": [
+        [
+          "A",
+          ""
+        ]
+      ],
+      "headerNames": [
+        "name",
+        "qty"
+      ],
+      "headerTypes": [
+        "string",
+        "int"
+      ],
+      "errors": ""
+    }
+  }
+]

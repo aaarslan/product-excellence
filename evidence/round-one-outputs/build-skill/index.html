@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Shift handoffs</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<main>
+<header><div><p class="eyebrow">SUPPORT OPERATIONS</p><h1>Shift handoffs</h1><p>Send ready handoffs to the next shift.</p></div><button id="export" disabled>Download CSV</button></header>
+<section class="filters" aria-label="Queue filters"><label>Search<input id="search" type="search" placeholder="Title or account"></label><label>Priority<select id="priority"><option value="all">All priorities</option><option value="high">High</option><option value="normal">Normal</option></select></label></section>
+<div class="toolbar"><label class="select-all"><input id="select-all" type="checkbox" disabled>Select all ready</label><p id="count">Loading handoffs…</p><button id="send" disabled>Send selected</button></div>
+<p id="notice" role="status"></p>
+<button id="reload" hidden>Try loading again</button>
+<div id="queue" aria-label="Handoff queue"></div>
+</main>
+<script type="module" src="/app.js"></script>
+</body>
+</html>

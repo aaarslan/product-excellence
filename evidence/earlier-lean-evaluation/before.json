@@ -1,0 +1,10 @@
+{
+  "fixtures/build-b/quote-service.js": "e58bb037d1cfcefd630eaabaa8f7327251b6d6fd2848f04ac429eede6178fd9a",
+  "fixtures/build-b/index.html": "d43e3c755ff39ecefa13620673f01918c9f0c646722f6975b8fe1bd5f2994765",
+  "fixtures/build-b/README.md": "5ba611022f2a50b43f5dfc709b88aeae59721cfa540d3cbd4e23b0a4e675abfc",
+  "fixtures/build-b/app.js": "296762cab4299f44f1a77e11dc141a88b76d385cbf7632e335dd7e1fe31768ff",
+  "fixtures/build-a/quote-service.js": "e58bb037d1cfcefd630eaabaa8f7327251b6d6fd2848f04ac429eede6178fd9a",
+  "fixtures/build-a/index.html": "d43e3c755ff39ecefa13620673f01918c9f0c646722f6975b8fe1bd5f2994765",
+  "fixtures/build-a/README.md": "5ba611022f2a50b43f5dfc709b88aeae59721cfa540d3cbd4e23b0a4e675abfc",
+  "fixtures/build-a/app.js": "296762cab4299f44f1a77e11dc141a88b76d385cbf7632e335dd7e1fe31768ff"
+}

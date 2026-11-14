@@ -1,0 +1,170 @@
+[
+  {
+    "arm": "control",
+    "case": "plain JSON",
+    "input": "name,qty\nA,1",
+    "output": "[{\"name\":\"A\",\"qty\":1}]",
+    "status": "Updated: 1 data rows, 2 columns. Select output to copy.",
+    "inputPreserved": true,
+    "exact": true
+  },
+  {
+    "arm": "control",
+    "case": "quoted text is valid JSON",
+    "input": "name,note\nA,\"say \"\"hello\"\"\"",
+    "output": "[{\"name\":\"A\",\"note\":\"say \"hello\"\"}]",
+    "status": "Updated: 1 data rows, 2 columns. Select output to copy.",
+    "inputPreserved": true,
+    "parseError": "Expected ',' or '}' after property value in JSON at position 26 (line 1 column 27)",
+    "exact": false
+  },
+  {
+    "arm": "control",
+    "case": "backslash survives JSON",
+    "input": "name,path\nA,C:\\temp\\notes",
+    "output": "[{\"name\":\"A\",\"path\":\"C:\\temp\\notes\"}]",
+    "status": "Updated: 1 data rows, 2 columns. Select output to copy.",
+    "inputPreserved": true,
+    "exact": false
+  },
+  {
+    "arm": "control",
+    "case": "multiline cell survives JSON",
+    "input": "name,note\nA,\"one\ntwo\"",
+    "output": "[{\"name\":\"A\",\"note\":\"one\\ntwo\"}]",
+    "status": "Updated: 1 data rows, 2 columns. Select output to copy.",
+    "inputPreserved": true,
+    "exact": true
+  },
+  {
+    "arm": "control",
+    "case": "incomplete quote after valid output",
+    "input": "name,qty\n\"open,1",
+    "output": "[{\"name\":\"A\",\"note\":\"one\\ntwo\"}]",
+    "status": "Row 2: missing closing quote. Finish the quoted field to update output. Showing previous output, not the current input or settings.",
+    "inputPreserved": true,
+    "invalidExpected": true
+  },
+  {
+    "arm": "control",
+    "case": "empty clears output",
+    "input": "",
+    "output": "",
+    "status": "Paste CSV or spreadsheet cells above to begin.",
+    "inputPreserved": true,
+    "parseError": "Unexpected end of JSON input",
+    "emptyExpected": true
+  },
+  {
+    "arm": "control",
+    "case": "ragged row",
+    "input": "name,qty\nA",
+    "output": "",
+    "status": "Row 2: expected 2 columns, found 1. Check the delimiter or finish this row.\n\n Output will appear when this is fixed.",
+    "inputPreserved": true,
+    "parseError": "Unexpected end of JSON input",
+    "invalidExpected": true
+  },
+  {
+    "arm": "control",
+    "case": "duplicate header does not silently lose cell",
+    "input": "name,name\nA,B",
+    "output": "[{\"name\":\"A\",\"name\":\"B\"}]",
+    "status": "Updated: 1 data rows, 2 columns. Select output to copy.",
+    "inputPreserved": true,
+    "invalidExpected": true
+  },
+  {
+    "arm": "control",
+    "case": "repair",
+    "input": "name,qty\nB,2",
+    "output": "[{\"name\":\"B\",\"qty\":2}]",
+    "status": "Updated: 1 data rows, 2 columns. Select output to copy.",
+    "inputPreserved": true,
+    "exact": true
+  },
+  {
+    "arm": "skill",
+    "case": "plain JSON",
+    "input": "name,qty\nA,1",
+    "output": "[\n  {\n    \"name\": \"A\",\n    \"qty\": 1\n  }\n]",
+    "status": "Converted 1 rows, 2 columns. Select the output to copy.",
+    "inputPreserved": true,
+    "exact": true
+  },
+  {
+    "arm": "skill",
+    "case": "quoted text is valid JSON",
+    "input": "name,note\nA,\"say \"\"hello\"\"\"",
+    "output": "[\n  {\n    \"name\": \"A\",\n    \"note\": \"say \\\"hello\\\"\"\n  }\n]",
+    "status": "Converted 1 rows, 2 columns. Select the output to copy.",
+    "inputPreserved": true,
+    "exact": true
+  },
+  {
+    "arm": "skill",
+    "case": "backslash survives JSON",
+    "input": "name,path\nA,C:\\temp\\notes",
+    "output": "[\n  {\n    \"name\": \"A\",\n    \"path\": \"C:\\\\temp\\\\notes\"\n  }\n]",
+    "status": "Converted 1 rows, 2 columns. Select the output to copy.",
+    "inputPreserved": true,
+    "exact": true
+  },
+  {
+    "arm": "skill",
+    "case": "multiline cell survives JSON",
+    "input": "name,note\nA,\"one\ntwo\"",
+    "output": "[\n  {\n    \"name\": \"A\",\n    \"note\": \"one\\ntwo\"\n  }\n]",
+    "status": "Converted 1 rows, 2 columns. Select the output to copy.",
+    "inputPreserved": true,
+    "exact": true
+  },
+  {
+    "arm": "skill",
+    "case": "incomplete quote after valid output",
+    "input": "name,qty\n\"open,1",
+    "output": "[\n  {\n    \"name\": \"A\",\n    \"note\": \"one\\ntwo\"\n  }\n]",
+    "status": "Row 2: finish the quoted cell with a closing quote. Output is unchanged: last successful json conversion, not the current input/settings.",
+    "inputPreserved": true,
+    "invalidExpected": true
+  },
+  {
+    "arm": "skill",
+    "case": "empty clears output",
+    "input": "",
+    "output": "",
+    "status": "Paste CSV or spreadsheet cells to begin.",
+    "inputPreserved": true,
+    "parseError": "Unexpected end of JSON input",
+    "emptyExpected": true
+  },
+  {
+    "arm": "skill",
+    "case": "ragged row",
+    "input": "name,qty\nA",
+    "output": "",
+    "status": "Row 2 has 1 columns; expected 2. Check the delimiter or finish editing this row. No output yet. Your input is kept; correct it to continue.",
+    "inputPreserved": true,
+    "parseError": "Unexpected end of JSON input",
+    "invalidExpected": true
+  },
+  {
+    "arm": "skill",
+    "case": "duplicate header does not silently lose cell",
+    "input": "name,name\nA,B",
+    "output": "",
+    "status": "Duplicate header: name. Give each column a unique name or choose JSON - Row Arrays. No output yet. Your input is kept; correct it to continue.",
+    "inputPreserved": true,
+    "parseError": "Unexpected end of JSON input",
+    "invalidExpected": true
+  },
+  {
+    "arm": "skill",
+    "case": "repair",
+    "input": "name,qty\nB,2",
+    "output": "[\n  {\n    \"name\": \"B\",\n    \"qty\": 2\n  }\n]",
+    "status": "Converted 1 rows, 2 columns. Select the output to copy.",
+    "inputPreserved": true,
+    "exact": true
+  }
+]

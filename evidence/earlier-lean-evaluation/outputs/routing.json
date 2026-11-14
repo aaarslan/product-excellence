@@ -1,0 +1,14 @@
+[
+  {"id":"r1","load":true,"reason":"Product direction and demand validation directly match assessing product ideas."},
+  {"id":"r2","load":true,"reason":"A read-only onboarding friction audit directly matches UX improvement work."},
+  {"id":"r3","load":true,"reason":"A user-facing checkout feature requires usability and reliable execution judgment."},
+  {"id":"r4","load":true,"reason":"Scoped dashboard clarity and visual improvements directly match improving user-facing products."},
+  {"id":"r5","load":true,"reason":"Planning an activation test directly addresses adoption problems."},
+  {"id":"r6","load":false,"reason":"Translation without meaning changes is copy-only work, explicitly outside scope."},
+  {"id":"r7","load":false,"reason":"An import-path fix is unrelated debugging and explicitly excludes product review."},
+  {"id":"r8","load":false,"reason":"A behavior-preserving variable rename is a mechanical refactor."},
+  {"id":"r9","load":false,"reason":"Shortening an email without evaluating its offer is copy-only work."},
+  {"id":"r10","load":false,"reason":"Explaining algorithmic complexity does not require product judgment."},
+  {"id":"r11","load":false,"reason":"Alphabetizing JSON keys is mechanical work regardless of the product name."},
+  {"id":"r12","load":false,"reason":"An internal batch-job retry is unrelated to user-facing product improvement."}
+]

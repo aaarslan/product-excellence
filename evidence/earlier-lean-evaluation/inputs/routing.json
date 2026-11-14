@@ -1,0 +1,17 @@
+{
+  "description": "Assess product ideas, improve existing user-facing products, or build requested features with clear value, beautiful usable experiences, and reliable execution. Use for product direction, UX improvements, onboarding and adoption problems, or feature work that needs product judgment. Do not expand unrelated debugging, mechanical refactors, or copy-only requests into product reviews.",
+  "requests": [
+    {"id": "r1", "request": "Should we build a paid team scheduling product? Evaluate the customer problem and cheapest way to test demand."},
+    {"id": "r2", "request": "Audit our onboarding for first-use friction; do not modify anything."},
+    {"id": "r3", "request": "Implement an accessible order-review step in our existing checkout, preserving bulk ordering and calculations."},
+    {"id": "r4", "request": "Make our app's dashboard easier to understand and visually coherent; implement scoped improvements."},
+    {"id": "r5", "request": "We have 40 visits a month. Plan a bounded test to learn why users do not activate."},
+    {"id": "r6", "request": "Translate this support reply into French without changing its meaning."},
+    {"id": "r7", "request": "Fix this TypeScript import path. Do not review the product."},
+    {"id": "r8", "request": "Rename the private worker queue variable across these files, with no behavior changes."},
+    {"id": "r9", "request": "Rewrite this sales email to be shorter, without evaluating the offer."},
+    {"id": "r10", "request": "Explain why this binary search algorithm is O(log n)."},
+    {"id": "r11", "request": "The product is called Product Excellence. Alphabetize its JSON keys only."},
+    {"id": "r12", "request": "Add a retry to this internal nightly batch job; leave all user-facing flows alone."}
+  ]
+}

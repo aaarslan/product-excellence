@@ -1,0 +1,333 @@
+{
+  "x": [
+    {
+      "label": "ordinary",
+      "output": "[\n  {\n    \"name\": \"Ada\",\n    \"amount\": 12\n  }\n]",
+      "status": "Converted 1 rows, 2 columns. Select the output to copy.",
+      "inputPreserved": true,
+      "decoded": [
+        {
+          "name": "Ada",
+          "amount": 12
+        }
+      ],
+      "validJSON": true
+    },
+    {
+      "label": "quoted comma",
+      "output": "[\n  {\n    \"name\": \"Ada\",\n    \"note\": \"a,b\"\n  }\n]",
+      "status": "Converted 1 rows, 2 columns. Select the output to copy.",
+      "inputPreserved": true,
+      "decoded": [
+        {
+          "name": "Ada",
+          "note": "a,b"
+        }
+      ],
+      "validJSON": true
+    },
+    {
+      "label": "escaped quote",
+      "output": "[\n  {\n    \"name\": \"Ada\",\n    \"note\": \"a \\\"quote\\\"\"\n  }\n]",
+      "status": "Converted 1 rows, 2 columns. Select the output to copy.",
+      "inputPreserved": true,
+      "decoded": [
+        {
+          "name": "Ada",
+          "note": "a \"quote\""
+        }
+      ],
+      "validJSON": true
+    },
+    {
+      "label": "literal backslash",
+      "output": "[\n  {\n    \"name\": \"Ada\",\n    \"path\": \"C:\\\\temp\\\\new\"\n  }\n]",
+      "status": "Converted 1 rows, 2 columns. Select the output to copy.",
+      "inputPreserved": true,
+      "decoded": [
+        {
+          "name": "Ada",
+          "path": "C:\\temp\\new"
+        }
+      ],
+      "validJSON": true
+    },
+    {
+      "label": "multiline",
+      "output": "[\n  {\n    \"name\": \"Ada\",\n    \"note\": \"one\\ntwo\\nthree\"\n  }\n]",
+      "status": "Converted 1 rows, 2 columns. Select the output to copy.",
+      "inputPreserved": true,
+      "decoded": [
+        {
+          "name": "Ada",
+          "note": "one\ntwo\nthree"
+        }
+      ],
+      "validJSON": true
+    },
+    {
+      "label": "auto TSV commas",
+      "output": "[\n  {\n    \"name\": \"Ada\",\n    \"note\": \"a,b,c,d\"\n  }\n]",
+      "status": "Converted 1 rows, 2 columns. Select the output to copy.",
+      "inputPreserved": true,
+      "decoded": [
+        {
+          "name": "Ada",
+          "note": "a,b,c,d"
+        }
+      ],
+      "validJSON": true
+    },
+    {
+      "label": "missing quote",
+      "output": "[\n  {\n    \"name\": \"Ada\",\n    \"amount\": 12\n  }\n]",
+      "status": "Row 2: finish the quoted cell with a closing quote. Output is unchanged: last successful Selected format conversion, not the current input/settings.",
+      "inputPreserved": true,
+      "decoded": [
+        {
+          "name": "Ada",
+          "amount": 12
+        }
+      ],
+      "validJSON": true
+    },
+    {
+      "label": "uneven row",
+      "output": "[\n  {\n    \"name\": \"Ada\",\n    \"amount\": 12\n  }\n]",
+      "status": "Row 2 has 3 columns; expected 2. Check the delimiter or finish editing this row. Output is unchanged: last successful Selected format conversion, not the current input/settings.",
+      "inputPreserved": true,
+      "decoded": [
+        {
+          "name": "Ada",
+          "amount": 12
+        }
+      ],
+      "validJSON": true
+    },
+    {
+      "label": "duplicate headers",
+      "output": "[\n  {\n    \"name\": \"Ada\",\n    \"amount\": 12\n  }\n]",
+      "status": "Duplicate header: name. Give each column a unique name or choose JSON - Row Arrays. Output is unchanged: last successful Selected format conversion, not the current input/settings.",
+      "inputPreserved": true,
+      "decoded": [
+        {
+          "name": "Ada",
+          "amount": 12
+        }
+      ],
+      "validJSON": true
+    },
+    {
+      "label": "large integer",
+      "output": "[\n  {\n    \"id\": 9007199254740992\n  }\n]",
+      "status": "Converted 1 rows, 1 columns. Select the output to copy.",
+      "inputPreserved": true,
+      "decoded": [
+        {
+          "id": 9007199254740992
+        }
+      ],
+      "validJSON": true
+    },
+    {
+      "label": "leading zero",
+      "output": "[\n  {\n    \"id\": 123\n  }\n]",
+      "status": "Converted 1 rows, 1 columns. Select the output to copy.",
+      "inputPreserved": true,
+      "decoded": [
+        {
+          "id": 123
+        }
+      ],
+      "validJSON": true
+    },
+    {
+      "label": "empty",
+      "output": "",
+      "status": "Paste CSV or spreadsheet cells to begin.",
+      "inputPreserved": true,
+      "validJSON": false
+    },
+    {
+      "label": "decimal comma",
+      "output": "[\n  {\n    \"name\": \"Ada\",\n    \"amount\": 1.5\n  }\n]",
+      "status": "Converted 1 rows, 2 columns. Select the output to copy.",
+      "inputPreserved": true,
+      "decoded": [
+        {
+          "name": "Ada",
+          "amount": 1.5
+        }
+      ],
+      "validJSON": true
+    },
+    {
+      "label": "duplicate dictionary key",
+      "output": "[\n  {\n    \"name\": \"Ada\",\n    \"amount\": 12\n  }\n]",
+      "status": "Duplicate dictionary key in row 3. Make first-column values unique or choose another JSON format. Output is unchanged: last successful Selected format conversion, not the current input/settings.",
+      "inputPreserved": true,
+      "decoded": [
+        {
+          "name": "Ada",
+          "amount": 12
+        }
+      ],
+      "validJSON": true
+    }
+  ],
+  "y": [
+    {
+      "label": "ordinary",
+      "output": "[{\"name\":\"Ada\",\"amount\":12}]",
+      "status": "Updated: 1 data rows, 2 columns. Select output to copy.",
+      "inputPreserved": true,
+      "decoded": [
+        {
+          "name": "Ada",
+          "amount": 12
+        }
+      ],
+      "validJSON": true
+    },
+    {
+      "label": "quoted comma",
+      "output": "[{\"name\":\"Ada\",\"note\":\"a,b\"}]",
+      "status": "Updated: 1 data rows, 2 columns. Select output to copy.",
+      "inputPreserved": true,
+      "decoded": [
+        {
+          "name": "Ada",
+          "note": "a,b"
+        }
+      ],
+      "validJSON": true
+    },
+    {
+      "label": "escaped quote",
+      "output": "[{\"name\":\"Ada\",\"note\":\"a \"quote\"\"}]",
+      "status": "Updated: 1 data rows, 2 columns. Select output to copy.",
+      "inputPreserved": true,
+      "validJSON": false
+    },
+    {
+      "label": "literal backslash",
+      "output": "[{\"name\":\"Ada\",\"path\":\"C:\\temp\\new\"}]",
+      "status": "Updated: 1 data rows, 2 columns. Select output to copy.",
+      "inputPreserved": true,
+      "decoded": [
+        {
+          "name": "Ada",
+          "path": "C:\temp\new"
+        }
+      ],
+      "validJSON": true
+    },
+    {
+      "label": "multiline",
+      "output": "[{\"name\":\"Ada\",\"note\":\"one\\ntwo\nthree\"}]",
+      "status": "Updated: 1 data rows, 2 columns. Select output to copy.",
+      "inputPreserved": true,
+      "validJSON": false
+    },
+    {
+      "label": "auto TSV commas",
+      "output": "[{\"name\":\"Ada\",\"amount\":12}]",
+      "status": "Row 2: expected 1 columns, found 4. Check the delimiter or finish this row.\n\n Showing previous output, not the current input or settings.",
+      "inputPreserved": true,
+      "decoded": [
+        {
+          "name": "Ada",
+          "amount": 12
+        }
+      ],
+      "validJSON": true
+    },
+    {
+      "label": "missing quote",
+      "output": "[{\"name\":\"Ada\",\"amount\":12}]",
+      "status": "Row 2: missing closing quote. Finish the quoted field to update output. Showing previous output, not the current input or settings.",
+      "inputPreserved": true,
+      "decoded": [
+        {
+          "name": "Ada",
+          "amount": 12
+        }
+      ],
+      "validJSON": true
+    },
+    {
+      "label": "uneven row",
+      "output": "[{\"name\":\"Ada\",\"amount\":12}]",
+      "status": "Row 2: expected 2 columns, found 3. Check the delimiter or finish this row.\n\n Showing previous output, not the current input or settings.",
+      "inputPreserved": true,
+      "decoded": [
+        {
+          "name": "Ada",
+          "amount": 12
+        }
+      ],
+      "validJSON": true
+    },
+    {
+      "label": "duplicate headers",
+      "output": "[{\"name\":\"Ada\",\"name\":\"Lovelace\"}]",
+      "status": "Updated: 1 data rows, 2 columns. Select output to copy.",
+      "inputPreserved": true,
+      "decoded": [
+        {
+          "name": "Lovelace"
+        }
+      ],
+      "validJSON": true
+    },
+    {
+      "label": "large integer",
+      "output": "[{\"id\":9007199254740993}]",
+      "status": "Updated: 1 data rows, 1 columns. Select output to copy.",
+      "inputPreserved": true,
+      "decoded": [
+        {
+          "id": 9007199254740992
+        }
+      ],
+      "validJSON": true
+    },
+    {
+      "label": "leading zero",
+      "output": "[{\"id\":00123}]",
+      "status": "Updated: 1 data rows, 1 columns. Select output to copy.",
+      "inputPreserved": true,
+      "validJSON": false
+    },
+    {
+      "label": "empty",
+      "output": "",
+      "status": "Paste CSV or spreadsheet cells above to begin.",
+      "inputPreserved": true,
+      "validJSON": false
+    },
+    {
+      "label": "decimal comma",
+      "output": "[{\"name\":\"Ada\",\"amount\":1.5}]",
+      "status": "Updated: 1 data rows, 2 columns. Select output to copy.",
+      "inputPreserved": true,
+      "decoded": [
+        {
+          "name": "Ada",
+          "amount": 1.5
+        }
+      ],
+      "validJSON": true
+    },
+    {
+      "label": "duplicate dictionary key",
+      "output": "{\n  \"a\": 1,\n  \"a\": 2\n}",
+      "status": "Updated: 2 data rows, 2 columns. Select output to copy.",
+      "inputPreserved": true,
+      "decoded": {
+        "a": 2
+      },
+      "validJSON": true
+    }
+  ]
+}

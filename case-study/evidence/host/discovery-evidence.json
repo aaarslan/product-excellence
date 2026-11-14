@@ -1,0 +1,39 @@
+{
+  "host_version": "codex-cli 0.167.0-alpha.4",
+  "transport": "stdio",
+  "protocol_methods": [
+    "initialize",
+    "initialized",
+    "skills/list"
+  ],
+  "request": {
+    "method": "skills/list",
+    "params": {
+      "cwds": [
+        "<test-project>"
+      ],
+      "forceReload": true
+    }
+  },
+  "response_excerpt": {
+    "cwd": "<test-project>",
+    "skills": [
+      {
+        "name": "product-excellence",
+        "description": "Turn product ideas, UX problems, and requested features into a clear user outcome and a complete, carefully designed path to it. Use when assessing what to build, improving an existing product journey, or implementing a feature that needs product judgment. Keep mechanical debugging, refactors, translation, and copy-only requests outside this workflow unless explicitly requested.",
+        "path": "<test-project>/.agents/skills/product-excellence/SKILL.md",
+        "scope": "repo",
+        "enabled": true,
+        "pluginId": null
+      }
+    ],
+    "errors": []
+  },
+  "sha256": {
+    "SKILL.md": "065809057187309a70866be249f49b9da1ccc75f8263c59b089b9e080988748b",
+    "LICENSE": "bd78283e3eacfcac982c5da00afd6cb0aece059ba0a18f74f851a38ef95353a8"
+  },
+  "isolation": "Separate test HOME and CODEX_HOME with an environment allowlist without credentials. Outbound connect/sendto/sendmsg/sendmmsg blocked by seccomp. Analytics and feedback disabled. No model or thread methods invoked.",
+  "scope": "Final artifact filesystem discovery and metadata parsing, not model behavior.",
+  "redactions": "Absolute environment paths replaced with test placeholders. Unrelated bundled skills, host identifiers, initialization details and notifications omitted."
+}

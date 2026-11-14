@@ -1,0 +1,27 @@
+[
+  {
+    "input": "id\n9007199254740993",
+    "output": "",
+    "state": "blocked",
+    "status": "Row 2, column 1: this number cannot be exported safely without a precision or notation change. Enable ‘JSON: keep all cell values as text’ to preserve the exact cells, or edit the value. No output yet. Your input is kept; correct it to continue."
+  },
+  {
+    "state": "explicit-text-mode",
+    "copied": "[\n  {\n    \"id\": \"9007199254740993\"\n  }\n]",
+    "parsed": [
+      {
+        "id": "9007199254740993"
+      }
+    ]
+  },
+  {
+    "output": "[\n  {\n    \"id\": \"9007199254740993\"\n  }\n]",
+    "state": "mode-off-retains-stale",
+    "status": "Row 2, column 1: this number cannot be exported safely without a precision or notation change. Enable ‘JSON: keep all cell values as text’ to preserve the exact cells, or edit the value. Output is unchanged: last successful JSON - Properties conversion, not the current input/settings."
+  },
+  {
+    "output": "[\n  {\n    \"name\": \"A\",\n    \"qty\": 1.5\n  }\n]",
+    "state": "normal-repair",
+    "status": "Converted 1 rows, 2 columns. Select the output to copy."
+  }
+]

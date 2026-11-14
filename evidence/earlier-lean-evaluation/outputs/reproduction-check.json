@@ -1,0 +1,125 @@
+{
+  "method": "Independent application execution with simulated DOM and timers; markup assertions are not accessibility runtime checks",
+  "results": [
+    {
+      "arm": "build-a",
+      "test": "loading_and_success",
+      "passed": true
+    },
+    {
+      "arm": "build-a",
+      "test": "invalid_input",
+      "passed": true
+    },
+    {
+      "arm": "build-a",
+      "test": "edit_clears_quote",
+      "passed": true
+    },
+    {
+      "arm": "build-a",
+      "test": "ignores_old_success",
+      "passed": true
+    },
+    {
+      "arm": "build-a",
+      "test": "ignores_old_failure",
+      "passed": true
+    },
+    {
+      "arm": "build-a",
+      "test": "edit_invalidates_pending",
+      "passed": true
+    },
+    {
+      "arm": "build-a",
+      "test": "error_then_retry",
+      "passed": true
+    },
+    {
+      "arm": "build-a",
+      "test": "timeout_and_late_result",
+      "passed": true
+    },
+    {
+      "arm": "build-a",
+      "test": "timeout_then_retry",
+      "passed": true
+    },
+    {
+      "arm": "build-a",
+      "test": "repeated_submission",
+      "passed": true
+    },
+    {
+      "arm": "build-a",
+      "test": "synchronous_service_error",
+      "passed": true
+    },
+    {
+      "arm": "build-a",
+      "test": "markup_relationships",
+      "passed": true
+    },
+    {
+      "arm": "build-b",
+      "test": "loading_and_success",
+      "passed": true
+    },
+    {
+      "arm": "build-b",
+      "test": "invalid_input",
+      "passed": true
+    },
+    {
+      "arm": "build-b",
+      "test": "edit_clears_quote",
+      "passed": true
+    },
+    {
+      "arm": "build-b",
+      "test": "ignores_old_success",
+      "passed": true
+    },
+    {
+      "arm": "build-b",
+      "test": "ignores_old_failure",
+      "passed": true
+    },
+    {
+      "arm": "build-b",
+      "test": "edit_invalidates_pending",
+      "passed": true
+    },
+    {
+      "arm": "build-b",
+      "test": "error_then_retry",
+      "passed": true
+    },
+    {
+      "arm": "build-b",
+      "test": "timeout_and_late_result",
+      "passed": true
+    },
+    {
+      "arm": "build-b",
+      "test": "timeout_then_retry",
+      "passed": true
+    },
+    {
+      "arm": "build-b",
+      "test": "repeated_submission",
+      "passed": true
+    },
+    {
+      "arm": "build-b",
+      "test": "synchronous_service_error",
+      "passed": true
+    },
+    {
+      "arm": "build-b",
+      "test": "markup_relationships",
+      "passed": true
+    }
+  ]
+}

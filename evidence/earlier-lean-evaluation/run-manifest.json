@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-14",
+  "skill_sha256": "eef9703fdeb2b76c0ea616343b51e0494780bdaca707a7de984a0db3119e97d2",
+  "arms": {
+    "a": "no skill",
+    "b": "explicitly load product-excellence/SKILL.md"
+  },
+  "trials_per_task_per_arm": 1,
+  "tasks": [
+    "assess",
+    "review",
+    "build"
+  ],
+  "fresh_worker_sessions": 6,
+  "fresh_descriptor_sessions": 1,
+  "fresh_judge_sessions": 1,
+  "blind_mapping": {
+    "assess-x": "b",
+    "assess-y": "a",
+    "review-x": "a",
+    "review-y": "b"
+  },
+  "model_id": null,
+  "model_version": null,
+  "sampling_parameters": null,
+  "token_usage": null,
+  "dollar_cost": null,
+  "host_install_tested": false,
+  "enforced_cross_trial_isolation": false,
+  "observed_window": {
+    "start_utc": "2026-11-14T01:11:13Z",
+    "end_utc": "2026-11-14T01:16:45Z",
+    "includes_preparation_and_coordination": true
+  },
+  "worker_instruction_contract": "Task text shared across arms; arm B additionally loads skill. Read only assigned task/fixture (and skill for B), do not inspect other runs or load other skills, no network/installs, write assigned report. The original instructions are not a sandbox."
+}

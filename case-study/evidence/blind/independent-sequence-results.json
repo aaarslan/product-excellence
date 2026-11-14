@@ -1,0 +1,156 @@
+{
+  "x": {
+    "states": [
+      {
+        "step": "valid",
+        "output": "[\n  {\n    \"name\": \"Ada\",\n    \"amount\": 12\n  }\n]",
+        "status": "Converted 1 rows, 2 columns. Select the output to copy."
+      },
+      {
+        "step": "incomplete",
+        "output": "[\n  {\n    \"name\": \"Ada\",\n    \"amount\": 12\n  }\n]",
+        "status": "Row 2: finish the quoted cell with a closing quote. Output is unchanged: last successful JSON conversion, not the current input/settings."
+      },
+      {
+        "step": "recovered",
+        "output": "[\n  {\n    \"name\": \"Ada\",\n    \"amount\": 13\n  }\n]",
+        "status": "Converted 1 rows, 2 columns. Select the output to copy."
+      }
+    ],
+    "formats": {
+      "as": {
+        "output": "[{name:\"Ada\",amount:13}];",
+        "status": "Converted 1 rows, 2 columns. Select the output to copy."
+      },
+      "asp": {
+        "output": "Dim myArray(1,0)\nmyArray(0,0) = \"Ada\"\nmyArray(1,0) = 13\n",
+        "status": "Converted 1 rows, 2 columns. Select the output to copy."
+      },
+      "html": {
+        "output": "<table>\n  <thead>\n    <tr>\n      <th class=\"name-cell\">name</th>\n      <th class=\"amount-cell\">amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr class=\"lastRow\">\n      <td class=\"name-cell\">Ada</td>\n      <td class=\"amount-cell\">13</td>\n    </tr>\n  </tbody>\n</table>",
+        "status": "Converted 1 rows, 2 columns. Select the output to copy."
+      },
+      "json": {
+        "output": "[\n  {\n    \"name\": \"Ada\",\n    \"amount\": 13\n  }\n]",
+        "status": "Converted 1 rows, 2 columns. Select the output to copy."
+      },
+      "jsonArrayCols": {
+        "output": "{\n  \"name\": [\n    \"Ada\"\n  ],\n  \"amount\": [\n    13\n  ]\n}",
+        "status": "Converted 1 rows, 2 columns. Select the output to copy."
+      },
+      "jsonArrayRows": {
+        "output": "[\n  [\n    \"Ada\",\n    13\n  ]\n]",
+        "status": "Converted 1 rows, 2 columns. Select the output to copy."
+      },
+      "jsonDict": {
+        "output": "{\n  \"Ada\": 13\n}",
+        "status": "Converted 1 rows, 2 columns. Select the output to copy."
+      },
+      "mysql": {
+        "output": "CREATE TABLE MrDataConverter (\n  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,\n  name VARCHAR(255),\n  amount INT\n);\nINSERT INTO MrDataConverter \n  (name,amount) \nVALUES \n  ('Ada',13);",
+        "status": "Converted 1 rows, 2 columns. Select the output to copy."
+      },
+      "php": {
+        "output": "array(\n  array(\"name\"=>\"Ada\",\"amount\"=>13)\n);",
+        "status": "Converted 1 rows, 2 columns. Select the output to copy."
+      },
+      "python": {
+        "output": "[{\"name\":\"Ada\",\"amount\":13}];",
+        "status": "Converted 1 rows, 2 columns. Select the output to copy."
+      },
+      "ruby": {
+        "output": "[{\"name\"=>\"Ada\",\"amount\"=>13}];",
+        "status": "Converted 1 rows, 2 columns. Select the output to copy."
+      },
+      "xmlProperties": {
+        "output": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rows>\n  <row name=\"Ada\" amount=\"13\" ></row>\n</rows>",
+        "status": "Converted 1 rows, 2 columns. Select the output to copy."
+      },
+      "xml": {
+        "output": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rows>\n  <row>\n    <name>Ada</name>\n    <amount>13</amount>\n  </row>\n</rows>",
+        "status": "Converted 1 rows, 2 columns. Select the output to copy."
+      },
+      "xmlIllustrator": {
+        "output": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 20001102//EN\"    \"http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd\" [\n  <!ENTITY ns_graphs \"http://ns.adobe.com/Graphs/1.0/\">\n  <!ENTITY ns_vars \"http://ns.adobe.com/Variables/1.0/\">\n  <!ENTITY ns_imrep \"http://ns.adobe.com/ImageReplacement/1.0/\">\n  <!ENTITY ns_custom \"http://ns.adobe.com/GenericCustomNamespace/1.0/\">\n  <!ENTITY ns_flows \"http://ns.adobe.com/Flows/1.0/\">\n  <!ENTITY ns_extend \"http://ns.adobe.com/Extensibility/1.0/\">\n]>\n<svg>\n<variableSets  xmlns=\"&ns_vars;\">\n  <variableSet  varSetName=\"binding1\" locked=\"none\">\n    <variables>\n      <variable varName=\"name\" trait=\"textcontent\" category=\"&ns_flows;\"></variable>\n      <variable varName=\"amount\" trait=\"textcontent\" category=\"&ns_flows;\"></variable>\n    </variables>\n    <v:sampleDataSets  xmlns:v=\"http://ns.adobe.com/Variables/1.0/\" xmlns=\"http://ns.adobe.com/GenericCustomNamespace/1.0/\">\n      <v:sampleDataSet dataSetName=\"Ada\">\n        <name>\n          <p>Ada</p>\n        </name>\n        <amount>\n          <p>13</p>\n        </amount>\n      </v:sampleDataSet>\n    </v:sampleDataSets>\n  </variableSet>\n</variableSets>\n</svg>\n",
+        "status": "Converted 1 rows, 2 columns. Select the output to copy."
+      }
+    }
+  },
+  "y": {
+    "states": [
+      {
+        "step": "valid",
+        "output": "[{\"name\":\"Ada\",\"amount\":12}]",
+        "status": "Updated: 1 data rows, 2 columns. Select output to copy."
+      },
+      {
+        "step": "incomplete",
+        "output": "[{\"name\":\"Ada\",\"amount\":12}]",
+        "status": "Row 2: missing closing quote. Finish the quoted field to update output. Showing previous output, not the current input or settings."
+      },
+      {
+        "step": "recovered",
+        "output": "[{\"name\":\"Ada\",\"amount\":13}]",
+        "status": "Updated: 1 data rows, 2 columns. Select output to copy."
+      }
+    ],
+    "formats": {
+      "as": {
+        "output": "[{name:\"Ada\",amount:13}];",
+        "status": "Updated: 1 data rows, 2 columns. Select output to copy."
+      },
+      "asp": {
+        "output": "Dim myArray(1,0)\nmyArray(0,0) = \"Ada\"\nmyArray(1,0) = 13\n",
+        "status": "Updated: 1 data rows, 2 columns. Select output to copy."
+      },
+      "html": {
+        "output": "<table>\n  <thead>\n    <tr>\n      <th class=\"name-cell\">name</th>\n      <th class=\"amount-cell\">amount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr class=\"lastRow\">\n      <td class=\"name-cell\">Ada</td>\n      <td class=\"amount-cell\">13</td>\n    </tr>\n  </tbody>\n</table>",
+        "status": "Updated: 1 data rows, 2 columns. Select output to copy."
+      },
+      "json": {
+        "output": "[{\"name\":\"Ada\",\"amount\":13}]",
+        "status": "Updated: 1 data rows, 2 columns. Select output to copy."
+      },
+      "jsonArrayCols": {
+        "output": "{\n  \"name\":[\"Ada\"],\n  \"amount\":[13]\n}",
+        "status": "Updated: 1 data rows, 2 columns. Select output to copy."
+      },
+      "jsonArrayRows": {
+        "output": "[\n  [\"Ada\",13]\n]",
+        "status": "Updated: 1 data rows, 2 columns. Select output to copy."
+      },
+      "jsonDict": {
+        "output": "{\n  \"Ada\": 13\n}",
+        "status": "Updated: 1 data rows, 2 columns. Select output to copy."
+      },
+      "mysql": {
+        "output": "CREATE TABLE MrDataConverter (\n  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,\n  name VARCHAR(255),\n  amount INT\n);\nINSERT INTO MrDataConverter \n  (name,amount) \nVALUES \n  ('Ada',13);",
+        "status": "Updated: 1 data rows, 2 columns. Select output to copy."
+      },
+      "php": {
+        "output": "array(\n  array(\"name\"=>\"Ada\",\"amount\"=>13)\n);",
+        "status": "Updated: 1 data rows, 2 columns. Select output to copy."
+      },
+      "python": {
+        "output": "[{\"name\":\"Ada\",\"amount\":13}];",
+        "status": "Updated: 1 data rows, 2 columns. Select output to copy."
+      },
+      "ruby": {
+        "output": "[{\"name\"=>\"Ada\",\"amount\"=>13}];",
+        "status": "Updated: 1 data rows, 2 columns. Select output to copy."
+      },
+      "xmlProperties": {
+        "output": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rows>\n  <row name=\"Ada\" amount=\"13\" ></row>\n</rows>",
+        "status": "Updated: 1 data rows, 2 columns. Select output to copy."
+      },
+      "xml": {
+        "output": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rows>\n  <row>\n    <name>Ada</name>\n    <amount>13</amount>\n  </row>\n</rows>",
+        "status": "Updated: 1 data rows, 2 columns. Select output to copy."
+      },
+      "xmlIllustrator": {
+        "output": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 20001102//EN\"    \"http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd\" [\n  <!ENTITY ns_graphs \"http://ns.adobe.com/Graphs/1.0/\">\n  <!ENTITY ns_vars \"http://ns.adobe.com/Variables/1.0/\">\n  <!ENTITY ns_imrep \"http://ns.adobe.com/ImageReplacement/1.0/\">\n  <!ENTITY ns_custom \"http://ns.adobe.com/GenericCustomNamespace/1.0/\">\n  <!ENTITY ns_flows \"http://ns.adobe.com/Flows/1.0/\">\n  <!ENTITY ns_extend \"http://ns.adobe.com/Extensibility/1.0/\">\n]>\n<svg>\n<variableSets  xmlns=\"&ns_vars;\">\n  <variableSet  varSetName=\"binding1\" locked=\"none\">\n    <variables>\n      <variable varName=\"name\" trait=\"textcontent\" category=\"&ns_flows;\"></variable>\n      <variable varName=\"amount\" trait=\"textcontent\" category=\"&ns_flows;\"></variable>\n    </variables>\n    <v:sampleDataSets  xmlns:v=\"http://ns.adobe.com/Variables/1.0/\" xmlns=\"http://ns.adobe.com/GenericCustomNamespace/1.0/\">\n      <v:sampleDataSet dataSetName=\"Ada\">\n        <name>\n          <p>Ada</p>\n        </name>\n        <amount>\n          <p>13</p>\n        </amount>\n      </v:sampleDataSet>\n    </v:sampleDataSets>\n  </variableSet>\n</variableSets>\n</svg>\n",
+        "status": "Updated: 1 data rows, 2 columns. Select output to copy."
+      }
+    }
+  }
+}
