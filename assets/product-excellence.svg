@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="title desc">
+  <title id="title">Product Excellence</title>
+  <desc id="desc">An editorial wordmark on warm paper, beside a series of considered shapes converging on one orange circle.</desc>
+  <rect width="1200" height="340" rx="20" fill="#f5f2eb"/>
+  <path d="M58 57H1142" stroke="#d4d0c7"/>
+  <text x="59" y="43" font-family="Arial, Helvetica, sans-serif" font-size="15" letter-spacing="3.5" fill="#58564f">A SKILL FOR PRODUCT JUDGMENT</text>
+  <text x="54" y="155" font-family="Georgia, 'Times New Roman', serif" font-size="98" letter-spacing="-4.5" fill="#222722">Product</text>
+  <text x="54" y="252" font-family="Georgia, 'Times New Roman', serif" font-size="98" letter-spacing="-4.5" fill="#222722">Excellence<tspan fill="#c4502e">.</tspan></text>
+  <path d="M780 99C712 155 754 284 858 274C959 264 991 161 931 112C876 67 772 110 794 186C813 252 924 247 955 186" fill="none" stroke="#d7d1c3" stroke-width="2"/>
+  <rect x="814" y="104" width="196" height="156" rx="24" fill="none" stroke="#9a9d91" stroke-width="1.5" transform="rotate(-11 912 182)"/>
+  <rect x="882" y="117" width="164" height="146" rx="48" fill="#f5f2eb" stroke="#596557" stroke-width="1.5" transform="rotate(8 964 190)"/>
+  <circle cx="1030" cy="180" r="58" fill="#c4502e"/>
+  <circle cx="1030" cy="180" r="76" fill="none" stroke="#c4502e" stroke-width="1" opacity="0.35"/>
+  <path d="M58 289H1142" stroke="#d4d0c7"/>
+  <text x="59" y="317" font-family="Arial, Helvetica, sans-serif" font-size="17" letter-spacing="1.1" fill="#58564f">IMAGINATION. JUDGMENT. CARE.</text>
+  <text x="1140" y="317" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="15" letter-spacing="1.1" fill="#58564f">BY ABDALLAH ARSLAN</text>
+</svg>

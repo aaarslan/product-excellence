@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Excellence"
+  short_description: "Shape thoughtful products and distinctive experiences"
+  default_prompt: "Use $product-excellence to improve this product: choose a strong direction, make the experience concrete, and verify the result."

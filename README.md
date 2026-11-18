@@ -1,76 +1,142 @@
-# Product Excellence
+<p align="center">
+  <img src="assets/product-excellence.svg" alt="Product Excellence — imagination, judgment, care." width="1200">
+</p>
 
-### Build the outcome. Verify the handoff.
+# Make products worth choosing.
 
-A product-judgment skill for agents working on an idea, an existing experience, or a requested feature. It follows the user's task past the interface: to a usable export, a confirmed action, a recoverable failure, or the next meaningful step.
+**A skill for product judgment, inventive design, and careful execution.**
 
-**Outcome → obstacle → intervention → replay.** Find the result worth delivering, locate what prevents it, make the smallest complete improvement, and exercise the result where it will actually be used.
+Give your agent a product problem. Product Excellence gives it a practical way to explore a stronger idea, shape a coherent experience, and follow the work through to something people can actually use.
 
-A prettier screen is not necessarily an easier task. A valid response is not necessarily a truthful success. Good implementation is not evidence that customers will adopt it.
+Inspired by Steve Jobs' product thinking: start with the experience, connect useful ideas, make deliberate choices, and care about the whole result. The [research](RESEARCH.md) separates historical evidence from the practical methods developed here.
 
-## What this looks like in practice
+**Experimental · Self-contained instructions · No runtime dependencies · MIT licensed**
 
-In a local study of [Mr. Data Converter](CASE-STUDY.md), an incomplete quoted cell could silently become different data. Fixing the parser alone still left the default JSON output unusable for ordinary quoted text. The skill-assisted implementation followed the result through copying and parsing, preserving quotes and backslashes and rejecting duplicate keys.
+[Try it](#try-it-without-installing) · [Install](#install) · [See the thinking](#what-it-brings-to-the-work) · [Read the evidence](EVALUATION.md)
 
-Independent review then caught a new precision bug in that implementation. The final demonstrator blocks unsafe numeric conversion and offers an explicit text-preserving choice. The failure and correction are both retained, alongside the no-skill baseline.
+## Try it without installing
 
-![The corrected demonstrator preserves an exact identifier after an explicit text-mode choice.](case-study/evidence/screenshots/demonstrator-precision-recovery.jpg)
-
-This is an existing open-source utility, not a fabricated app. It is also a legacy project, not a customer engagement or proof of adoption. The [case study](CASE-STUDY.md) includes the pinned source, runnable copies, actual browser observations, and limitations.
-
-## Use it
-
-After installation, try a concrete journey:
+Paste this into an agent that can open links, then replace the task:
 
 ```text
-$product-excellence Improve the CSV import journey in this repository. Follow it from a realistic input through the result the user actually uses. Implement one focused improvement, preserve existing expert capabilities, and verify the handoff plus one error or interruption. Do not deploy or change external services.
+Read and apply Product Excellence:
+https://raw.githubusercontent.com/aaarslan/product-excellence/main/product-excellence/SKILL.md
+
+Task: Improve this product's first-use experience.
+Choose a coherent direction, implement it in this repository,
+and show what changed and what you checked.
 ```
 
-Replace “CSV import” with your actual journey. In Claude Code, invoke `/product-excellence` instead.
+For a review, say “review only; do not edit.” For a concept, describe the audience, observations, and constraints. You can use the skill with an existing app, a new idea, a developer tool, or a service.
 
-For a review, not implementation:
-
-```text
-$product-excellence Audit this onboarding journey. Identify the biggest obstacle to a useful result and recommend one focused improvement. Do not edit files or run state-changing workflows. Distinguish observed defects from hypotheses.
-```
-
-For an idea, supply the evidence and decision: “Should we build this, improve the workaround, or stop? What smallest commitment would change the answer?” The skill does not default to interviews, a large build, or a commercial model for a noncommercial tool.
-
-## Where it helps, and where it stays out
-
-- **Assess:** separate problem evidence from adoption and willingness to pay. Compare alternatives, reachable distribution, switching effort, and cost to serve.
-- **Improve:** remove the binding obstacle, not merely the unattractive screen. Preserve useful information, recovery, and expert workflows.
-- **Build:** deliver a user-complete slice, including affected states and downstream use. A placeholder or success-shaped failure is not completion.
-
-Mechanical debugging, import fixes, refactors, translation, and copy-only tasks stay bounded. No mandatory scorecard, business report, recorder, benchmark, universal visual style, or new dependency. Existing project instructions and the user's requested scope take precedence.
+If your agent cannot open the link, attach or paste [SKILL.md](product-excellence/SKILL.md). Everything needed to apply the skill is in that file. Reading it for a task does not install it.
 
 ## Install
 
-No runtime dependencies. The installable folder contains only `SKILL.md` and `LICENSE`; examples and evaluations are optional development material.
+With Node.js **22.20+** and npm, run this in your project:
 
-Clone the repository or download its ZIP:
+```sh
+npx skills add aaarslan/product-excellence --skill product-excellence
+```
+
+Choose your coding agent when prompted. This uses the third-party [Skills CLI](https://skills.sh/docs/cli); the skill itself needs no packages, API keys, or external services.
+
+Then ask for real work:
+
+| Agent | Example |
+| --- | --- |
+| Codex | `$product-excellence Make this onboarding experience worth finishing.` |
+| Claude Code | `/product-excellence Make this onboarding experience worth finishing.` |
+
+<details>
+<summary><strong>Install manually, or ask Codex to install it</strong></summary>
+
+In Codex, you can ask:
+
+```text
+$skill-installer install https://github.com/aaarslan/product-excellence/tree/main/product-excellence
+```
+
+For a manual install, [download the repository](https://github.com/aaarslan/product-excellence/archive/refs/heads/main.zip) or clone it:
 
 ```sh
 git clone https://github.com/aaarslan/product-excellence.git
 ```
 
-From its root, copy the **inner** `product-excellence` folder into your target project:
+Copy the inner `product-excellence/` folder into one of these locations in your target project:
 
-| Host | Destination | Invocation |
-| --- | --- | --- |
-| Codex CLI / IDE | `.agents/skills/product-excellence/` | `$product-excellence` |
-| Claude Code | `.claude/skills/product-excellence/` | `/product-excellence` |
+| Host | Project destination |
+| --- | --- |
+| Codex CLI / IDE | `.agents/skills/product-excellence/` |
+| Claude Code | `.claude/skills/product-excellence/` |
 
-Check for an existing copy before replacing it. Retain `LICENSE`. Remove only that folder to uninstall. You can also ask an agent to read `SKILL.md` directly without installing it.
+Keep the folder's `SKILL.md`, `LICENSE`, and `agents/` metadata together. Check for an existing copy before replacing it. Remove that installed folder to uninstall a manual copy.
 
-Actual discovery and metadata parsing passed in an isolated project using Codex CLI `0.167.0-alpha.4`, with networking blocked and no model inference. This does not prove implicit triggering or compatibility with other hosts. Claude instructions follow its documentation but were not host-tested. See the [Codex docs](https://learn.chatgpt.com/docs/build-skills), [Claude docs](https://code.claude.com/docs/en/skills), and [Agent Skills format](https://agentskills.io/specification).
+These are local coding-agent instructions. Chat products can have separate skill or plugin installation flows. See the current [Codex](https://learn.chatgpt.com/docs/build-skills) and [Claude Code](https://code.claude.com/docs/en/skills) documentation.
 
-## Evidence, not a performance promise
+</details>
 
-[Evaluation](EVALUATION.md) includes negative and tie results from earlier synthetic comparisons, the real-code paired study, independent review, and the separately corrected demonstrator. The real-code trial supports a concrete improvement on common JSON cases, not a general win rate. No productivity, conversion, revenue, or adoption uplift is established.
+## What it brings to the work
 
-The skill is instruction text, not a sandbox. Tests and recommendations do not authorize outreach, publication, spending, deployment, or production changes. Use synthetic data in public examples and review diffs before applying them.
+| Habit | What the agent should do differently |
+| --- | --- |
+| **Find the promise** | Describe a concrete moment that should become easier, clearer, more capable, or more enjoyable. |
+| **Explore a better mechanism** | Question an inherited step, borrow a useful idea from another field, or combine familiar parts into a better experience. |
+| **Choose a direction** | Make one coherent recommendation, with a reason and an honest tradeoff. |
+| **Give it character** | Make interaction, language, hierarchy, feedback, and visual detail serve the product's purpose. |
+| **Complete the experience** | Carry the result through setup, use, recovery, and the next meaningful action where relevant. |
+| **Let reality correct it** | Inspect the artifact, exercise the important behavior, and revise what does not work. |
 
-## License and provenance
+A playful learning tool should have room for discovery and delight. A command-line tool may earn affection through excellent defaults and a clear recovery path. A community service may improve most by changing how the handover works. The skill does not prescribe one visual style or assume every problem needs more software.
 
-The skill, new documentation, and synthetic evaluation material are [MIT licensed](LICENSE), copyright Abdallah Arslan. The open-source case study retains Shan Carter's MIT license and bundled third-party notices; see [case-study provenance](case-study/PROVENANCE.md). No affiliation or endorsement is implied. Earlier supplied private material is not redistributed or relicensed.
+For open briefs, it encourages invention. For a fixed design or tiny repair, it keeps the work bounded. There is no mandatory workshop, scorecard, business report, or framework recital.
+
+## Good tasks to bring it
+
+**Improve something real**
+
+```text
+$product-excellence This tool works, but using it feels like paperwork.
+Improve the central interaction. Preserve saved work and existing useful
+capabilities. Implement the result and inspect it at desktop and phone widths.
+```
+
+**Find a product worth testing**
+
+```text
+$product-excellence Here are observations, workarounds, and constraints
+from a recurring problem. Recommend one product or service concept.
+Make the experience concrete and explain what would change your mind.
+```
+
+**Get an opinionated critique**
+
+```text
+$product-excellence Review this experience using the actual artifact.
+Show me the highest-value change, what already works, and a concrete
+way to improve it. Review only; do not edit.
+```
+
+Replace the invocation with `/product-excellence` in Claude Code. Mechanical debugging, translation, and copy-only work stay small unless you explicitly request a product pass.
+
+## Evidence you can inspect
+
+The repository keeps the tasks, frozen instructions, outputs, and reviews behind its claims. The [evaluation report](EVALUATION.md) distinguishes comparative findings from implementation checks and from things that would require real users to establish.
+
+One concrete result: in the visitor-guide prototype, replacing a blocked stop retains earlier activities and the original departure time, with an undo action. One blind reviewer preferred the revised skill's output to the committed skill's; another called a tie. The photo-service case also tied. The broader release gate remains unmet; the record supports a useful experimental direction, not a general performance advantage.
+
+The [earlier public-code case study](CASE-STUDY.md) also retains an instructive failure: a skill-assisted improvement to JSON output introduced a numeric precision regression. The failed trial and the separately corrected demonstration are both preserved.
+
+The purpose of evaluation is to find out when the skill helps, when a capable agent already does as well, and when the instructions need to change. This development study does not establish adoption, revenue, or a universal performance advantage.
+
+## Contribute
+
+Bring a concrete task where the skill helped, added nothing, or got in the way. [Contribution guidance](CONTRIBUTING.md) explains how to propose a small improvement and test it honestly.
+
+Only the inner `product-excellence/` folder is installed. Research, examples, images, and evaluation material are optional reading for people.
+
+## License and credits
+
+Created by [Abdallah Arslan](https://github.com/aaarslan). The skill and original repository material are [MIT licensed](LICENSE). Historical sources retain their own rights. The existing Mr. Data Converter study retains its [upstream attribution and license notices](case-study/PROVENANCE.md).
+
+An independent project inspired by product craft, with research and evaluation open to inspection.

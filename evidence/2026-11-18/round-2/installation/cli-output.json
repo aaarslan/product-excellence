@@ -1,0 +1,17 @@
+[
+  {
+    "name": "product-excellence",
+    "status": "installed",
+    "source": "/workspace/scratch/6ecb29bfb4b0/product-excellence",
+    "ref": null,
+    "hash": "070a61256c00ae75cff7c43c7a3d198477a305605eca219b9000f9dd317fff35",
+    "path": "/workspace/scratch/6ecb29bfb4b0/install-check-v2/.agents/skills/product-excellence",
+    "scope": "project",
+    "agents": [
+      "Codex",
+      "Claude Code"
+    ],
+    "mode": "copy",
+    "security": null
+  }
+]

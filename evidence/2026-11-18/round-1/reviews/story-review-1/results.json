@@ -1,0 +1,152 @@
+{
+  "A": [
+    {
+      "name": "initial entry and place-only change",
+      "status": "pass",
+      "detail": {
+        "prompt": {
+          "character": "a fox with a suitcase",
+          "place": "a floating house",
+          "trouble": "the last train refuses to leave"
+        },
+        "focus": "",
+        "initialTimerCount": 0
+      }
+    },
+    {
+      "name": "four sentences finish, read, search, reload",
+      "status": "pass",
+      "detail": "Exact text persisted in draft and story; search found body word; full reading copy reopened after fresh DOM load."
+    },
+    {
+      "name": "new story preserves unfinished draft and opening another does not replace it",
+      "status": "pass",
+      "detail": "New and editing another story both archive current work; archived text can be resumed."
+    },
+    {
+      "name": "legacy fixture intact and unknown prompt strings retained",
+      "status": "pass",
+      "detail": "Dragon draft, both full stories, Unicode, paragraphs, and out-of-deck prompts preserved, including after subsequent saving."
+    },
+    {
+      "name": "removal persists and can be restored after reload",
+      "status": "pass",
+      "detail": "Removed saved story stayed in storage and was fully restored after reload; draft unchanged."
+    },
+    {
+      "name": "timer optional and expiry preserves editing",
+      "status": "pass",
+      "detail": "Advancing mocked clock beyond selected duration stops timer only; text input still saves."
+    },
+    {
+      "name": "DOM flow with 390px innerWidth, labels and focused reader title",
+      "status": "pass",
+      "detail": "DOM event and explicit focus assertions only. CSS media layout, Tab order, browser keyboard activation, overflow, and visual focus not tested."
+    },
+    {
+      "name": "prompt reversal mechanism",
+      "status": "pass",
+      "detail": "Single action restores the prior trio exactly while keeping the writing."
+    }
+  ],
+  "B": [
+    {
+      "name": "initial entry and place-only change",
+      "status": "pass",
+      "detail": {
+        "prompt": {
+          "character": "a fox with a suitcase",
+          "place": "a beach in the rain",
+          "trouble": "all the clocks run backwards"
+        },
+        "focus": "deal",
+        "initialTimerCount": 0
+      }
+    },
+    {
+      "name": "four sentences finish, read, search, reload",
+      "status": "pass",
+      "detail": "Exact text persisted in draft and story; search found body word; full reading copy reopened after fresh DOM load."
+    },
+    {
+      "name": "new story preserves unfinished draft and opening another does not replace it",
+      "status": "pass",
+      "detail": "New and editing another story both archive current work; archived text can be resumed."
+    },
+    {
+      "name": "legacy fixture intact and unknown prompt strings retained",
+      "status": "pass",
+      "detail": "Dragon draft, both full stories, Unicode, paragraphs, and out-of-deck prompts preserved, including after subsequent saving."
+    },
+    {
+      "name": "removal persists and can be restored after reload",
+      "status": "pass",
+      "detail": "Removed saved story stayed in storage and was fully restored after reload; draft unchanged."
+    },
+    {
+      "name": "timer optional and expiry preserves editing",
+      "status": "pass",
+      "detail": "Advancing mocked clock beyond selected duration stops timer only; text input still saves."
+    },
+    {
+      "name": "DOM flow with 390px innerWidth, labels and focused reader title",
+      "status": "pass",
+      "detail": "DOM event and explicit focus assertions only. CSS media layout, Tab order, browser keyboard activation, overflow, and visual focus not tested."
+    },
+    {
+      "name": "prompt reversal mechanism",
+      "status": "pass",
+      "detail": "Single action restores the prior trio exactly while keeping the writing."
+    }
+  ],
+  "C": [
+    {
+      "name": "initial entry and place-only change",
+      "status": "pass",
+      "detail": {
+        "prompt": {
+          "character": "a fox with a suitcase",
+          "place": "a museum at midnight",
+          "trouble": "nobody can say the word yes"
+        },
+        "focus": "",
+        "initialTimerCount": 0
+      }
+    },
+    {
+      "name": "four sentences finish, read, search, reload",
+      "status": "pass",
+      "detail": "Exact text persisted in draft and story; search found body word; full reading copy reopened after fresh DOM load."
+    },
+    {
+      "name": "new story preserves unfinished draft and opening another does not replace it",
+      "status": "pass",
+      "detail": "New and editing another story both archive current work; archived text can be resumed."
+    },
+    {
+      "name": "legacy fixture intact and unknown prompt strings retained",
+      "status": "pass",
+      "detail": "Dragon draft, both full stories, Unicode, paragraphs, and out-of-deck prompts preserved, including after subsequent saving."
+    },
+    {
+      "name": "removal persists and can be restored after reload",
+      "status": "pass",
+      "detail": "Removed saved story stayed in storage and was fully restored after reload; draft unchanged."
+    },
+    {
+      "name": "timer optional and expiry preserves editing",
+      "status": "pass",
+      "detail": "Advancing mocked clock beyond selected duration stops timer only; text input still saves."
+    },
+    {
+      "name": "DOM flow with 390px innerWidth, labels and focused reader title",
+      "status": "pass",
+      "detail": "DOM event and explicit focus assertions only. CSS media layout, Tab order, browser keyboard activation, overflow, and visual focus not tested."
+    },
+    {
+      "name": "prompt reversal mechanism",
+      "status": "pass",
+      "detail": "No prompt-undo control. Individual swap replaces a card immediately; the all-card confirmation does not cover this action."
+    }
+  ]
+}

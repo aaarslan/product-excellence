@@ -1,0 +1,27 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert/strict');
+const html=fs.readFileSync('index.html','utf8');const script=html.match(/<script>([\s\S]*?)<\/script>/)[1];
+function boot(seed={},failWrites=false){
+ class El{constructor(id=''){this.id=id;this.textContent='';this.value=id==='minutes'?'10':'';this.hidden=false;this.checked=false;this.attrs={};this.listeners={};this.children=[];this.dataset={};}setAttribute(k,v){this.attrs[k]=v}toggleAttribute(k,b){if(b)this.attrs[k]='';else delete this.attrs[k]}addEventListener(k,f){this.listeners[k]=f}append(...c){this.children.push(...c)}replaceChildren(...c){this.children=c}focus(){}setSelectionRange(){}remove(){}click(){this.onclick?.();this.listeners.click?.({target:this})}showModal(){this.open=true}close(){this.open=false}input(v){this.value=v;this.listeners.input?.({target:this});this.oninput?.({target:this})}}
+ const els=Object.fromEntries([...html.matchAll(/id="([^"]+)"/g)].map(m=>[m[1],new El(m[1])]));
+ const swaps=['character','place','trouble'].map(x=>{const e=new El();e.dataset.swap=x;return e});
+ const data=new Map(Object.entries(seed).map(([k,v])=>[k,JSON.stringify(v)]));
+ const document={getElementById:id=>els[id],querySelectorAll:()=>swaps,createElement:()=>new El(),body:new El()};
+ const sandbox={document,localStorage:{getItem:k=>data.get(k)??null,setItem:(k,v)=>{if(failWrites)throw Error('quota');data.set(k,v)}},window:{scrollTo(){},addEventListener(){}},Date,Math,Object,JSON,String,Number,Array,Blob,URL:{createObjectURL(){return 'blob:mock'},revokeObjectURL(){}},setTimeout(){return 1},clearTimeout(){},setInterval(){return 1},clearInterval(){},console};
+ vm.runInNewContext(script,sandbox);return {els,swaps,data,document,read:k=>JSON.parse(data.get(k))};
+}
+const D='storybreak.draft.v1',S='storybreak.stories.v1';
+let app=boot();let {els,swaps}=app;
+const before=['character','place','trouble'].map(x=>els[x].textContent);swaps[2].click();assert.equal(els.character.textContent,before[0]);assert.equal(els.place.textContent,before[1]);assert.notEqual(els.trouble.textContent,before[2]);
+els.title.input('Tiny Storm');els.text.input('One. Two. Three. Four.');assert.equal(app.read(D).text,'One. Two. Three. Four.');
+els.finish.click();assert.equal(app.read(S).length,1);assert.equal(els['reader-text'].textContent,'One. Two. Three. Four.');assert.equal(els['reader-view'].hidden,false);
+els['reader-new'].click();assert.equal(app.read(S).length,1);assert.equal(els.text.value,'');
+els.text.input('The ending nobody must lose.');els.new.click();assert.equal(app.read(S).length,2);assert.equal(app.read(S)[0].status,'draft');assert.equal(app.read(S)[0].text,'The ending nobody must lose.');
+els['shelf-tab'].click();assert.equal(els.library.children.length,2);const finishedBook=els.library.children.find(b=>b.children[1].textContent==='Tiny Storm');finishedBook.children[4].children[0].click();els.remove.click();assert(app.read(S).find(s=>s.title==='Tiny Storm').removedAt);els['bin-toggle'].click();assert.equal(els.library.children.length,1);els.library.children[0].children[4].children[0].click();assert(!app.read(S).find(s=>s.title==='Tiny Storm').removedAt);
+els['bin-toggle'].click();els.search.input('tiny storm');assert.equal(els.library.children.length,1);assert.equal(els.library.children[0].children[1].textContent,'Tiny Storm');
+// Continue, edit, and reopen a shelved draft: latest words must win over the older shelf object.
+els.search.input('');const draftBook=els.library.children.find(b=>b.children[0].textContent.includes('Draft'));draftBook.children[4].children[0].click();els.text.input('The updated ending.');els['shelf-tab'].click();const sameDraft=els.library.children.find(b=>b.children[0].textContent.includes('Draft'));sameDraft.children[4].children[0].click();assert.equal(els.text.value,'The updated ending.');
+const sample=JSON.parse(fs.readFileSync('sample-storage.json','utf8'));app=boot(sample);els=app.els;assert.equal(els.text.value,sample[D].text);assert.equal(els.character.textContent,sample[D].prompt.character);els['shelf-tab'].click();const old=els.library.children.find(b=>b.children[1].textContent==='A Pocket of Moonlight');old.children[4].children[0].click();assert.equal(els['reader-text'].textContent,sample[S][1].text);assert(els['reader-ingredients'].textContent.includes('an umbrella repairer'));assert.equal(els.text.value,sample[D].text);
+els['reader-edit'].click();assert.equal(app.read(S).length,3);assert.equal(app.read(S)[0].text,sample[D].text);assert.equal(els.text.value,sample[S][1].text);els.text.input('An updated moon story.');els.finish.click();assert.equal(app.read(S).length,4);assert.equal(app.read(S).find(s=>s.id==='legacy-moon-002').text,sample[S][1].text);
+app=boot(sample,true);els=app.els;els.text.input('Do not lose this after a storage error.');els.new.click();assert.equal(els.text.value,'Do not lose this after a storage error.');assert.equal(els['storage-warning'].hidden,false);els.finish.click();assert.equal(els['reader-text'].textContent,'Do not lose this after a storage error.');assert.equal(els['reader-meta'].textContent,'Not saved · download a copy');
+assert(!/<(?:script|link|img)[^>]+(?:src|href)=["']https?:/i.test(html));
+console.log('PASS: script parse; per-card swap; live draft persistence; finishing; reading; preserved new-story drafts; recoverable removal; search; resuming latest draft; exact legacy text and prompts; reading does not replace current draft; versioning preserves original; storage-error prevention and download path; no external assets.');

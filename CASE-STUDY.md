@@ -1,5 +1,7 @@
 # A converter that says “done” can still lose the result
 
+> **Historical study — November 14, 2026.** This records an earlier skill version and its preserved failure/correction. See [the current evaluation](EVALUATION.md) for the revised skill.
+
 **A local, agent-assisted improvement study of a real open-source utility. Not a customer project, upstream contribution, or adoption study.**
 
 [Mr. Data Converter](https://github.com/shancarter/mr-data-converter) turns spreadsheet/CSV input into web formats. This study uses commit `e5d6cb616eafe2d16beb6c7f0399d7ca5c142304`, dated 2014-08-27. The legacy code makes a compact, inspectable case, but is not representative of every modern product. Source and licenses are [retained](case-study/PROVENANCE.md).

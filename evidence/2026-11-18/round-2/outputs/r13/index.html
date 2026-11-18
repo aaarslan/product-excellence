@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#233f39">
+<title>Night Shift — a little of both at Calder Mill</title>
+<style>
+:root{--paper:#f4f0e5;--white:#fffdf6;--ink:#233f39;--muted:#53665d;--line:#c7c9b8;--orange:#cb4b29;--pale:#e4e9da;--gold:#edd286}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:22px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.5}
+button,select,input{font:inherit}
+button,a,select,input,summary{-webkit-tap-highlight-color:transparent}
+button{cursor:pointer}
+a{color:inherit;text-underline-offset:4px}
+button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--orange);outline-offset:4px}
+button:disabled{cursor:default}
+button,select,summary{touch-action:manipulation}
+h1,h2,h3,p{margin:0}
+button{color:inherit}
+.wrap{width:min(1160px,calc(100% - 64px));margin:auto}
+.skip-link{position:absolute;top:-70px;left:16px;padding:12px 18px;background:var(--ink);color:white;z-index:10}
+.skip-link:focus{top:10px}
+.masthead{display:flex;align-items:center;justify-content:space-between;padding:23px 0 19px;border-bottom:1px solid var(--ink);gap:20px}
+.brand{display:flex;gap:11px;align-items:center;text-decoration:none}
+.brand svg{width:36px;height:36px}
+.brand-name{font-size:18px;font-weight:800;letter-spacing:-.6px;line-height:1.05}
+.brand-name small{display:block;font-size:10px;letter-spacing:2px;font-weight:600;margin-top:5px}
+.event-meta{text-align:right;font-size:12px;letter-spacing:.04em}
+.event-meta strong{display:block;font-size:14px}
+.hero{display:grid;grid-template-columns:1.32fr 1fr;align-items:center;gap:42px;padding:39px 0 35px}
+.eyebrow{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+.hero h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(40px,5.5vw,68px);font-weight:400;line-height:1.01;letter-spacing:-2.7px;margin:12px 0 18px}
+.hero h1 em{font-weight:400;color:var(--orange)}
+.hero-copy{max-width:490px;font-size:16px;line-height:1.55}
+.first-peek{display:inline-flex;align-items:center;gap:14px;font-weight:700;margin-top:19px;text-decoration:none;border-bottom:1px solid var(--ink);padding:4px 0 8px;min-height:44px}
+.first-peek span:last-child{font-size:23px}
+.print-panel{position:relative;border:1px solid var(--ink);padding:19px 21px 0;align-self:stretch;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;min-height:285px;background:#e9dfca}
+.print-top{display:flex;align-items:center;justify-content:space-between;font-size:10px;font-weight:bold;letter-spacing:1.6px}
+.print-title{font-family:Georgia,serif;font-size:45px;font-weight:400;line-height:.96;letter-spacing:-2px;margin:15px 0 0}
+.print-title span{font-style:italic}
+.print-panel svg{width:100%;height:119px;display:block;margin-top:10px}
+.print-stamp{position:absolute;right:24px;top:74px;width:87px;height:87px;display:flex;align-items:center;justify-content:center;border:1px solid var(--orange);outline:1px solid var(--orange);outline-offset:4px;border-radius:50%;color:var(--orange);font-size:10px;line-height:1.5;letter-spacing:1px;text-align:center;transform:rotate(12deg)}
+.demo-strip{display:flex;justify-content:space-between;align-items:center;gap:15px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:11px 0;font-size:12px}
+.demo-strip strong{font-weight:800}
+.demo-dot{display:inline-block;width:7px;height:7px;background:var(--orange);margin-right:7px}
+.main-grid{display:grid;grid-template-columns:290px minmax(0,1fr);gap:50px;margin:34px 0 46px;align-items:start}
+.setup-heading{font-family:Georgia,serif;font-size:27px;font-weight:400;letter-spacing:-.7px;margin-bottom:18px}
+fieldset{margin:0;padding:0;border:0}
+legend,.field-label{display:block;font-size:12px;font-weight:700;margin:0 0 9px}
+.time-options{display:flex;gap:7px}
+.time-button{min-height:49px;flex:1;border:1px solid var(--line);background:transparent;border-radius:3px;font-size:15px;font-weight:bold}
+.time-button[aria-pressed="true"]{background:var(--ink);color:var(--white);border-color:var(--ink)}
+.time-button:hover{border-color:var(--ink)}
+.finish-label{font-size:12px;color:var(--muted);margin:9px 0 19px}
+.preferences{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.preferences summary{list-style:none;position:relative;padding:15px 27px 15px 0;cursor:pointer;min-height:55px}
+.preferences summary::-webkit-details-marker{display:none}
+.preferences summary:after{content:'+';font-size:23px;position:absolute;right:3px;top:15px}
+.preferences[open] summary:after{content:'−'}
+.preferences summary .small{font-size:10px;letter-spacing:1.3px;font-weight:bold;text-transform:uppercase;display:block;margin-bottom:4px}
+.preferences summary .pair{font-size:14px;line-height:1.45;display:block}
+.preference-body{padding:0 0 18px}
+.field-label{margin-top:12px}
+select{width:100%;min-height:46px;padding:10px 28px 10px 11px;border:1px solid #9ba89c;border-radius:3px;background:var(--white);color:var(--ink)}
+.hint{font-size:12px;color:var(--muted);line-height:1.5;margin-top:10px}
+.access-control{display:flex;align-items:flex-start;gap:10px;margin-top:17px;cursor:pointer;font-size:14px}
+.access-control input{width:20px;height:20px;accent-color:var(--ink);flex-shrink:0;margin:1px 0 0}
+.access-control strong{display:block;font-size:14px}
+.access-control small{display:block;font-size:12px;color:var(--muted);margin-top:3px}
+.sidebar-note{font-family:Georgia,serif;font-size:23px;line-height:1.25;font-style:italic;margin:31px 0 14px;max-width:240px}
+.sidebar-links{display:flex;flex-direction:column;gap:4px;margin-top:17px}
+.sidebar-links a{font-size:13px;min-height:40px;display:flex;align-items:center;justify-content:space-between;text-decoration:none;border-bottom:1px solid var(--line)}
+.sidebar-links a:hover{color:var(--orange)}
+.route-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.route-top h2{font-family:Georgia,serif;font-weight:400;font-size:35px;letter-spacing:-1px;line-height:1.12;margin:6px 0 9px}
+.route-number{border:1px solid var(--ink);padding:9px 12px;text-align:center;font-size:11px;line-height:1.2;white-space:nowrap;transform:rotate(3deg)}
+.route-number strong{font-family:Georgia,serif;display:block;font-size:29px;font-weight:400}
+.route-summary{font-size:13px;color:var(--muted)}
+.route-intro{font-size:15px;margin:15px 0 18px;max-width:650px}
+.uncertainty{display:flex;gap:8px;align-items:flex-start;font-size:12px;color:var(--muted);margin:12px 0 20px}
+.uncertainty:before{content:'○';font-size:16px;line-height:1.1}
+.notice{padding:13px 15px;border-left:3px solid var(--orange);background:#eee4d2;margin:17px 0;font-size:13px;line-height:1.55}
+.notice strong{display:block;font-size:13px;margin-bottom:3px}
+.notice button{background:none;border:0;text-decoration:underline;text-underline-offset:3px;padding:7px 0 0;min-height:37px;font-size:13px;font-weight:bold}
+.route-list{list-style:none;padding:0;margin:0}
+.route-step{position:relative}
+.connector{display:flex;align-items:center;gap:11px;padding:10px 0 10px 21px;font-size:12px;color:var(--muted)}
+.connector:before{content:'';height:22px;width:1px;border-left:1px dashed #829384}
+.connector em{font-style:normal;color:var(--orange);margin-left:4px}
+.stop-card{background:var(--white);border:1px solid #abb6a5;border-radius:3px;overflow:hidden}
+.stop-top{display:flex;align-items:center;justify-content:space-between;background:var(--pale);padding:9px 18px;gap:10px;font-size:12px}
+.stop-top strong{font-size:13px;letter-spacing:.15px}
+.stop-top .match{font-size:10px;font-weight:bold;letter-spacing:.7px;text-transform:uppercase;text-align:right}
+.stop-body{padding:19px 20px 16px}
+.stop-heading{display:flex;gap:13px;align-items:flex-start}
+.step-number{font-family:Georgia,serif;font-size:15px;border:1px solid var(--ink);border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.stop-heading h3{font-family:Georgia,serif;font-weight:400;font-size:28px;letter-spacing:-.6px;line-height:1.14;margin-bottom:7px}
+.stop-location{font-size:11px;letter-spacing:.2px;font-weight:700}
+.stop-description{font-size:15px;line-height:1.55;margin:15px 0 12px}
+.stop-detail{font-size:12px;line-height:1.5;color:var(--muted)}
+.stop-tip{margin:14px 0 0;border-top:1px solid #e0e2d5;padding-top:12px;font-size:13px}
+.stop-tip strong{font-weight:700}
+.risk{background:#f5e5c4;padding:9px 11px;margin-top:13px;font-size:12px;line-height:1.5;border-radius:2px}
+.swap-row{border-top:1px solid #e1e3d7;margin-top:16px;padding-top:9px}
+.swap-button{border:0;background:none;text-decoration:underline;text-underline-offset:4px;font-size:12px;font-weight:bold;padding:7px 0;min-height:38px;text-align:left}
+.swap-button:hover{color:var(--orange)}
+.swap-helper{font-size:11px;color:var(--muted);display:block;margin-top:8px}.swap-row summary{font-size:12px;font-weight:bold;cursor:pointer;min-height:38px;padding:8px 0}.swap-row input{font:inherit;color:var(--ink);border:1px solid #9ba89c;background:var(--white);border-radius:2px;min-height:42px;margin:8px 0 4px 9px;padding:5px}.swap-error{font-size:12px;color:#9b321e;margin-top:7px}
+.earlier .stop-card{background:#eeeede}
+.earlier .stop-top{background:#d9dfcf}
+.finish-card{margin-top:19px;padding:16px 20px;background:var(--ink);color:var(--white);border-radius:3px;display:flex;align-items:flex-start;gap:13px}
+.finish-card .finish-icon{font-size:24px;line-height:1.2}
+.finish-card strong{display:block;font-size:14px;margin-bottom:4px}
+.finish-card p{font-size:12px;line-height:1.55;color:#e0e7d7}
+.reset-button{display:inline-flex;align-items:center;min-height:44px;background:none;border:0;border-bottom:1px solid var(--ink);font-size:12px;padding:9px 0;margin-top:12px;font-weight:bold}
+.empty-state{padding:25px;border:1px solid var(--line);background:var(--white);margin-top:18px}
+.empty-state h3{font-family:Georgia,serif;font-size:26px;font-weight:400;margin-bottom:10px}
+.empty-state p{font-size:14px}
+.programme{border-top:1px solid var(--ink);padding-top:25px;margin-bottom:38px}
+.section-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:25px;margin-bottom:23px}
+.section-heading h2{font-family:Georgia,serif;font-weight:400;font-size:37px;letter-spacing:-1.2px;line-height:1.15}
+.section-heading p{font-size:13px;color:var(--muted);max-width:340px}
+.program-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:34px}
+.program-item{border-top:1px solid var(--line)}
+.program-item summary{cursor:pointer;list-style:none;position:relative;padding:19px 30px 18px 0;min-height:95px}
+.program-item summary::-webkit-details-marker{display:none}
+.program-item summary:after{content:'+';position:absolute;right:3px;top:27px;font-size:21px}
+.program-item[open] summary:after{content:'−'}
+.program-item h3{font-size:17px;font-weight:600;line-height:1.35}
+.program-item .program-meta{font-size:11px;color:var(--muted);margin-top:7px}
+.program-body{padding:0 22px 19px 0;font-size:14px;line-height:1.55}
+.program-body p+p{margin-top:12px}
+.program-body .schedule{font-size:13px}
+.program-body .program-access{font-size:12px;color:var(--muted)}
+.pick-button{background:transparent;border:1px solid var(--ink);border-radius:2px;font-size:12px;font-weight:bold;padding:10px 14px;margin-top:15px;min-height:42px}
+.pick-button:hover{background:var(--ink);color:var(--white)}
+.essentials{background:#e3e6d8;border-top:1px solid var(--ink);padding:27px 30px;margin-bottom:28px}
+.essentials h2{font-family:Georgia,serif;font-weight:400;font-size:29px;letter-spacing:-.6px;margin-bottom:22px}
+.essentials-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}
+.essentials h3{font-size:13px;margin-bottom:8px}
+.essentials p{font-size:12px;line-height:1.65}
+.planning-note{font-size:11px;line-height:1.65;color:var(--muted);margin-top:23px;padding-top:16px;border-top:1px solid #bdc5b6}
+.footer{border-top:1px solid var(--ink);padding:17px 0 25px;display:flex;justify-content:space-between;gap:20px;font-size:11px}
+.footer strong{font-size:12px;letter-spacing:1.5px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+[hidden]{display:none!important}
+@media(min-width:950px){.setup{position:sticky;top:25px}}
+@media(max-width:900px){.wrap{width:calc(100% - 40px)}.main-grid{grid-template-columns:250px minmax(0,1fr);gap:28px}.hero{gap:28px}.print-title{font-size:38px}.print-stamp{right:20px;width:72px;height:72px;font-size:8px;top:83px}.route-top h2{font-size:31px}.stop-heading h3{font-size:25px}}
+@media(max-width:700px){
+.wrap{width:calc(100% - 32px)}.masthead{padding:18px 0 15px}.brand-name{font-size:16px}.brand-name small{font-size:8px;letter-spacing:1.6px}.brand svg{width:30px;height:30px}.event-meta{font-size:10px}.event-meta strong{font-size:12px}
+.hero{display:block;padding:27px 0 25px}.hero h1{font-size:45px;line-height:1.02;letter-spacing:-1.9px;margin:11px 0 14px}.hero-copy{font-size:14px;max-width:370px}.eyebrow{font-size:10px;letter-spacing:1.5px}.first-peek{font-size:13px;margin-top:13px;gap:10px}.print-panel{display:none}.demo-strip{align-items:flex-start;font-size:10px;padding:10px 0;gap:12px}.demo-strip .offline{max-width:116px;text-align:right}
+.main-grid{display:flex;flex-direction:column;gap:28px;margin:24px 0 34px}.setup{width:100%}.setup-heading{font-size:24px;margin-bottom:13px}.time-options{max-width:100%}.time-button{min-height:44px}.finish-label{margin:7px 0 13px}.preferences summary{padding:12px 26px 12px 0;min-height:60px}.preferences summary:after{top:12px}.preferences summary .small{font-size:9px;margin-bottom:3px}.preferences summary .pair{font-size:13px}.access-control{margin-top:12px}.access-control strong{font-size:13px}.access-control small{font-size:11px;display:inline}.sidebar-note,.sidebar-links{display:none}
+.route{width:100%}.route-top h2{font-size:33px;margin:5px 0 8px}.route-number{padding:7px 10px}.route-number strong{font-size:26px}.route-summary{font-size:12px}.route-intro{font-size:14px;margin:12px 0}.uncertainty{margin:11px 0 16px;font-size:11px}.stop-body{padding:17px 16px 14px}.stop-top{padding:9px 14px}.stop-top strong{font-size:12px}.stop-top .match{font-size:9px}.stop-heading{gap:10px}.stop-heading h3{font-size:27px}.stop-location{font-size:10px}.stop-description{font-size:14px}.stop-detail{font-size:12px}.stop-tip{font-size:12px}.connector{padding:8px 0 8px 18px}.notice{font-size:12px}
+.section-heading{display:block;margin-bottom:18px}.section-heading h2{font-size:32px}.section-heading p{font-size:12px;margin-top:10px;max-width:none}.program-grid{grid-template-columns:1fr}.program-item summary{min-height:87px;padding:16px 30px 15px 0}.program-item h3{font-size:16px}.program-item .program-meta{font-size:11px}.essentials{padding:23px 20px}.essentials-grid{grid-template-columns:1fr;gap:20px}.essentials h2{font-size:27px;margin-bottom:18px}.essentials h3{margin-bottom:5px}.essentials p{font-size:13px}.footer{font-size:10px}.footer span{text-align:right;max-width:175px}
+}
+@media(max-width:360px){.hero h1{font-size:39px}.route-top h2{font-size:29px}.stop-heading h3{font-size:24px}.route-number{padding:6px 8px}.demo-strip .offline{max-width:90px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{body{background:white}.wrap{width:100%}.hero,.setup,.first-peek,.swap-row,.sidebar-links,.reset-button,.print-panel{display:none}.main-grid{display:block}.route{width:100%}.stop-card,.essentials{break-inside:avoid}.program-item[open] .program-body{display:block}.footer{margin-top:20px}.print-panel{display:none}.stop-card{border-color:#666}.notice button{display:none}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#route">Skip to your route</a>
+<div class="wrap">
+<header class="masthead">
+<a class="brand" href="#top" aria-label="Calder Mill, back to top">
+<svg viewBox="0 0 40 40" aria-hidden="true"><path d="M4 7h32M4 14h32M4 21h32" fill="none" stroke="currentColor" stroke-width="3"/><path d="M3 29c5-5 9 5 14 0s9 5 14 0 5 0 6 0M3 36c5-5 9 5 14 0s9 5 14 0 5 0 6 0" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+<span class="brand-name">CALDER MILL<small>BY THE RIVER</small></span>
+</a>
+<div class="event-meta"><strong>Night Shift</strong>Open studios · 18:00–21:00</div>
+</header>
+<main id="top">
+<section class="hero" aria-labelledby="hero-title">
+<div>
+<div class="eyebrow">An old paper mill. A new kind of night.</div>
+<h1 id="hero-title">Two curiosities.<br>One <em>good evening.</em></h1>
+<p class="hero-copy">Meet the people who make things here. Find a little something for each of you, without needing to know a thing about art.</p>
+<a id="first-peek" class="first-peek" href="#route"><span id="peek-text">Start with Small Machines at 18:30</span><span aria-hidden="true">↘</span></a>
+</div>
+<div class="print-panel" aria-hidden="true">
+<div class="print-top"><span>THE MILL IS STILL MAKING</span><span>06 STUDIOS</span></div>
+<div class="print-title">Paper. People.<br><span>Possibilities.</span></div>
+<div class="print-stamp">COME IN<br>STAY CURIOUS<br>ALL FREE</div>
+<svg viewBox="0 0 400 130" preserveAspectRatio="xMidYMid meet">
+<g fill="none" stroke="#233f39" stroke-width="2">
+<path d="M0 107c32-15 55 14 89 0s54 14 88 0 55 14 89 0 54 14 88 0 30 2 46 0M0 120c32-15 55 14 89 0s54 14 88 0 55 14 89 0 54 14 88 0 30 2 46 0"/>
+<path d="M30 95V36h40V17h66v19h43v59M30 57h149M30 77h149M79 17v78M132 17v78"/>
+<path d="M91 28h29v13H91zM91 59h29v10H91zM41 42h15v8H41zM145 42h19v8h-19z"/>
+<path d="M225 95V23h118v72M218 94h133M235 45h98M251 14v68M317 14v68"/>
+<path d="M237 68h94v13h-94zM276 26v36M270 26h12M272 48h8"/>
+<circle cx="360" cy="54" r="21"/><circle cx="360" cy="54" r="3"/><path d="M360 33v42M339 54h42M345 39l30 30M345 69l30-30M343 95h34"/>
+</g>
+<path d="M242 75h84v8h-84z" fill="#cb4b29"/><path d="M13 95h177" fill="none" stroke="#cb4b29" stroke-width="3"/>
+</svg>
+</div>
+</section>
+
+<div class="demo-strip"><span><span class="demo-dot"></span><strong>Tonight, 18:20</strong> · demo arrival time</span><span class="offline">Free entry & all six activities · works offline</span></div>
+
+<div class="main-grid" id="planner">
+<aside class="setup" aria-label="Choose your visit">
+<h2 class="setup-heading">A little of both</h2>
+<fieldset>
+<legend>How long have you got?</legend>
+<div class="time-options">
+<button type="button" class="time-button" data-minutes="45" aria-pressed="false">45 min</button>
+<button type="button" class="time-button" data-minutes="60" aria-pressed="true">60 min</button>
+<button type="button" class="time-button" data-minutes="90" aria-pressed="false">90 min</button>
+</div>
+</fieldset>
+<p class="finish-label" id="finish-label">From 18:20 · heading out by 19:20</p>
+<details class="preferences" id="preferences">
+<summary><span class="small">Your two curiosities · change</span><span class="pair" id="pair-summary">Moving things + a quiet pause</span></summary>
+<div class="preference-body">
+<label for="interest-a" class="field-label">Something for you</label>
+<select id="interest-a">
+<option value="machines" selected>Moving things</option>
+<option value="press">Print & paper</option>
+<option value="river">A quiet pause</option>
+<option value="postcard">Making something</option>
+<option value="archive">The mill's past</option>
+<option value="repair">How things are repaired</option>
+</select>
+<label for="interest-b" class="field-label">Something for your companion</label>
+<select id="interest-b">
+<option value="machines">Moving things</option>
+<option value="press">Print & paper</option>
+<option value="river" selected>A quiet pause</option>
+<option value="postcard">Making something</option>
+<option value="archive">The mill's past</option>
+<option value="repair">How things are repaired</option>
+</select>
+<p class="hint">Here on your own? Pick two things you fancy. Changes build a fresh route from 18:20.</p>
+</div>
+</details>
+<label class="access-control" for="ground-only">
+<input type="checkbox" id="ground-only">
+<span><strong>Keep us on the ground floor</strong><small>All ground-floor activities are step-free. There’s no lift upstairs.</small></span>
+</label>
+<p class="sidebar-note">You don’t have to see everything to have a good evening.</p>
+<nav class="sidebar-links" aria-label="Visitor information"><a href="#programme">Explore all six studios <span aria-hidden="true">↗</span></a><a href="#essentials">Chairs, café & getting around <span aria-hidden="true">↗</span></a></nav>
+</aside>
+
+<section class="route" id="route" tabindex="-1" aria-labelledby="route-title">
+<div class="route-top"><div><div class="eyebrow" id="route-kicker">Your suggested wander</div><h2 id="route-title">Small wonders, softer sounds.</h2><p class="route-summary" id="route-summary"></p></div><div class="route-number"><strong id="stop-count">2</strong><span id="stop-word">STOPS</span></div></div>
+<p class="route-intro" id="route-intro"></p>
+<p class="uncertainty">Suggested timings, not bookings. Small Machines is first come, first served. We don’t have live availability or queue estimates.</p>
+<div id="notices"></div>
+<ol class="route-list" id="route-list"></ol>
+<div id="finish-card"></div>
+<button class="reset-button" id="restart" type="button" hidden>Start this wander again from 18:20 ↺</button>
+<p class="sr-only" role="status" aria-live="polite" id="route-status"></p>
+</section>
+</div>
+
+<section class="programme" id="programme" aria-labelledby="programme-title">
+<div class="section-heading"><div><div class="eyebrow" style="margin-bottom:9px">Follow another thread</div><h2 id="programme-title">The whole mill, at a glance.</h2></div><p>Six ways to spend a little time. Open any one for the full story, timings and access.</p></div>
+<div class="program-grid" id="program-grid"></div>
+</section>
+
+<section class="essentials" id="essentials" aria-labelledby="essentials-title">
+<h2 id="essentials-title">Good to know before you wander.</h2>
+<div class="essentials-grid">
+<div><h3>A place to pause</h3><p>The café is on the ground floor, with chairs and paid refreshments until 20:45. It’s a place to take a break between studios.</p></div>
+<div><h3>Getting around</h3><p>Toilets and the welcome desk are on the ground floor. The first floor is reached by stairs only. There is no lift.</p></div>
+<div><h3>A person to ask</h3><p>The welcome desk has paper programmes and can answer questions. The people demonstrating in the studios are the makers themselves. Questions are welcome.</p></div>
+</div>
+<p class="planning-note">This is a guide for an 18:20 arrival, not a live timetable. Routes allow roughly 3 minutes between ground-floor rooms and 5 minutes when changing floors, including the first walk from and last walk back to the welcome desk. We also leave 5 minutes between two upstairs stops. These are planning estimates, not measured accessible travel times; your pace may differ. Postcard timings assume a seat is free. You can leave whenever you like.</p>
+</section>
+</main>
+<footer class="footer"><strong>NIGHT SHIFT / CALDER MILL</strong><span>The building once worked through the night.<br>Tonight, come and see what’s being made.</span></footer>
+</div>
+<noscript><div style="padding:24px;margin:20px;border:2px solid #233f39">This route planner needs JavaScript enabled. Night Shift runs 18:00–21:00, with free entry and activities. Pick up a paper programme at the ground-floor welcome desk.</div></noscript>
+<script>
+(function(){
+'use strict';
+var BASE = 18*60+20;
+var activities = [
+{id:'press',name:'Printing Floor',floor:0,duration:20,durations:[20],open:1080,close:1260,short:'Print & paper',description:'Watch an old press turn a blank sheet into a two-colour river print.',detail:'A steady mechanical clatter. Mostly standing, with a bench nearby.',tip:'Ask the printer about the blocks on the wall.',when:'Drop in, 18:00–21:00. About 20 minutes.',program:'Watch an old press turn a blank sheet into a two-colour river print. Ask the printer about the blocks on the wall.',overview:'Drop in until 21:00 · about 20 min',affinity:{machines:.65,river:.05,postcard:.7,archive:.5,repair:.4}},
+{id:'machines',name:'Small Machines',floor:0,duration:20,durations:[20],starts:[1110,1155,1200],short:'Moving things',description:'A swimming fish, a nodding bird, a very stubborn dog. Watch a maker bring wooden automata to life.',detail:'Some chairs. A small room; space is first come, first served.',tip:'Best to join at the start so you see the little machines come to life.',when:'Demonstrations at 18:30, 19:15 and 20:00. Each lasts 20 minutes. Best to join at the start.',program:'A maker brings hand-built wooden automata to life: a swimming fish, a nodding bird, and a very stubborn dog.',overview:'18:30 / 19:15 / 20:00 · 20 min',affinity:{press:.45,river:.1,postcard:.35,archive:.25,repair:.5}},
+{id:'river',name:'River Listening Room',floor:0,duration:20,durations:[20,15],open:1080,close:1245,short:'A quiet pause',description:'Take a seat and hear the river at dawn, under bridges and in heavy rain. Same river, a different world.',detail:'Quiet, dim and seated. A short printed note explains each recording.',tip:'No need to recognise anything. Just listen for a sound you hadn’t noticed before.',when:'Drop in, 18:00–20:45. About 15–25 minutes.',program:'Sit with recordings from the river at dawn, under bridges, and during heavy rain. A short printed note explains each recording.',overview:'Drop in until 20:45 · 15–25 min',affinity:{machines:.1,press:.1,postcard:.1,archive:.45,repair:.1}},
+{id:'postcard',name:'Make a Postcard',floor:0,duration:25,durations:[25],open:1080,close:1230,short:'Making something',description:'Stamps, studio offcuts and a bit of curiosity: make a postcard to take home. No drawing skill needed.',detail:'Seated. About 25 minutes once a seat is free.',tip:'The offcuts are a good place to begin. You don’t need a plan.',when:'Drop in, 18:00–20:30. About 25 minutes once a seat is free. A wait is possible; we cannot estimate it live.',program:'Use the studio’s stamps and offcuts to make a postcard to take home. No drawing skill needed.',overview:'Drop in until 20:30 · 25 min + possible wait',affinity:{machines:.4,river:.4,press:.8,archive:.2,repair:.25}},
+{id:'repair',name:'Repair Stories',floor:1,duration:30,durations:[30],starts:[1125,1200],short:'How things are repaired',description:'Two furniture restorers, one battered chair, and the choices that give it another life. Bring your questions.',detail:'Seated. A conversation, rather than a hands-on workshop.',tip:'What would you keep, and what would you change? A good question to bring into the room.',when:'Talks at 18:45 and 20:00. Each lasts 30 minutes.',program:'Two furniture restorers show a battered chair and explain the choices behind its repair. Questions welcome. Conversation rather than a hands-on workshop.',overview:'18:45 / 20:00 · 30 min',affinity:{machines:.35,river:.5,press:.3,postcard:.4,archive:.65}},
+{id:'archive',name:'Archive Drawers',floor:1,duration:12,durations:[12,10],open:1080,close:1260,short:'The mill’s past',description:'Open a drawer. Look a little closer. Old mill labels, workers’ notes and print samples make the past feel surprisingly near.',detail:'Quiet and self-guided. Mostly standing.',tip:'Find one small detail to point out to your companion.',when:'Drop in, 18:00–21:00. About 10–15 minutes.',program:'Open drawers of old mill labels, workers’ notes, and print samples. Small details reward a close look.',overview:'Drop in until 21:00 · 10–15 min',affinity:{machines:.35,river:.7,press:.6,postcard:.25,repair:.55}}
+];
+var byId = {};
+activities.forEach(function(a){byId[a.id]=a;});
+var state = {minutes:60,a:'machines',b:'river',ground:false,route:[],skipped:[],recovery:null,prefixCount:0};
+var undo = null;
+var $ = function(id){return document.getElementById(id);};
+var time = function(n){return String(Math.floor(n/60)).padStart(2,'0')+':'+String(n%60).padStart(2,'0');};
+var safe = function(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});};
+var travel = function(from,to){return from===0&&to===0?3:5;};
+function location(a){return a.floor===0?'GROUND FLOOR · STEP-FREE':'FIRST FLOOR · STAIRS ONLY · NO LIFT';}
+function score(route){
+var ids=route.map(function(s){return s.id;});
+var result=0;
+[state.a,state.b].forEach(function(id){
+if(ids.indexOf(id)>-1){result+=1000;}else{
+var best=0;
+route.forEach(function(s){best=Math.max(best,byId[s.id].affinity[id]||0);});
+result+=best*30;
+}
+});
+route.forEach(function(s){
+result+=8;
+result-=s.wait*.15;
+result-=(byId[s.id].duration-s.duration)*.35;
+if(s.id==='press') result+=.35;
+if(s.id==='postcard'&&state.a!=='postcard'&&state.b!=='postcard') result-=30;
+});
+if(route.length) result-=(route[route.length-1].end-BASE)*.012;
+return result;
+}
+function plan(cursor,floor,prefix,excluded){
+var deadline=BASE+state.minutes;
+var best=prefix.slice(), bestScore=score(best);
+function walk(at,from,path){
+var currentScore=score(path);
+if(currentScore>bestScore+.0001){bestScore=currentScore;best=path.slice();}
+if(path.length>=3)return;
+activities.forEach(function(a){
+if((state.ground&&a.floor!==0)||excluded.indexOf(a.id)>-1||path.some(function(s){return s.id===a.id;}))return;
+var move=travel(from,a.floor), arrival=at+move;
+a.durations.forEach(function(duration){
+var starts=a.starts?a.starts.filter(function(n){return n>=arrival;}):[Math.max(arrival,a.open)];
+starts.forEach(function(start){
+var end=start+duration;
+if(end+travel(a.floor,0)>deadline||end>(a.close||1260))return;
+path.push({id:a.id,start:start,end:end,duration:duration,travel:move,arrival:arrival,wait:start-arrival});
+walk(end,a.floor,path);
+path.pop();
+});
+});
+});
+}
+walk(cursor,floor,prefix.slice());
+return best;
+}
+function buildFresh(announce){
+state.recovery=null;state.prefixCount=0;state.skipped=[];undo=null;
+state.route=plan(BASE,0,[],[]);
+render(announce);
+}
+function matchLabel(id){
+if(id===state.a&&id===state.b)return 'For both of you';
+if(id===state.a)return 'Your curiosity';
+if(id===state.b)return 'Their curiosity';
+return 'A little extra';
+}
+function routeTitle(){
+var ids=state.route.map(function(s){return s.id;});
+if(state.recovery)return 'A different way through.';
+if(ids.indexOf('machines')>-1&&ids.indexOf('river')>-1)return 'Small wonders, softer sounds.';
+if(ids.indexOf('press')>-1&&ids.indexOf('postcard')>-1)return 'See it made. Make it yours.';
+if(ids.indexOf('repair')>-1&&ids.indexOf('archive')>-1)return 'Things with stories to tell.';
+if(ids.indexOf('river')>-1&&ids.indexOf('archive')>-1)return 'The quieter side of the mill.';
+if(ids.indexOf('press')>-1&&ids.indexOf('river')>-1)return 'From the press to the river.';
+return 'Follow a little curiosity.';
+}
+function missingNotices(){
+var ids=state.route.map(function(s){return s.id;});
+var missing=[state.a,state.b].filter(function(id,i,arr){return arr.indexOf(id)===i&&ids.indexOf(id)===-1&&state.skipped.indexOf(id)===-1;});
+return missing.map(function(id){
+var a=byId[id], reason='';
+if(state.ground&&a.floor===1){
+reason=a.name+' is upstairs, with no lift. This route keeps you on the ground floor; that curiosity isn’t included.';
+}else if(a.starts&&!a.starts.some(function(start){return start>=BASE+travel(0,a.floor)&&start+a.duration<=BASE+state.minutes;})){
+reason='The next '+a.name+' session finishes at '+time(a.starts.filter(function(start){return start>=BASE;})[0]+a.duration)+', after your '+time(BASE+state.minutes)+' finish.';
+}else{
+reason=a.name+' doesn’t fit alongside the other stops in this route. Choose more time or change your two curiosities to give it priority.';
+}
+return '<div class="notice"><strong>A small compromise</strong>'+safe(reason)+'</div>';
+}).join('');
+}
+function render(announce){
+var route=state.route,deadline=BASE+state.minutes;
+document.querySelectorAll('[data-minutes]').forEach(function(b){b.setAttribute('aria-pressed',String(Number(b.dataset.minutes)===state.minutes));});
+$('interest-a').value=state.a;$('interest-b').value=state.b;$('ground-only').checked=state.ground;
+$('finish-label').textContent='From 18:20 · heading out by '+time(deadline);
+$('pair-summary').textContent=byId[state.a].short+' + '+byId[state.b].short.toLowerCase();
+$('route-title').textContent=routeTitle();
+$('route-kicker').textContent=state.recovery?'Your revised wander':'Your suggested wander';
+$('stop-count').textContent=route.length;
+$('stop-word').textContent=route.length===1?'STOP':'STOPS';
+var first=route[state.prefixCount];
+var endRoom=route.length?byId[route[route.length-1].id]:null;
+var returnMinutes=endRoom?travel(endRoom.floor,0):0;
+var last=route.length?route[route.length-1].end+returnMinutes:BASE;
+if(state.recovery&&!first){returnMinutes=travel(byId[state.recovery.id].floor,0);last=state.recovery.from+returnMinutes;}
+var hasUpstairs=route.some(function(s){return byId[s.id].floor===1;})||(state.recovery&&byId[state.recovery.id].floor===1);
+$('route-summary').textContent=route.length+' stops · '+(hasUpstairs?'includes stairs':'all on the ground floor')+' · finishes about '+time(last);
+var intro='';
+if(first){
+var a=byId[first.id];
+if(state.recovery){
+intro='From '+time(state.recovery.from)+' at '+byId[state.recovery.id].name+', allow '+first.travel+' minutes to '+a.name+'. '+(a.starts?'Join at '+time(first.start)+'.':'Spend about '+first.duration+' minutes there.');
+}else if(a.starts){
+intro='Head to '+a.name+' now. It starts at '+time(first.start)+'; allow '+first.travel+' minutes to get there, then '+first.wait+' minutes before the start.';
+}else{
+intro='Start at '+a.name+'. Allow '+first.travel+' minutes from the welcome desk, then spend about '+first.duration+' minutes exploring.';
+}
+$('peek-text').textContent=(state.recovery?'Next: ':'Start with ')+a.name+' at '+time(first.start);
+}else{
+intro='There isn’t another full studio stop that fits your remaining time and route choices. A pause is a perfectly good way to end the evening.';
+$('peek-text').textContent='See your route and places to pause';
+}
+$('route-intro').textContent=intro;
+var notice='';
+if(state.recovery){
+notice='<div class="notice"><strong>Replanned from '+time(state.recovery.from)+'</strong>'+safe(byId[state.recovery.id].name)+' skipped. '+(state.prefixCount?'Earlier stops stay in your route. ':'')+'We’re still aiming for '+time(deadline)+'. This is another suggestion, not a check on room space.'+(undo?'<br><button type="button" id="undo-swap">Undo this swap</button>':'')+'</div>';
+}
+notice+=missingNotices();
+if(last>deadline)notice+='<div class="notice"><strong>You’ll need a little longer to leave.</strong>At this point, allow '+returnMinutes+' minutes back to the welcome desk: about '+time(last)+', after your '+time(deadline)+' target. No extra studio stop has been added.</div>';
+if(route.some(function(s){return s.id==='postcard';})){
+notice+='<div class="notice"><strong>This route depends on a free postcard seat.</strong>The 25-minute activity fits; an unknown queue is not included. If there’s a wait, use the alternative button on that stop.</div>';
+}
+$('notices').innerHTML=notice;
+if($('undo-swap'))$('undo-swap').addEventListener('click',undoSwap);
+$('route-list').innerHTML=route.map(function(s,index){
+var a=byId[s.id],earlier=index<state.prefixCount;
+var connector='';
+if(index===0&&!state.recovery)connector='<div class="connector">'+time(BASE)+' · welcome desk → allow '+s.travel+' min'+(s.wait?' <em>then '+s.wait+' min before the start</em>':'')+'</div>';
+else if(index===state.prefixCount&&state.recovery)connector='<div class="connector">From '+time(state.recovery.from)+' · allow '+s.travel+' min to move on'+(s.wait?' <em>then '+s.wait+' min before the start</em>':'')+'</div>';
+else if(index>0)connector='<div class="connector">'+s.travel+' min '+(byId[route[index-1].id].floor!==a.floor?'to change floors':'between rooms')+(s.wait?' <em>then '+s.wait+' min before the start</em>':'')+'</div>';
+var risk=a.id==='machines'?'<p class="risk">Small room, first come, first served. Arriving for the start doesn’t guarantee a space.</p>':a.id==='postcard'?'<p class="risk">These times assume a seat is free. A wait is possible and we can’t estimate it.</p>':'';
+var swapText=a.id==='machines'?'Room full? Find another stop':a.id==='postcard'?'A queue? Find another stop':'Fancy a different stop?';
+return '<li class="route-step'+(earlier?' earlier':'')+'">'+connector+'<article class="stop-card" aria-labelledby="stop-'+index+'"><div class="stop-top"><strong>'+time(s.start)+'–'+time(s.end)+(a.id==='postcard'?' · if seat free':'')+'</strong><span class="match">'+(earlier?'Earlier in your route':matchLabel(a.id))+'</span></div><div class="stop-body"><div class="stop-heading"><span class="step-number" aria-hidden="true">'+(index+1)+'</span><div><h3 id="stop-'+index+'">'+safe(a.name)+'</h3><p class="stop-location">'+location(a)+'</p></div></div><p class="stop-description">'+safe(a.description)+'</p><p class="stop-detail">'+safe(a.detail)+'</p><p class="stop-tip"><strong>A way in:</strong> '+safe(a.tip)+'</p>'+risk+(!earlier?'<details class="swap-row"><summary>'+swapText+'</summary><label class="swap-helper" for="swap-time-'+index+'">Ready to move on at <input type="time" id="swap-time-'+index+'" value="'+time(s.start)+'" min="'+time(s.arrival)+'" max="'+time(deadline)+'" step="60" required></label><span class="swap-helper">Change the time if you’ve already waited. Keeps earlier stops and your '+time(deadline)+' finish.</span><button type="button" class="swap-button" data-swap="'+index+'" aria-label="'+safe('Find another stop instead of '+a.name)+'">Find another stop ↗</button><p class="swap-error" id="swap-error-'+index+'" role="alert" hidden></p></details>':'')+'</div></article></li>';
+}).join('');
+document.querySelectorAll('[data-swap]').forEach(function(b){b.addEventListener('click',function(){swap(Number(b.dataset.swap));});});
+if(route.length){
+var spare=deadline-last;
+$('finish-card').innerHTML='<div class="finish-card"><span class="finish-icon" aria-hidden="true">↗</span><div><strong>Back at the welcome desk about '+time(last)+'.</strong><p>Allow '+returnMinutes+' minutes back from '+safe(state.recovery&&!first?byId[state.recovery.id].name:endRoom.name)+'. '+(spare>0?'You have about '+spare+' minutes before your '+time(deadline)+' finish. Linger a little, pause in the ground-floor café, or head out.':spare===0?'That uses your planned time. Leave whenever you’re ready.':'That’s about '+(-spare)+' minutes past your '+time(deadline)+' target. Head back when you’re ready.')+' Café refreshments are paid.</p></div></div>';
+if(!first&&state.recovery)$('finish-card').innerHTML+='<div class="notice"><strong>No further stop fits.</strong>The café and welcome desk are on the ground floor. If you’re upstairs, allow about 5 minutes to change floors; your pace may differ.</div>';
+}else{
+$('finish-card').innerHTML='<div class="empty-state"><h3>A moment to pause.</h3>'+(state.recovery?'<p>Allow '+returnMinutes+' minutes back to the welcome desk, reaching it about '+time(last)+'.</p>':'')+'<p>The ground-floor café has chairs and paid refreshments until 20:45. The welcome desk can help with a paper programme if you’d like to stay longer.</p></div>';
+}
+$('restart').hidden=!state.recovery;
+if(announce)$('route-status').textContent=(state.recovery?'Route updated. ':'')+route.length+' stops, finishing about '+time(last)+'. '+(hasUpstairs?'Includes stairs.':'Ground floor only.');
+}
+function swap(index){
+var skipped=state.route[index],field=$('swap-time-'+index),parts=field.value.split(':');
+var from=parts.length===2?Number(parts[0])*60+Number(parts[1]):NaN;
+if(!Number.isFinite(from)||from<skipped.arrival||from>BASE+state.minutes){
+var error=$('swap-error-'+index);error.hidden=false;error.textContent='Choose a time from '+time(skipped.arrival)+' to '+time(BASE+state.minutes)+'.';field.focus();return;
+}
+undo=JSON.parse(JSON.stringify(state));
+var prefix=state.route.slice(0,index);
+state.skipped.push(skipped.id);
+state.recovery={from:from,id:skipped.id};
+state.prefixCount=prefix.length;
+state.route=plan(from,byId[skipped.id].floor,prefix,state.skipped);
+render(true);
+$('route').focus({preventScroll:true});
+$('route').scrollIntoView({block:'start',behavior:window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+}
+function undoSwap(){
+if(!undo)return;
+state=undo;undo=null;render(true);$('route').focus({preventScroll:true});
+}
+function renderProgramme(){
+$('program-grid').innerHTML=activities.map(function(a){
+return '<details class="program-item" id="program-'+a.id+'"><summary><h3>'+safe(a.name)+'</h3><p class="program-meta">'+safe(a.overview)+'<br>'+(a.floor?'First floor · stairs only':'Ground floor · step-free')+'</p></summary><div class="program-body"><p>'+safe(a.program)+'</p><p class="schedule"><strong>When to come</strong><br>'+safe(a.when)+'</p><p class="program-access"><strong>'+location(a)+'</strong><br>'+safe(a.detail)+'</p><button class="pick-button" type="button" data-pick="'+a.id+'">Make this my curiosity <span aria-hidden="true">↗</span></button></div></details>';
+}).join('');
+document.querySelectorAll('[data-pick]').forEach(function(b){b.addEventListener('click',function(){state.a=b.dataset.pick;buildFresh(true);$('route').focus({preventScroll:true});$('route').scrollIntoView({block:'start'});});});
+}
+document.querySelectorAll('[data-minutes]').forEach(function(b){b.addEventListener('click',function(){state.minutes=Number(b.dataset.minutes);buildFresh(true);});});
+$('interest-a').addEventListener('change',function(e){state.a=e.target.value;buildFresh(true);});
+$('interest-b').addEventListener('change',function(e){state.b=e.target.value;buildFresh(true);});
+$('ground-only').addEventListener('change',function(e){state.ground=e.target.checked;buildFresh(true);});
+$('restart').addEventListener('click',function(){buildFresh(true);$('route').focus({preventScroll:true});});
+renderProgramme();
+buildFresh(false);
+window.NightShiftDemo={getState:function(){return JSON.parse(JSON.stringify(state));},activities:activities,base:BASE};
+})();
+</script>
+</body>
+</html>

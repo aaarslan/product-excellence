@@ -1,0 +1,13 @@
+# Worker envelope
+
+All tasks used fresh-context workers with inherited parent model settings, no parent conversation, no other skills, and no delegation. The common implementation message was the text below; `{directory}` was the worker's assigned directory. Only the two skill arms included the indicated skill sentence.
+
+> Work only in {directory}. Read TASK.md and CONTEXT.md there and fulfill the user's task. [Skill arms: Apply the product-excellence skill at guidance/product-excellence/SKILL.md.] Do not inspect sibling or parent directories, other instructions/skills, other agents' outputs, or evaluation materials. Do not delegate or browse. You may use local file/shell tools. No external services, network dependencies, paid APIs, deployment, or real external actions. The artifact must remain a single dependency-free index.html. Keep the case inputs unchanged. Browser execution is unavailable in this environment; do not attempt it, escalations, or workarounds. If useful, jsdom for local DOM checks is available at /workspace/scratch/6ecb29bfb4b0/dom-runtime/node_modules/jsdom. DOM checks are not browser/layout/keyboard/user verification. Work within about 15 minutes, including any checks. Save the requested artifact as index.html and the brief deliverable note as RESULT.md (maximum 300 words). In your final response name the actual output and checks/limitations. Proceed autonomously.
+
+The case author and judges were separate workers. Workers did not receive the rubric or release gate. The full task/notes and arm-to-run mapping are retained beside this file. The jsdom path was an existing environment test dependency, not an application dependency.
+
+The written-case envelope was:
+
+> Work only in {directory}. Read TASK.md and CONTEXT.md there and fulfill the user's task. [Skill arms: Apply the product-excellence skill at guidance/product-excellence/SKILL.md.] Do not inspect sibling or parent directories, other instructions/skills, other agents' outputs, or evaluation materials. Do not delegate or browse. Use the supplied evidence only; no outreach, real bookings, purchases, external services, or code implementation. Keep the case inputs unchanged. Write your complete recommendation to RESULT.md, within the task's 650-word limit. Use local tools to verify a material calculation or the word count if helpful. Proceed autonomously, keeping the effort proportionate to this bounded decision.
+
+At approximately ten elapsed minutes, the same reminder to finish the central experience and focused checks within the original budget was sent to the two implementation workers still running. The third had already completed. No new task information or output-specific feedback was supplied.

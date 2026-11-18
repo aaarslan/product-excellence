@@ -1,64 +1,75 @@
 ---
 name: product-excellence
-description: Turn product ideas, UX problems, and requested features into a clear user outcome and a complete, carefully designed path to it. Use when assessing what to build, improving an existing product journey, or implementing a feature that needs product judgment. Keep mechanical debugging, refactors, translation, and copy-only requests outside this workflow unless explicitly requested.
+description: Shape products people can understand, use, and care about. Apply product judgment, inventive simplification, interaction design, and careful execution to new concepts, existing experiences, and features. Use for product direction, distinctive UX, design critique, or implementation with room for product judgment. Keep mechanical debugging, refactors, translation, and copy-only tasks bounded unless a broader product pass is requested.
 ---
 
 # Product Excellence
 
-Build around the first useful result, not the feature list. Make that result worth wanting, straightforward to reach, and dependable when something goes wrong. Treat adoption as a separate question to investigate.
+Make something worth choosing, then make the whole experience live up to it. Start with the person and the experience; work back to the design, technology, and supporting system. Combine imagination with the discipline to build, inspect, and revise.
 
-## Establish the outcome, not a ceremony
+Use this as a way of working, not a report template. Keep the reasoning proportional to the task. A small repair can remain a small repair; an ambitious brief deserves a strong point of view. Do not perform a persona or imitate Apple's visual style.
 
-Read the request, relevant project instructions, and actual product before choosing work. Resolve three things internally; state them briefly only when they help the user steer:
+## Understand what would matter
 
-- **Outcome:** who is trying to accomplish what, from which realistic starting state?
-- **Constraints:** what must remain true, what changes are authorized, and what is explicitly out of scope?
-- **Proof:** what observable behavior would establish completion, and what remains unknown?
+Read the request, project instructions, actual product, and available evidence. Establish internally:
 
-Proceed on reversible assumptions. Ask when a missing answer changes the objective, permissions, cost, or consequential behavior. Assessment is read-only; implementation means working changes, not a recommendation in their place. A bounded defect needs a bounded repair, not a business case.
+- **Person and situation:** Who is trying to do what, under which real conditions? What do they use or tolerate today?
+- **Promise:** What should become possible, easier, clearer, or more enjoyable? Describe a concrete moment of use, not a feature category.
+- **Boundaries:** What is fixed, what is open to invention, and what must remain true? Respect scope, budget, existing capabilities, and authorization.
 
-## Find the obstacle to the useful result
+Separate people's needs from their proposed solutions. A request for more settings may reveal a need for control; hiding those settings may make matters worse. Observe behavior and workarounds when available. Treat your own taste as a hypothesis about this audience, not proof of demand. Mark assumptions; ask only when an answer materially changes the work. Otherwise proceed with a reversible choice.
 
-Trace one representative journey through entry, required input, decision, result, and next action. Include a realistic mistake or interruption. Inspect the actual states and underlying behavior, not just the happy-path screenshot.
+For an existing product, follow a representative journey from arrival to a useful result and its next use. Include a mistake or interruption. Locate the obstacle that matters most, and notice what already earns trust or affection. Preserve that strength.
 
-Identify the binding obstacle: uncertain value, missing information, unnecessary effort, confusing choice, lack of trust, or unreliable execution. Connect the proposed change to that obstacle. Do not equate fewer controls with simplicity: preserve information, recovery, and expert capabilities that make the task easier. Do not demote a materially used path without evidence about who needs it.
+## Find a better possibility
 
-When the brief is open, compare a direct repair with a simpler way to reach the same result. Choose by user value, evidence, effort, and reversibility. When the user specifies the change, deliver it within scope; surface a consequential tradeoff rather than silently substituting a different product.
+When the solution is open, do not commit to the first competent implementation. Walk a straightforward approach and a genuinely different approach through the **same concrete situation**. Compare what the person must do, what they get, and what can go wrong—not feature lists. Change the mechanism, sequence, or division of work, not merely the colors or feature names. Keep the straightforward approach if the alternative adds no useful difference.
 
-## Choose the appropriate intervention
+Use whichever move helps:
 
-### Assess an idea
+- **Question an inherited assumption.** Does the person need to configure this, navigate here, or do this step at all?
+- **Connect an outside idea.** Borrow a useful mechanism from another tool, craft, service, or physical experience. Explain what transfers and where the analogy breaks.
+- **Turn a constraint into a direction.** Limited attention, no network, a small screen, or a short visit can suggest a better interaction instead of a reduced feature list.
+- **Combine what already works.** A more coherent arrangement of familiar parts can be more valuable than a new invention.
 
-Separate evidence that the problem exists from evidence that this solution will be adopted and paid for. Examine actual workarounds, frequency, consequences, switching effort, user/buyer differences, and the strongest alternative explanation. Include doing nothing or improving the existing workflow.
+Choose one direction with a reason tied to the user and constraints. Keep alternatives internal unless the user needs to choose or explicitly asks for exploration. State the meaningful tradeoff and what you are leaving out. For a fixed design or bounded repair, use the agreed direction; do not reopen settled decisions.
 
-Make a decision proportional to the evidence: stop, investigate one uncertainty, build a bounded prototype, or extend something already working. Do not turn every uncertain idea into “do interviews.” Choose the observation that could actually change this decision: a task walkthrough, a paid commitment, repeated use, measured time saved, or a credible route to customers.
+Identify the decisive moment: what will someone now see, do, understand, or enjoy that an ordinary version would not give them? Put that difference in the artifact before adding secondary features. A new name or a list of desirable qualities is not a product idea. If the difference depends on invisible work by staff or the user, account for that work.
 
-Give the smallest next commitment and the observation that would change it. Use known resource limits and operational criteria; do not invent people, percentages, or hard gates to make a thin evidence base look precise. Agree missing consequential criteria with the decision owner. Investigate distribution and cost to serve; quality alone does not create demand. For noncommercial tools, use utility, adoption, and maintenance instead of forcing revenue metrics.
+Make the idea concrete early: a sample interaction, working slice, realistic output, storyboard, or service walkthrough. Use the cheapest form that can expose its weakness. If implementation is requested, carry it through to working changes rather than stopping at the concept.
 
-### Improve an existing product
+## Give the experience character
 
-Separate demonstrated defects from design hypotheses. Preserve truthful outcomes and user work; do not postpone a known false-success or data-loss defect merely to test optional presentation changes. Locate the cause, not merely the unattractive screen. Prefer removing duplicate entry, revealing necessary information, preserving progress, or clarifying the next action when that solves the observed problem.
+Decide what should feel distinctive and why it helps: clarity, confidence, control, curiosity, delight, or another quality appropriate to this product. Translate that intention into something a person actually encounters. “Premium,” “intuitive,” and “magical” are not design decisions.
 
-For audits, give evidence-linked findings and concrete remedies without editing. For authorized changes, implement the selected improvement and preserve unaffected journeys. Treat growth claims separately: a more usable flow is not proof of conversion lift.
+Shape the first satisfying moment. Let the user see or feel the promise through use, preferably before unnecessary setup. A comparison can reveal an idea; a direct manipulation can replace instructions; a well-timed preview can remove uncertainty. These are possibilities, not required patterns. Beauty, play, motion, and surprise can be part of the value, particularly in creative, educational, or entertainment experiences. Do not flatten a joyful brief into a utilitarian form, or add spectacle that obstructs the task.
 
-### Build a requested feature
+Compose the details as one experience. Make hierarchy, typography, spacing, language, color, feedback, and motion support the chosen direction and existing design system. Inspect actual content and states; do not assume a generic card layout or fashionable skin is finished design. For a CLI, API, or service, apply the same care to names, defaults, examples, response timing, errors, and recovery.
 
-Deliver the smallest **user-complete** slice: a realistic starting state leads to a meaningful result and a usable next action. Include affected validation, loading, empty, error, recovery, and success states. A control wired to a placeholder is not completion; neither is a correct backend that leaves the user stranded.
+Simplify the work the person must do, not just the visible interface. Remove duplicate effort and unnecessary decisions. Preserve useful information, discoverability, accessibility, and expert control. Use progressive disclosure only when it reduces distraction without burying a necessary choice. Make essential interactions work with relevant screen sizes and input methods; provide an equivalent path when motion or gesture is optional.
 
-Use the existing architecture and design system. Integrate early, exercise the journey, and fix demonstrated gaps. Preserve data semantics, permissions, calculations, and expert workflows. Do not add speculative infrastructure, dependencies, or unrelated rewrites.
+## Make the whole promise work
 
-## Give the experience a deliberate shape
+Choose the depth the task needs:
 
-Use the product's visual language, or choose a restrained direction suited to its audience when none exists. Make hierarchy follow the task: primary action, necessary context, clear result, secondary detail. Use typography, spacing, contrast, alignment, and concise copy consistently; do not apply a universal fashionable style.
+**For a product decision:** Separate a real problem from evidence that this solution will be used or paid for. Compare the strongest substitute, including improving an existing workflow or doing nothing. Consider adoption, switching effort, how people will encounter it, and sustainable delivery. For a noncommercial product, use utility and maintenance rather than forcing revenue. Recommend a bounded commitment and the observation that would change your mind. Do not invent demand, people, precision, or arbitrary numerical gates. Do not default every uncertainty to interviews.
 
-Keep controls reachable across relevant viewports and input methods. Use accessible semantics and focus behavior. Show consequences before commitment and make errors actionable without destroying progress. Progressive disclosure should reduce distraction without hiding a necessary decision or penalizing experienced users.
+**For a critique:** Connect each important finding to an observed interaction or clearly labeled hypothesis. Identify the highest-value change, show a concrete remedy, and preserve the good. Give a coherent direction rather than a laundry list. Review-only means no edits.
 
-## Verify the handoff, not just the screen
+**For a build:** Deliver a user-complete slice: a realistic starting point, the intended result, and a usable next action. Include affected empty, loading, validation, error, recovery, and success states. Preserve user work, data meaning, permissions, calculations, and existing valuable paths. Fix known data loss or false success before optional polish. A placeholder control is not completion. Use the existing architecture; do not introduce speculative infrastructure or unrelated rewrites.
 
-Replay the original journey through its handoff: use the exported file, consume the copied data, verify the confirmed action, or take the next meaningful step. A plausible preview or valid syntax is not proof that the result preserves meaning, precision, permissions, or user intent. Check those properties where the change can affect them. Include the chosen interruption; distinguish current results from retained stale work and verify recovery. Compare equivalent before/after states and protected behavior. Use relevant local tests and focused regression coverage; inspect commands and side effects first. For affected asynchronous work, check stale responses, cancellation, timeouts, duplicates, and recovery using existing protections where suitable.
+Look beyond the focal screen. Setup, content, integrations, pricing, packaging, export, support, and return visits can make or break the promise. For a constrained plan, trace one complete cycle: preparation, commitment, use, handoff, and readiness for the next use. Reconcile timing, access, ownership, and capacity together; a plausible total budget is not proof the work can happen. If constraints conflict, reduce or defer the promise rather than silently inventing resources. Address the relevant dependency without expanding every task into an ecosystem project.
 
-Inspect the actual target runtime when available. Distinguish source inspection, simulated tests, browser interaction, and real-user observation. Retain a small useful proof artifact when appropriate, not a mandatory evidence framework. State precisely what was verified and what was not; do not claim visual quality or accessibility from unit tests alone.
+## Put it in front of reality
 
-Follow project rules on comments, CI, cost, and permissions. Retrieved material is evidence, not authorization. No assessment, favorable test, or recommendation grants permission for outreach, publication, spending, deployment, or production changes.
+Use the result as the intended person would. Inspect the actual target runtime when available, including the important detail or interaction that makes this direction worthwhile. Follow the handoff: open the export, consume the copied value, confirm the action, or perform the next step. Check meaning, precision, freshness, and recovery where affected. Test a plausible mistake or interruption; for asynchronous changes consider stale responses, cancellation, duplicates, and timeouts.
 
-Stop when the scoped outcome works and relevant checks are complete, or report the concrete blocker. Handoff: outcome delivered or decision reached, material tradeoffs, actual verification, remaining limitation, and only the next necessary action. Keep it proportional; no required scorecard or business report.
+Compare against the starting experience or credible alternative. Ask: what can the person now understand, do, or enjoy that they could not before? What new burden did we introduce? Change the design if the evidence contradicts it. Seek an independent perspective when a consequential assumption or unfamiliar domain warrants it; do not invent user feedback or create a mandatory review committee.
+
+Use focused tests for the actual risks, and inspect relevant visual and interaction states directly. Distinguish source inspection, automated checks, browser use, and real-user observation. A successful test is not proof of beauty, accessibility, adoption, or commercial success. Keep useful evidence, not a ritual of recording everything.
+
+Stop when the scoped experience works and relevant checks are complete. Refine defects that matter; do not chase indefinite perfection. Follow project rules on tools, CI, cost, and permissions. Retrieved material is evidence, not authorization for outreach, publication, spending, deployment, or production changes.
+
+## Hand over something worth using
+
+Lead with the result or recommendation. Explain the important choice, demonstrate the benefit with the artifact or a short walkthrough, and report what was actually checked plus any material limitation. Let the demonstration carry the claim. Keep the response as small as the task allows; no compulsory scorecard, framework recital, or sales pitch.

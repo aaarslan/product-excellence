@@ -1,0 +1,24 @@
+{
+  "recorded_at_utc": "2026-11-18T15:33:25.203841+00:00",
+  "case_author_blind": true,
+  "status": "Candidate frozen, task author working; no tasks or outputs inspected yet.",
+  "arms": [
+    "none",
+    "current at 969eb34",
+    "candidate v2"
+  ],
+  "cases": "Two new tasks authored independently: an open experience build and a constrained product/service decision. No prior tasks/candidate/results given to designer.",
+  "executions": "One fresh run per arm per case; same brief, tool availability, word/time limits and inherited model settings.",
+  "review": "Anonymous outputs reviewed with independently frozen rubric before identity reveal. Coordinator verifies decisive observations.",
+  "release_gate": "Unchanged from round 1: useful material gains over committed skill in more than one task type without unresolved severe regression. If evidence is insufficient, say so rather than declare success.",
+  "stopping_rule": "Complete this additional round and assess it with all retained first-round results. Do not silently replace cases, reroll outputs, or change criteria to obtain a win. Any further correctness repair requires explicitly separate evidence, not attribution of old results to changed instructions.",
+  "limits": [
+    "Development extension chosen after weak first-round results",
+    "Selected synthetic cases",
+    "One run per arm/case",
+    "Language-model judges",
+    "No pinned backend/seed/token/cost data",
+    "Instructional file separation rather than security sandbox",
+    "Browser/layout/native keyboard/real-user behavior unavailable"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "story-break": {
+    "A": "r02",
+    "B": "r03",
+    "C": "r01"
+  },
+  "lending-cupboard": {
+    "A": "r06",
+    "B": "r04",
+    "C": "r05"
+  },
+  "worktree-command": {
+    "A": "r07",
+    "B": "r09",
+    "C": "r08"
+  }
+}

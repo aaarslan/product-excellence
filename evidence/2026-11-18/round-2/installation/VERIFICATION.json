@@ -1,0 +1,35 @@
+{
+  "cli": "skills 1.9.0",
+  "method": "Local repository source, project installation in a disposable directory; two agent selections; copied files; telemetry disabled. No global or user skill directory was used.",
+  "checks": [
+    {
+      "host": "codex",
+      "project_destination": ".agents/skills/product-excellence",
+      "installed_files": [
+        "LICENSE",
+        "SKILL.md",
+        "agents/openai.yaml"
+      ],
+      "exact_bytes": true,
+      "skill_sha256": "2f4c82f12a73765b23f4eecdd2bd1df2cb1a0c17af5f579e75ebf8a3156d89bd"
+    },
+    {
+      "host": "claude-code",
+      "project_destination": ".claude/skills/product-excellence",
+      "installed_files": [
+        "LICENSE",
+        "SKILL.md",
+        "agents/openai.yaml"
+      ],
+      "exact_bytes": true,
+      "skill_sha256": "2f4c82f12a73765b23f4eecdd2bd1df2cb1a0c17af5f579e75ebf8a3156d89bd"
+    }
+  ],
+  "limits": "Validates CLI packaging and exact project paths, not actual host discovery, implicit triggering, or product performance.",
+  "declared_node_engine": {
+    "requirement": ">=22.20.0",
+    "source": "npm registry metadata: npm view skills@1.9.0 engines --json",
+    "observed_at": "2026-11-18",
+    "not_a_test_of_every_supported_node_version": true
+  }
+}

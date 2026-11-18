@@ -1,0 +1,9 @@
+{
+  "frozen_at_utc": "2026-11-18T15:27:44.992944+00:00",
+  "candidate_words": 1470,
+  "candidate_sha256": "2f4c82f12a73765b23f4eecdd2bd1df2cb1a0c17af5f579e75ebf8a3156d89bd",
+  "previous_candidate_sha256": "9fbf261cc43e91b68aad02828b9958f6d982f24be95234985341e8c962d067e6",
+  "reason_for_revision": "First-round implementations mostly converged. The candidate had an unresolved physical-preparation access assumption in the service case. Make mechanism comparison concrete and account for real sequence/access/capacity, not just a budget. No new cases or outputs have been seen.",
+  "unchanged_release_gate": "Useful material improvements over the committed skill in more than one type of task, with no unresolved severe regression. Qualitative development decision, not statistical superiority.",
+  "next_cases": "Independent author to create two fresh, less prescriptive tasks: open experience build and constrained product/service decision. All three arms retained; no replacement or deletion of first-round results."
+}
