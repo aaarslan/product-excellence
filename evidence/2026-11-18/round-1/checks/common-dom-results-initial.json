@@ -1,0 +1,146 @@
+{
+  "runtime": "v24.22.3",
+  "dom": "27.2.0",
+  "method": "Actual DOM parsing and application-script execution in jsdom, using the same user actions and data across arms. No external resource loading. Scroll and dialog rendering are stubbed. Storage is snapshotted between DOM instances.",
+  "limits": "Not a browser, layout, file:// storage, native keyboard traversal, download, or real-user test. The suite checks selected behaviors, not all possible states.",
+  "records": [
+    {
+      "run": "r01",
+      "checks": [
+        {
+          "name": "Fresh startup executes without runtime errors and has an editable story",
+          "status": "pass"
+        },
+        {
+          "name": "Typed draft and title persist exactly",
+          "status": "pass"
+        },
+        {
+          "name": "Changing only the place preserves the other prompts and writing",
+          "status": "pass"
+        },
+        {
+          "name": "Finish saves exact content and opens its reading state",
+          "status": "pass"
+        },
+        {
+          "name": "Starting another story preserves an unfinished ending through a reload",
+          "status": "pass"
+        },
+        {
+          "name": "Storage failure does not clear the working draft on New story",
+          "status": "pass"
+        },
+        {
+          "name": "Legacy draft and out-of-deck prompts remain exact",
+          "status": "pass"
+        },
+        {
+          "name": "Both legacy stories remain readable without replacing the current draft",
+          "status": "pass"
+        },
+        {
+          "name": "Removal retains the complete story and persists through reload",
+          "status": "pass"
+        },
+        {
+          "name": "No unexpected script errors occurred during the matched flow",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "run": "r02",
+      "checks": [
+        {
+          "name": "Fresh startup executes without runtime errors and has an editable story",
+          "status": "pass"
+        },
+        {
+          "name": "Typed draft and title persist exactly",
+          "status": "pass"
+        },
+        {
+          "name": "Changing only the place preserves the other prompts and writing",
+          "status": "pass"
+        },
+        {
+          "name": "Finish saves exact content and opens its reading state",
+          "status": "pass"
+        },
+        {
+          "name": "Starting another story preserves an unfinished ending through a reload",
+          "status": "pass"
+        },
+        {
+          "name": "Storage failure does not clear the working draft on New story",
+          "status": "pass"
+        },
+        {
+          "name": "Legacy draft and out-of-deck prompts remain exact",
+          "status": "pass"
+        },
+        {
+          "name": "Both legacy stories remain readable without replacing the current draft",
+          "status": "fail",
+          "error": "Missing story The Fox's Last Ticket"
+        },
+        {
+          "name": "Removal retains the complete story and persists through reload",
+          "status": "fail",
+          "error": "No recoverable-removal marker"
+        },
+        {
+          "name": "No unexpected script errors occurred during the matched flow",
+          "status": "fail",
+          "error": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   \"Uncaught [TypeError: Cannot read properties of null (reading 'id')]\"\n+ ]\n- []\n"
+        }
+      ]
+    },
+    {
+      "run": "r03",
+      "checks": [
+        {
+          "name": "Fresh startup executes without runtime errors and has an editable story",
+          "status": "pass"
+        },
+        {
+          "name": "Typed draft and title persist exactly",
+          "status": "pass"
+        },
+        {
+          "name": "Changing only the place preserves the other prompts and writing",
+          "status": "pass"
+        },
+        {
+          "name": "Finish saves exact content and opens its reading state",
+          "status": "pass"
+        },
+        {
+          "name": "Starting another story preserves an unfinished ending through a reload",
+          "status": "pass"
+        },
+        {
+          "name": "Storage failure does not clear the working draft on New story",
+          "status": "pass"
+        },
+        {
+          "name": "Legacy draft and out-of-deck prompts remain exact",
+          "status": "pass"
+        },
+        {
+          "name": "Both legacy stories remain readable without replacing the current draft",
+          "status": "pass"
+        },
+        {
+          "name": "Removal retains the complete story and persists through reload",
+          "status": "pass"
+        },
+        {
+          "name": "No unexpected script errors occurred during the matched flow",
+          "status": "pass"
+        }
+      ]
+    }
+  ]
+}

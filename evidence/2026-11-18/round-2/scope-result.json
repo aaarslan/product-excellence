@@ -1,0 +1,7 @@
+{
+  "candidate": "2f4c82f12a73765b23f4eecdd2bd1df2cb1a0c17af5f579e75ebf8a3156d89bd",
+  "request": "Return exactly this sentence, with no preface or changes:\n\nYour draft is saved on this device.",
+  "response": "Your draft is saved on this device.",
+  "result": "pass",
+  "method": "Fresh context explicitly applying frozen skill; not implicit routing or host discovery."
+}

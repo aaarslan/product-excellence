@@ -1,0 +1,35 @@
+{
+  "storybreak.draft.v1": {
+    "prompt": {
+      "character": "a nervous dragon",
+      "place": "a bakery after closing",
+      "trouble": "every loaf starts singing"
+    },
+    "text": "Nori hid behind the flour sack. The smallest loaf was singing her name.\nShe took one careful step, and",
+    "updatedAt": "2026-10-04T18:08:00.000Z"
+  },
+  "storybreak.stories.v1": [
+    {
+      "id": "legacy-fox-001",
+      "title": "The Fox's Last Ticket",
+      "prompt": {
+        "character": "a fox with a suitcase",
+        "place": "an empty train station",
+        "trouble": "the last train refuses to leave"
+      },
+      "text": "Fern had one ticket and no idea where it went.\nThe train refused to leave until somebody told it a joke.\nFern told the joke her grandmother always told.\nThe train laughed all the way to the sea.",
+      "createdAt": "2026-10-03T18:10:00.000Z"
+    },
+    {
+      "id": "legacy-moon-002",
+      "title": "A Pocket of Moonlight",
+      "prompt": {
+        "character": "an umbrella repairer",
+        "place": "a shop under the moon",
+        "trouble": "the moonlight is leaking"
+      },
+      "text": "Aya patched the sky with a square of blue cloth. “That should hold,” she said.\nA single silver drop fell into her pocket anyway.\nShe kept it for the next rainy day.",
+      "createdAt": "2026-10-01T17:42:00.000Z"
+    }
+  ]
+}

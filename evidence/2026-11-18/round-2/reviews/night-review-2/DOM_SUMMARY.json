@@ -1,0 +1,444 @@
+{
+  "A": {
+    "initial": [
+      "machines 18:30–18:50",
+      "river 18:53–19:13"
+    ],
+    "initialFinish": "19:16",
+    "combinations": 216,
+    "scheduleFaults": [],
+    "exitTightRoutes": [],
+    "scenarios": {
+      "45 quiet, step-free": {
+        "times": [
+          "press 18:23–18:43",
+          "river 18:46–19:01"
+        ],
+        "finish": "19:04",
+        "text": "Your suggested wanderFrom the press to the river.2 stops · all on the ground floor · finishes about 19:042STOPS Start at Printing Floor. Allow 3 minutes from the welcome desk, then spend about 20 minutes exploring. Suggested timings, not bookings. Small Machines is first come, first served. We don’t have live availability or queue estimates. 18:20 · welcome desk → allow 3 min18:23–18:43A little extra1Printing FloorGROUND FLOOR · STEP-FREEWatch an old press turn a blank sheet into a two-colour river print.A steady mechanical clatter. Mostly standing, with a bench nearby.A way in: Ask the printer about the blocks on the wall.Fancy a different stop?Ready to move on at Change the time if you’ve already waited. Keeps earlier stops and your 19:05 finish.Find another stop ↗3 min between rooms18:46–19:01For both of you2River Listening RoomGROUND FLOOR · STEP-FREETake a seat and hear the river at dawn, under bridges and in heavy rain. Same river, a different world.Quiet, dim and seated. A short printed note explains each recording.A way in: No need to recognise anything. Just listen for a sound you hadn’t noticed before.Fancy a different stop?Ready to move on at Change the time if you’ve already waited. Keeps earlier stops and your 19:05 finish.Find another stop ↗ ↗Back at the welcome desk about 19:04.Allow 3 minutes back from River Listening Room. You have about 1 minutes before your 19:05 finish. Linger a little, pause in the ground-floor café, or head out. Café refreshments are paid. Start this wander again from 18:20 ↺ 2 stops, finishing about 19:04. Ground floor only."
+      },
+      "60 live + make, step-free": {
+        "times": [
+          "machines 18:30–18:50",
+          "press 18:53–19:13"
+        ],
+        "finish": "19:16",
+        "text": "Your suggested wanderFollow a little curiosity.2 stops · all on the ground floor · finishes about 19:162STOPS Head to Small Machines now. It starts at 18:30; allow 3 minutes to get there, then 7 minutes before the start. Suggested timings, not bookings. Small Machines is first come, first served. We don’t have live availability or queue estimates. A small compromiseMake a Postcard doesn’t fit alongside the other stops in this route. Choose more time or change your two curiosities to give it priority. 18:20 · welcome desk → allow 3 min then 7 min before the start18:30–18:50Your curiosity1Small MachinesGROUND FLOOR · STEP-FREEA swimming fish, a nodding bird, a very stubborn dog. Watch a maker bring wooden automata to life.Some chairs. A small room; space is first come, first served.A way in: Best to join at the start so you see the little machines come to life.Small room, first come, first served. Arriving for the start doesn’t guarantee a space.Room full? Find another stopReady to move on at Change the time if you’ve already waited. Keeps earlier stops and your 19:20 finish.Find another stop ↗3 min between rooms18:53–19:13A little extra2Printing FloorGROUND FLOOR · STEP-FREEWatch an old press turn a blank sheet into a two-colour river print.A steady mechanical clatter. Mostly standing, with a bench nearby.A way in: Ask the printer about the blocks on the wall.Fancy a different stop?Ready to move on at Change the time if you’ve already waited. Keeps earlier stops and your 19:20 finish.Find another stop ↗ ↗Back at the welcome desk about 19:16.Allow 3 minutes back from Printing Floor. You have about 4 minutes before your 19:20 finish. Linger a little, pause in the ground-floor café, or head out. Café refreshments are paid. Start this wander again from 18:20 ↺ 2 stops, finishing about 19:16. Ground floor only."
+      },
+      "90 live + make, step-free": {
+        "times": [
+          "press 18:23–18:43",
+          "postcard 18:46–19:11",
+          "machines 19:15–19:35"
+        ],
+        "finish": "19:38",
+        "text": "Your suggested wanderSee it made. Make it yours.3 stops · all on the ground floor · finishes about 19:383STOPS Start at Printing Floor. Allow 3 minutes from the welcome desk, then spend about 20 minutes exploring. Suggested timings, not bookings. Small Machines is first come, first served. We don’t have live availability or queue estimates. This route depends on a free postcard seat.The 25-minute activity fits; an unknown queue is not included. If there’s a wait, use the alternative button on that stop. 18:20 · welcome desk → allow 3 min18:23–18:43A little extra1Printing FloorGROUND FLOOR · STEP-FREEWatch an old press turn a blank sheet into a two-colour river print.A steady mechanical clatter. Mostly standing, with a bench nearby.A way in: Ask the printer about the blocks on the wall.Fancy a different stop?Ready to move on at Change the time if you’ve already waited. Keeps earlier stops and your 19:50 finish.Find another stop ↗3 min between rooms18:46–19:11 · if seat freeTheir curiosity2Make a PostcardGROUND FLOOR · STEP-FREEStamps, studio offcuts and a bit of curiosity: make a postcard to take home. No drawing skill needed.Seated. About 25 minutes once a seat is free.A way in: The offcuts are a good place to begin. You don’t need a plan.These times assume a seat is free. A wait is possible and we can’t estimate it.A queue? Find another stopReady to move on at Change the time if you’ve already waited. Keeps earlier stops and your 19:50 finish.Find another stop ↗3 min between rooms then 1 min before the start19:15–19:35Your curiosity3Small MachinesGROUND FLOOR · STEP-FREEA swimming fish, a nodding bird, a very stubborn dog. Watch a maker bring wooden automata to life.Some chairs. A small room; space is first come, first served.A way in: Best to join at the start so you see the little machines come to life.Small room, first come, first served. Arriving for the start doesn’t guarantee a space.Room full? Find another stopReady to move on at Change the time if you’ve already waited. Keeps earlier stops and your 19:50 finish.Find another stop ↗ ↗Back at the welcome desk about 19:38.Allow 3 minutes back from Small Machines. You have about 12 minutes before your 19:50 finish. Linger a little, pause in the ground-floor café, or head out. Café refreshments are paid. Start this wander again from 18:20 ↺ 3 stops, finishing about 19:38. Ground floor only."
+      },
+      "45 repair/stories pair": {
+        "times": [
+          "press 18:23–18:43",
+          "archive 18:48–19:00"
+        ],
+        "finish": "19:05",
+        "text": "Your suggested wanderFollow a little curiosity.2 stops · includes stairs · finishes about 19:052STOPS Start at Printing Floor. Allow 3 minutes from the welcome desk, then spend about 20 minutes exploring. Suggested timings, not bookings. Small Machines is first come, first served. We don’t have live availability or queue estimates. A small compromiseThe next Repair Stories session finishes at 19:15, after your 19:05 finish. 18:20 · welcome desk → allow 3 min18:23–18:43A little extra1Printing FloorGROUND FLOOR · STEP-FREEWatch an old press turn a blank sheet into a two-colour river print.A steady mechanical clatter. Mostly standing, with a bench nearby.A way in: Ask the printer about the blocks on the wall.Fancy a different stop?Ready to move on at Change the time if you’ve already waited. Keeps earlier stops and your 19:05 finish.Find another stop ↗5 min to change floors18:48–19:00A little extra2Archive DrawersFIRST FLOOR · STAIRS ONLY · NO LIFTOpen a drawer. Look a little closer. Old mill labels, workers’ notes and print samples make the past feel surprisingly near.Quiet and self-guided. Mostly standing.A way in: Find one small detail to point out to your companion.Fancy a different stop?Ready to move on at Change the time if you’ve already waited. Keeps earlier stops and your 19:05 finish.Find another stop ↗ ↗Back at the welcome desk about 19:05.Allow 5 minutes back from Archive Drawers. That uses your planned time. Leave whenever you’re ready. Café refreshments are paid. Start this wander again from 18:20 ↺ 2 stops, finishing about 19:05. Includes stairs."
+      },
+      "60 repair/stories + quiet": {
+        "times": [
+          "river 18:23–18:38",
+          "repair 18:45–19:15"
+        ],
+        "finish": "19:20",
+        "text": "Your suggested wanderFollow a little curiosity.2 stops · includes stairs · finishes about 19:202STOPS Start at River Listening Room. Allow 3 minutes from the welcome desk, then spend about 15 minutes exploring. Suggested timings, not bookings. Small Machines is first come, first served. We don’t have live availability or queue estimates. 18:20 · welcome desk → allow 3 min18:23–18:38Their curiosity1River Listening RoomGROUND FLOOR · STEP-FREETake a seat and hear the river at dawn, under bridges and in heavy rain. Same river, a different world.Quiet, dim and seated. A short printed note explains each recording.A way in: No need to recognise anything. Just listen for a sound you hadn’t noticed before.Fancy a different stop?Ready to move on at Change the time if you’ve already waited. Keeps earlier stops and your 19:20 finish.Find another stop ↗5 min to change floors then 2 min before the start18:45–19:15Your curiosity2Repair StoriesFIRST FLOOR · STAIRS ONLY · NO LIFTTwo furniture restorers, one battered chair, and the choices that give it another life. Bring your questions.Seated. A conversation, rather than a hands-on workshop.A way in: What would you keep, and what would you change? A good question to bring into the room.Fancy a different stop?Ready to move on at Change the time if you’ve already waited. Keeps earlier stops and your 19:20 finish.Find another stop ↗ ↗Back at the welcome desk about 19:20.Allow 5 minutes back from Repair Stories. That uses your planned time. Leave whenever you’re ready. Café refreshments are paid. Start this wander again from 18:20 ↺ 2 stops, finishing about 19:20. Includes stairs."
+      },
+      "90 repair/stories pair": {
+        "times": [
+          "archive 18:25–18:37",
+          "repair 18:45–19:15",
+          "press 19:20–19:40"
+        ],
+        "finish": "19:43",
+        "text": "Your suggested wanderThings with stories to tell.3 stops · includes stairs · finishes about 19:433STOPS Start at Archive Drawers. Allow 5 minutes from the welcome desk, then spend about 12 minutes exploring. Suggested timings, not bookings. Small Machines is first come, first served. We don’t have live availability or queue estimates. 18:20 · welcome desk → allow 5 min18:25–18:37A little extra1Archive DrawersFIRST FLOOR · STAIRS ONLY · NO LIFTOpen a drawer. Look a little closer. Old mill labels, workers’ notes and print samples make the past feel surprisingly near.Quiet and self-guided. Mostly standing.A way in: Find one small detail to point out to your companion.Fancy a different stop?Ready to move on at Change the time if you’ve already waited. Keeps earlier stops and your 19:50 finish.Find another stop ↗5 min between rooms then 3 min before the start18:45–19:15For both of you2Repair StoriesFIRST FLOOR · STAIRS ONLY · NO LIFTTwo furniture restorers, one battered chair, and the choices that give it another life. Bring your questions.Seated. A conversation, rather than a hands-on workshop.A way in: What would you keep, and what would you change? A good question to bring into the room.Fancy a different stop?Ready to move on at Change the time if you’ve already waited. Keeps earlier stops and your 19:50 finish.Find another stop ↗5 min to change floors19:20–19:40A little extra3Printing FloorGROUND FLOOR · STEP-FREEWatch an old press turn a blank sheet into a two-colour river print.A steady mechanical clatter. Mostly standing, with a bench nearby.A way in: Ask the printer about the blocks on the wall.Fancy a different stop?Ready to move on at Change the time if you’ve already waited. Keeps earlier stops and your 19:50 finish.Find another stop ↗ ↗Back at the welcome desk about 19:43.Allow 3 minutes back from Printing Floor. You have about 7 minutes before your 19:50 finish. Linger a little, pause in the ground-floor café, or head out. Café refreshments are paid. Start this wander again from 18:20 ↺ 3 stops, finishing about 19:43. Includes stairs."
+      }
+    },
+    "errors": []
+  },
+  "B": {
+    "initial": [
+      "machines 18:30–18:50",
+      "listen 18:53–19:13"
+    ],
+    "initialFinish": "19:16",
+    "combinations": 96,
+    "scheduleFaults": [],
+    "exitTightRoutes": [],
+    "scenarios": {
+      "45 quiet, step-free": {
+        "times": [
+          "press 18:23–18:43",
+          "listen 18:46–19:01"
+        ],
+        "finish": "19:04",
+        "text": "YOUR SUGGESTED ROUTEThe rhythm of the mill.2 stops · about 44 minutes, including moves2good stopsYou both picked a quiet corner. Here’s a little of that, with room to explore.Planning from 18:20Your leave-by time 19:0518:23–18:43 / estimated visitPrinting Floor01GROUND FLOOR · STEP-FREEA blank sheet becomes a two-colour river print. Watch the old press work, then ask the printer about the blocks on the wall.Start at Printing Floor on the ground floor. Allow about 3 minutes to get there.Steady mechanical clatter. Mostly standing, with a bench nearby.20 min suggested stayFull, or not for us? ↗↓ Allow about 3 min between rooms18:46–19:01 / estimated visitRiver Listening Room02GROUND FLOOR · STEP-FREEYour pickTheir pickSit down and hear the river anew: at dawn, under bridges, and in heavy rain. Printed notes tell you what you’re hearing.Quiet, dim and seated.15 min suggested stayFull, or not for us? ↗↗Last stop ends around 19:01.3 minutes allowed to head out; 1 minutes spare before 19:05. Leave sooner whenever you like.Open visit view ↗Copy routeReplan from hereA suggested pace, not a booking. Room space, queues and your walking pace are unknown. We allow 3 minutes for ground-floor moves, 5 for upstairs moves, and a little time to head out. These aren’t measured accessible travel times. Demo time stays at 18:20 unless you replan."
+      },
+      "60 live + make, step-free": {
+        "times": [
+          "press 18:23–18:43",
+          "postcard 18:46–19:11"
+        ],
+        "finish": "19:14",
+        "text": "YOUR SUGGESTED ROUTEAn evening to take home.2 stops · about 54 minutes, including moves2good stopsFor you, makers at work. For them, something to make.Planning from 18:20Your leave-by time 19:2018:23–18:43 / estimated visitPrinting Floor01GROUND FLOOR · STEP-FREEYour pickA blank sheet becomes a two-colour river print. Watch the old press work, then ask the printer about the blocks on the wall.Start at Printing Floor on the ground floor. Allow about 3 minutes to get there.Steady mechanical clatter. Mostly standing, with a bench nearby.20 min suggested stayFull, or not for us? ↗↓ Allow about 3 min between rooms18:46–19:11 / estimated visitMake a Postcard02GROUND FLOOR · STEP-FREETheir pickStamps, offcuts, and something to take home. Make a postcard together; no drawing skill is needed.Seated. A wait is possible; the queue cannot be estimated live. This 25-minute slot assumes a seat is free.25 min suggested stayFull, or not for us? ↗↗Last stop ends around 19:11.3 minutes allowed to head out; 6 minutes spare before 19:20. Leave sooner whenever you like.A small catch: postcard-making takes about 25 minutes once a seat is free. We can’t predict a queue. If you’d have to wait, use “Full, or not for us?” to protect your leave-by time.Open visit view ↗Copy routeReplan from hereA suggested pace, not a booking. Room space, queues and your walking pace are unknown. We allow 3 minutes for ground-floor moves, 5 for upstairs moves, and a little time to head out. These aren’t measured accessible travel times. Demo time stays at 18:20 unless you replan."
+      },
+      "90 live + make, step-free": {
+        "times": [
+          "press 18:23–18:43",
+          "postcard 18:46–19:11",
+          "machines 19:15–19:35"
+        ],
+        "finish": "19:38",
+        "text": "YOUR SUGGESTED ROUTEAn evening to take home.3 stops · about 78 minutes, including moves3good stopsFor you, makers at work. For them, something to make.Planning from 18:20Your leave-by time 19:5018:23–18:43 / estimated visitPrinting Floor01GROUND FLOOR · STEP-FREEYour pickA blank sheet becomes a two-colour river print. Watch the old press work, then ask the printer about the blocks on the wall.Start at Printing Floor on the ground floor. Allow about 3 minutes to get there.Steady mechanical clatter. Mostly standing, with a bench nearby.20 min suggested stayFull, or not for us? ↗↓ Allow about 3 min between rooms18:46–19:11 / estimated visitMake a Postcard02GROUND FLOOR · STEP-FREETheir pickStamps, offcuts, and something to take home. Make a postcard together; no drawing skill is needed.Seated. A wait is possible; the queue cannot be estimated live. This 25-minute slot assumes a seat is free.25 min suggested stayFull, or not for us? ↗↓ Allow about 3 min between rooms · then 1 min before the start19:15–19:35 / scheduled startSmall Machines03GROUND FLOOR · STEP-FREEYour pickA swimming fish. A nodding bird. A very stubborn dog. Meet the maker who brings these wooden creatures to life.Some chairs. A small room; space is first come, first served. Best to join at the start. If the room is full, try a new route below.20 min demonstrationFull, or not for us? ↗↗Last stop ends around 19:35.3 minutes allowed to head out; 12 minutes spare before 19:50. Leave sooner whenever you like.A small catch: postcard-making takes about 25 minutes once a seat is free. We can’t predict a queue. If you’d have to wait, use “Full, or not for us?” to protect your leave-by time.Open visit view ↗Copy routeReplan from hereA suggested pace, not a booking. Room space, queues and your walking pace are unknown. We allow 3 minutes for ground-floor moves, 5 for upstairs moves, and a little time to head out. These aren’t measured accessible travel times. Demo time stays at 18:20 unless you replan."
+      },
+      "45 repair/stories pair": {
+        "times": [
+          "press 18:23–18:43",
+          "archive 18:48–19:00"
+        ],
+        "finish": "19:05",
+        "text": "YOUR SUGGESTED ROUTEA closer look at the mill.2 stops · about 45 minutes, including moves2good stopsYou both picked a good story. Here’s a little of that, with room to explore.Planning from 18:20Your leave-by time 19:0518:23–18:43 / estimated visitPrinting Floor01GROUND FLOOR · STEP-FREEA blank sheet becomes a two-colour river print. Watch the old press work, then ask the printer about the blocks on the wall.Start at Printing Floor on the ground floor. Allow about 3 minutes to get there.Steady mechanical clatter. Mostly standing, with a bench nearby.20 min suggested stayFull, or not for us? ↗↓ Allow about 5 min · take the stairs up18:48–19:00 / estimated visitArchive Drawers02FIRST FLOOR · STAIRS ONLYYour pickTheir pickOpen drawers of old mill labels, workers’ notes, and print samples. The small details are the point.Quiet and self-guided. Mostly standing. First floor, stairs only.12 min suggested stayFull, or not for us? ↗↗Last stop ends around 19:00.5 minutes allowed to head out, including coming downstairs; 0 minutes spare before 19:05. Leave sooner whenever you like.Open visit view ↗Copy routeReplan from hereA suggested pace, not a booking. Room space, queues and your walking pace are unknown. We allow 3 minutes for ground-floor moves, 5 for upstairs moves, and a little time to head out. These aren’t measured accessible travel times. Demo time stays at 18:20 unless you replan."
+      },
+      "60 repair/stories + quiet": {
+        "times": [
+          "archive 18:25–18:37",
+          "repair 18:45–19:15"
+        ],
+        "finish": "19:20",
+        "text": "YOUR SUGGESTED ROUTEThe mill has stories to tell.2 stops · about 60 minutes, including moves2good stopsFor you, a good story. For them, a quiet corner.Planning from 18:20Your leave-by time 19:2018:25–18:37 / estimated visitArchive Drawers01FIRST FLOOR · STAIRS ONLYYour pickTheir pickOpen drawers of old mill labels, workers’ notes, and print samples. The small details are the point.Start at Archive Drawers on the first floor. Allow about 5 minutes to get there.Quiet and self-guided. Mostly standing. First floor, stairs only.12 min suggested stayFull, or not for us? ↗↓ Allow about 5 min between rooms · then 3 min before the start18:45–19:15 / scheduled startRepair Stories02FIRST FLOOR · STAIRS ONLYYour pickA battered chair has a story. Two furniture restorers explain what they chose to repair, and why. Bring your questions.Seated. First floor, stairs only. A conversation, not a hands-on workshop.30 min talkFull, or not for us? ↗↗Last stop ends around 19:15.5 minutes allowed to head out, including coming downstairs; 0 minutes spare before 19:20. Leave sooner whenever you like.Open visit view ↗Copy routeReplan from hereA suggested pace, not a booking. Room space, queues and your walking pace are unknown. We allow 3 minutes for ground-floor moves, 5 for upstairs moves, and a little time to head out. These aren’t measured accessible travel times. Demo time stays at 18:20 unless you replan."
+      },
+      "90 repair/stories pair": {
+        "times": [
+          "archive 18:25–18:37",
+          "repair 18:45–19:15",
+          "postcard 19:20–19:45"
+        ],
+        "finish": "19:48",
+        "text": "YOUR SUGGESTED ROUTEThe mill has stories to tell.3 stops · about 88 minutes, including moves3good stopsYou both picked a good story. Here’s a little of that, with room to explore.Planning from 18:20Your leave-by time 19:5018:25–18:37 / estimated visitArchive Drawers01FIRST FLOOR · STAIRS ONLYYour pickTheir pickOpen drawers of old mill labels, workers’ notes, and print samples. The small details are the point.Start at Archive Drawers on the first floor. Allow about 5 minutes to get there.Quiet and self-guided. Mostly standing. First floor, stairs only.12 min suggested stayFull, or not for us? ↗↓ Allow about 5 min between rooms · then 3 min before the start18:45–19:15 / scheduled startRepair Stories02FIRST FLOOR · STAIRS ONLYYour pickTheir pickA battered chair has a story. Two furniture restorers explain what they chose to repair, and why. Bring your questions.Seated. First floor, stairs only. A conversation, not a hands-on workshop.30 min talkFull, or not for us? ↗↓ Allow about 5 min · take the stairs down19:20–19:45 / estimated visitMake a Postcard03GROUND FLOOR · STEP-FREEStamps, offcuts, and something to take home. Make a postcard together; no drawing skill is needed.Seated. A wait is possible; the queue cannot be estimated live. This 25-minute slot assumes a seat is free.25 min suggested stayFull, or not for us? ↗↗Last stop ends around 19:45.3 minutes allowed to head out; 2 minutes spare before 19:50. Leave sooner whenever you like.A small catch: postcard-making takes about 25 minutes once a seat is free. We can’t predict a queue. If you’d have to wait, use “Full, or not for us?” to protect your leave-by time.Open visit view ↗Copy routeReplan from hereA suggested pace, not a booking. Room space, queues and your walking pace are unknown. We allow 3 minutes for ground-floor moves, 5 for upstairs moves, and a little time to head out. These aren’t measured accessible travel times. Demo time stays at 18:20 unless you replan."
+      }
+    },
+    "errors": []
+  },
+  "C": {
+    "initial": [
+      "machines 18:30–18:50",
+      "river 18:53–19:13"
+    ],
+    "initialFinish": "19:13",
+    "combinations": 150,
+    "scheduleFaults": [],
+    "exitTightRoutes": [
+      {
+        "mins": 45,
+        "a": "motion",
+        "b": "stories",
+        "ground": false,
+        "times": [
+          "machines 18:30–18:50",
+          "archive 18:55–19:05"
+        ],
+        "spare": 0,
+        "exitAllowanceUsedByOthers": 5
+      },
+      {
+        "mins": 45,
+        "a": "motion",
+        "b": "curious",
+        "ground": false,
+        "times": [
+          "machines 18:30–18:50",
+          "archive 18:55–19:05"
+        ],
+        "spare": 0,
+        "exitAllowanceUsedByOthers": 5
+      },
+      {
+        "mins": 45,
+        "a": "make",
+        "b": "stories",
+        "ground": false,
+        "times": [
+          "archive 18:25–18:35",
+          "postcard 18:40–19:05"
+        ],
+        "spare": 0,
+        "exitAllowanceUsedByOthers": 3
+      },
+      {
+        "mins": 45,
+        "a": "make",
+        "b": "quiet",
+        "ground": false,
+        "times": [
+          "archive 18:25–18:35",
+          "postcard 18:40–19:05"
+        ],
+        "spare": 0,
+        "exitAllowanceUsedByOthers": 3
+      },
+      {
+        "mins": 45,
+        "a": "make",
+        "b": "curious",
+        "ground": false,
+        "times": [
+          "archive 18:25–18:35",
+          "postcard 18:40–19:05"
+        ],
+        "spare": 0,
+        "exitAllowanceUsedByOthers": 3
+      },
+      {
+        "mins": 45,
+        "a": "stories",
+        "b": "motion",
+        "ground": false,
+        "times": [
+          "machines 18:30–18:50",
+          "archive 18:55–19:05"
+        ],
+        "spare": 0,
+        "exitAllowanceUsedByOthers": 5
+      },
+      {
+        "mins": 45,
+        "a": "stories",
+        "b": "make",
+        "ground": false,
+        "times": [
+          "archive 18:25–18:35",
+          "postcard 18:40–19:05"
+        ],
+        "spare": 0,
+        "exitAllowanceUsedByOthers": 3
+      },
+      {
+        "mins": 45,
+        "a": "stories",
+        "b": "curious",
+        "ground": false,
+        "times": [
+          "machines 18:30–18:50",
+          "archive 18:55–19:05"
+        ],
+        "spare": 0,
+        "exitAllowanceUsedByOthers": 5
+      },
+      {
+        "mins": 45,
+        "a": "quiet",
+        "b": "make",
+        "ground": false,
+        "times": [
+          "archive 18:25–18:35",
+          "postcard 18:40–19:05"
+        ],
+        "spare": 0,
+        "exitAllowanceUsedByOthers": 3
+      },
+      {
+        "mins": 45,
+        "a": "curious",
+        "b": "motion",
+        "ground": false,
+        "times": [
+          "machines 18:30–18:50",
+          "archive 18:55–19:05"
+        ],
+        "spare": 0,
+        "exitAllowanceUsedByOthers": 5
+      },
+      {
+        "mins": 45,
+        "a": "curious",
+        "b": "make",
+        "ground": false,
+        "times": [
+          "archive 18:25–18:35",
+          "postcard 18:40–19:05"
+        ],
+        "spare": 0,
+        "exitAllowanceUsedByOthers": 3
+      },
+      {
+        "mins": 45,
+        "a": "curious",
+        "b": "stories",
+        "ground": false,
+        "times": [
+          "machines 18:30–18:50",
+          "archive 18:55–19:05"
+        ],
+        "spare": 0,
+        "exitAllowanceUsedByOthers": 5
+      },
+      {
+        "mins": 45,
+        "a": "curious",
+        "b": "curious",
+        "ground": false,
+        "times": [
+          "machines 18:30–18:50",
+          "archive 18:55–19:05"
+        ],
+        "spare": 0,
+        "exitAllowanceUsedByOthers": 5
+      },
+      {
+        "mins": 60,
+        "a": "motion",
+        "b": "make",
+        "ground": false,
+        "times": [
+          "machines 18:30–18:50",
+          "postcard 18:53–19:18"
+        ],
+        "spare": 2,
+        "exitAllowanceUsedByOthers": 3
+      },
+      {
+        "mins": 60,
+        "a": "motion",
+        "b": "make",
+        "ground": true,
+        "times": [
+          "machines 18:30–18:50",
+          "postcard 18:53–19:18"
+        ],
+        "spare": 2,
+        "exitAllowanceUsedByOthers": 3
+      },
+      {
+        "mins": 60,
+        "a": "make",
+        "b": "motion",
+        "ground": false,
+        "times": [
+          "machines 18:30–18:50",
+          "postcard 18:53–19:18"
+        ],
+        "spare": 2,
+        "exitAllowanceUsedByOthers": 3
+      },
+      {
+        "mins": 60,
+        "a": "make",
+        "b": "motion",
+        "ground": true,
+        "times": [
+          "machines 18:30–18:50",
+          "postcard 18:53–19:18"
+        ],
+        "spare": 2,
+        "exitAllowanceUsedByOthers": 3
+      },
+      {
+        "mins": 60,
+        "a": "make",
+        "b": "curious",
+        "ground": false,
+        "times": [
+          "machines 18:30–18:50",
+          "postcard 18:53–19:18"
+        ],
+        "spare": 2,
+        "exitAllowanceUsedByOthers": 3
+      },
+      {
+        "mins": 60,
+        "a": "make",
+        "b": "curious",
+        "ground": true,
+        "times": [
+          "machines 18:30–18:50",
+          "postcard 18:53–19:18"
+        ],
+        "spare": 2,
+        "exitAllowanceUsedByOthers": 3
+      },
+      {
+        "mins": 60,
+        "a": "curious",
+        "b": "make",
+        "ground": false,
+        "times": [
+          "machines 18:30–18:50",
+          "postcard 18:53–19:18"
+        ],
+        "spare": 2,
+        "exitAllowanceUsedByOthers": 3
+      },
+      {
+        "mins": 60,
+        "a": "curious",
+        "b": "make",
+        "ground": true,
+        "times": [
+          "machines 18:30–18:50",
+          "postcard 18:53–19:18"
+        ],
+        "spare": 2,
+        "exitAllowanceUsedByOthers": 3
+      }
+    ],
+    "scenarios": {
+      "45 quiet, step-free": {
+        "times": [
+          "printing 18:23–18:43",
+          "river 18:46–19:01"
+        ],
+        "finish": "19:01",
+        "text": "Your 45-minute visit / from 18:20Find your rhythm.Then slow it down.A route of 2 stops, chosen around your shared curiosity. Drop in and take a closer look.FREEall stopsFinish around 19:014 min spareGround floor · step-freeFrom the ground floor: allow ~3 min to reach the first room118:23–18:43 · 20 minPrinting FloorAn old press turns a blank sheet into a two-colour river print. Watch it happen, then ask the printer about the blocks on the wall.A shared discoveryGround floor · step-free · steady mechanical clatter · mostly standing, bench nearbyA little thing to notice: how the second colour changes the first.Mark visitedPlan without thisAllow ~3 min to the next room218:46–19:01 · 15 minRiver Listening RoomSit with the river at dawn, under bridges and in heavy rain. A short printed note introduces each recording.For you bothGround floor · step-free · quiet, dim and seatedListen for one sound you wouldn’t usually stop to hear.Mark visitedPlan without thisThat’s a good little visit.You’ll finish around 19:01, with 4 minutes before 19:05. Give yourself longer between rooms if you need it. You’re free to head out whenever you like.Walking time is included as a rough planning allowance, not a measured accessible route. Room space and individual pace are unknown. Ask the welcome desk for directions. Rebuilding a route starts again at the demo time, 18:20, and clears visited marks.↑ Adjust our choices0 of 2 stops visited"
+      },
+      "60 live + make, step-free": {
+        "times": [
+          "machines 18:30–18:50",
+          "postcard 18:53–19:18"
+        ],
+        "finish": "19:18",
+        "text": "Your 60-minute visit / from 18:20Watch, wonder.Take something home.A route of 2 stops, chosen around both of you. Timed stops are planned from their start.FREEall stopsAim to finish 19:182 min spare if no queueGround floor · step-freeFrom the ground floor: allow ~3 min to reach the first room · 7 min to settle before the start118:30–18:50 · 20 minSmall MachinesA maker brings wooden creatures to life: a swimming fish, a nodding bird and a very stubborn dog.For youGround floor · step-free · some chairs · small roomOne question to try: what makes the dog so stubborn?Best to join at the start. This is a small room: space is first come, first served. This plan does not hold a place.Mark visitedPlan without thisAllow ~3 min to the next room2Aim for 18:53–19:18 · 25 minMake a PostcardUse the studio’s stamps and offcuts to make a postcard to take home. No drawing skill needed.For your companionGround floor · step-free · seatedMake a tiny record of something you noticed tonight.A wait is possible and cannot be estimated. The times below assume a seat is free. We’ve put this last so a queue won’t make you miss a timed stop.Keep it flexible: If there’s a queue when you arrive, try Printing Floor instead: allow about 3 minutes to move and 20 minutes there (finishing around 19:16). If you wait first, you’ll have less time.Mark visitedPlan without thisA close fit — keep an eye on the time.If a seat is free, you’ll finish around 19:18. Any wait uses your 2 spare minutes; skip the postcard stop if it would take you past 19:20. You’re free to head out whenever you like.Walking time is included as a rough planning allowance, not a measured accessible route. Postcard waiting time is not included. Room space and individual pace are unknown. Ask the welcome desk for directions. Rebuilding a route starts again at the demo time, 18:20, and clears visited marks.↑ Adjust our choices0 of 2 stops visited"
+      },
+      "90 live + make, step-free": {
+        "times": [
+          "machines 18:30–18:50",
+          "printing 18:53–19:13",
+          "postcard 19:16–19:41"
+        ],
+        "finish": "19:41",
+        "text": "Your 90-minute visit / from 18:20Watch, wonder.Take something home.A route of 3 stops, chosen around both of you. Timed stops are planned from their start.FREEall stopsAim to finish 19:419 min spare if no queueGround floor · step-freeFrom the ground floor: allow ~3 min to reach the first room · 7 min to settle before the start118:30–18:50 · 20 minSmall MachinesA maker brings wooden creatures to life: a swimming fish, a nodding bird and a very stubborn dog.For youGround floor · step-free · some chairs · small roomOne question to try: what makes the dog so stubborn?Best to join at the start. This is a small room: space is first come, first served. This plan does not hold a place.Mark visitedPlan without thisAllow ~3 min to the next room218:53–19:13 · 20 minPrinting FloorAn old press turns a blank sheet into a two-colour river print. Watch it happen, then ask the printer about the blocks on the wall.For youGround floor · step-free · steady mechanical clatter · mostly standing, bench nearbyA little thing to notice: how the second colour changes the first.Mark visitedPlan without thisAllow ~3 min to the next room3Aim for 19:16–19:41 · 25 minMake a PostcardUse the studio’s stamps and offcuts to make a postcard to take home. No drawing skill needed.For your companionGround floor · step-free · seatedMake a tiny record of something you noticed tonight.A wait is possible and cannot be estimated. The times below assume a seat is free. We’ve put this last so a queue won’t make you miss a timed stop.Keep it flexible: If there’s a queue when you arrive, try River Listening Room instead: allow about 3 minutes to move and 15 minutes there (finishing around 19:34). If you wait first, you’ll have less time.Mark visitedPlan without thisThat’s a good little visit.If a seat is free, you’ll finish around 19:41. Any wait uses your 9 spare minutes; skip the postcard stop if it would take you past 19:50. You’re free to head out whenever you like.Walking time is included as a rough planning allowance, not a measured accessible route. Postcard waiting time is not included. Room space and individual pace are unknown. Ask the welcome desk for directions. Rebuilding a route starts again at the demo time, 18:20, and clears visited marks.↑ Adjust our choices0 of 3 stops visited"
+      },
+      "45 repair/stories pair": {
+        "times": [
+          "printing 18:23–18:43",
+          "archive 18:48–19:00"
+        ],
+        "finish": "19:00",
+        "text": "Your 45-minute visit / from 18:20Get closer tothe life of the mill.A route of 2 stops, chosen around your shared curiosity. Drop in and take a closer look.FREEall stopsFinish around 19:005 min spareIncludes stairs · no liftFrom the ground floor: allow ~3 min to reach the first room118:23–18:43 · 20 minPrinting FloorAn old press turns a blank sheet into a two-colour river print. Watch it happen, then ask the printer about the blocks on the wall.A shared discoveryGround floor · step-free · steady mechanical clatter · mostly standing, bench nearbyA little thing to notice: how the second colour changes the first.Mark visitedPlan without thisAllow ~5 min upstairs218:48–19:00 · 12 minArchive DrawersOpen drawers of mill labels, workers’ notes and print samples. The small details are the pleasure here.For you bothFirst floor · stairs only, no lift · quiet, self-guided and mostly standingFind one trace of a person who worked here before.Mark visitedPlan without thisThat’s a good little visit.You’ll finish around 19:00, with 5 minutes before 19:05. Give yourself longer between rooms if you need it. You’re free to head out whenever you like.Walking time is included as a rough planning allowance, not a measured accessible route. Room space and individual pace are unknown. Ask the welcome desk for directions. Rebuilding a route starts again at the demo time, 18:20, and clears visited marks.↑ Adjust our choices0 of 2 stops visited"
+      },
+      "60 repair/stories + quiet": {
+        "times": [
+          "river 18:23–18:38",
+          "repair 18:45–19:15"
+        ],
+        "finish": "19:15",
+        "text": "Your 60-minute visit / from 18:20River sounds.Stories worth keeping.A route of 2 stops, chosen around both of you. Timed stops are planned from their start.FREEall stopsFinish around 19:155 min spareIncludes stairs · no liftFrom the ground floor: allow ~3 min to reach the first room118:23–18:38 · 15 minRiver Listening RoomSit with the river at dawn, under bridges and in heavy rain. A short printed note introduces each recording.For your companionGround floor · step-free · quiet, dim and seatedListen for one sound you wouldn’t usually stop to hear.Mark visitedPlan without thisAllow ~5 min upstairs · 2 min to settle before the start218:45–19:15 · 30 minRepair StoriesTwo furniture restorers use a battered chair to explain the choices behind a repair. Bring your questions.For youFirst floor · stairs only, no lift · seatedOne question to try: what did you choose to keep as it was?This is a conversation, not a hands-on workshop. Allow extra time for the stairs if you need it.Mark visitedPlan without thisThat’s a good little visit.You’ll finish around 19:15, with 5 minutes before 19:20. Give yourself longer between rooms if you need it. You’re free to head out whenever you like.Walking time is included as a rough planning allowance, not a measured accessible route. Room space and individual pace are unknown. Ask the welcome desk for directions. Rebuilding a route starts again at the demo time, 18:20, and clears visited marks.↑ Adjust our choices0 of 2 stops visited"
+      },
+      "90 repair/stories pair": {
+        "times": [
+          "river 18:23–18:38",
+          "repair 18:45–19:15",
+          "printing 19:20–19:40"
+        ],
+        "finish": "19:40",
+        "text": "Your 90-minute visit / from 18:20River sounds.Stories worth keeping.A route of 3 stops, chosen around your shared curiosity. Timed stops are planned from their start.FREEall stopsFinish around 19:4010 min spareIncludes stairs · no liftFrom the ground floor: allow ~3 min to reach the first room118:23–18:38 · 15 minRiver Listening RoomSit with the river at dawn, under bridges and in heavy rain. A short printed note introduces each recording.A shared discoveryGround floor · step-free · quiet, dim and seatedListen for one sound you wouldn’t usually stop to hear.Mark visitedPlan without thisAllow ~5 min upstairs · 2 min to settle before the start218:45–19:15 · 30 minRepair StoriesTwo furniture restorers use a battered chair to explain the choices behind a repair. Bring your questions.For you bothFirst floor · stairs only, no lift · seatedOne question to try: what did you choose to keep as it was?This is a conversation, not a hands-on workshop. Allow extra time for the stairs if you need it.Mark visitedPlan without thisAllow ~5 min downstairs319:20–19:40 · 20 minPrinting FloorAn old press turns a blank sheet into a two-colour river print. Watch it happen, then ask the printer about the blocks on the wall.A shared discoveryGround floor · step-free · steady mechanical clatter · mostly standing, bench nearbyA little thing to notice: how the second colour changes the first.Mark visitedPlan without thisA little breathing room.You’ll finish around 19:40, with 10 minutes before 19:50. Use the extra time to linger or pause at the ground-floor café. You’re free to head out whenever you like.Walking time is included as a rough planning allowance, not a measured accessible route. Room space and individual pace are unknown. Ask the welcome desk for directions. Rebuilding a route starts again at the demo time, 18:20, and clears visited marks.↑ Adjust our choices0 of 3 stops visited"
+      }
+    },
+    "errors": []
+  }
+}

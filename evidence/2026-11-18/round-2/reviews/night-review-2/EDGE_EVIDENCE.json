@@ -1,0 +1,50 @@
+{
+  "A_late_upstairs": {
+    "state": {
+      "minutes": 60,
+      "a": "repair",
+      "b": "river",
+      "ground": false,
+      "route": [
+        {
+          "id": "river",
+          "start": 1103,
+          "end": 1118,
+          "duration": 15,
+          "travel": 3,
+          "arrival": 1103,
+          "wait": 0
+        }
+      ],
+      "skipped": [
+        "repair"
+      ],
+      "recovery": {
+        "from": 1159,
+        "id": "repair"
+      },
+      "prefixCount": 1
+    },
+    "text": "Your revised wanderA different way through.1 stops · includes stairs · finishes about 19:241STOP There isn’t another full studio stop that fits your remaining time and route choices. A pause is a perfectly good way to end the evening. Suggested timings, not bookings. Small Machines is first come, first served. We don’t have live availability or queue estimates. Replanned from 19:19Repair Stories skipped. Earlier stops stay in your route. We’re still aiming for 19:20. This is another suggestion, not a check on room space.Undo this swapYou’ll need a little longer to leave.At this point, allow 5 minutes back to the welcome desk: about 19:24, after your 19:20 target. No extra studio stop has been added. 18:23–18:38Earlier in your route1River Listening RoomGROUND FLOOR · STEP-FREETake a seat and hear the river at dawn, under bridges and in heavy rain. Same river, a different world.Quiet, dim and seated. A short printed note explains each recording.A way in: No need to recognise anything. Just listen for a sound you hadn’t noticed before. ↗Back at the welcome desk about 19:24.Allow 5 minutes back from Repair Stories. That’s about 4 minutes past your 19:20 target. Head back when you’re ready. Café refreshments are paid.No further stop fits.The café and welcome desk are on the ground floor. If you’re upstairs, allow about 5 minutes to change floors; your pace may differ. Start this wander again from 18:20 ↺ Route updated. 1 stops, finishing about 19:24. Includes stairs.",
+    "errors": []
+  },
+  "B_late_upstairs": {
+    "state": {
+      "budget": 60,
+      "start": 1159,
+      "leaveBy": 1160,
+      "you": "watch",
+      "them": "quiet",
+      "floor": 1,
+      "ground": false,
+      "excluded": [],
+      "replanned": true
+    },
+    "text": "Replanned from 19:19, first floor. Leaving by 19:20.Start overYOUR SUGGESTED ROUTEA little less time, a simpler visit.Leave by 19:20No full activity fits these choices.There are 1 minutes left before your 19:20 departure. You can still look around at your own pace or ask the welcome desk for a short suggestion.The ground-floor café has chairs and paid refreshments until 20:45.Adjust time or roomsRestart the 18:20 plan",
+    "errors": []
+  },
+  "C_zero_spare_upstairs": {
+    "text": "Your 45-minute visit / from 18:20Get closer tothe life of the mill.A route of 2 stops, chosen around both of you. Timed stops are planned from their start.FREEall stopsFinish around 19:050 min spareIncludes stairs · no liftFrom the ground floor: allow ~3 min to reach the first room · 7 min to settle before the start118:30–18:50 · 20 minSmall MachinesA maker brings wooden creatures to life: a swimming fish, a nodding bird and a very stubborn dog.For youGround floor · step-free · some chairs · small roomOne question to try: what makes the dog so stubborn?Best to join at the start. This is a small room: space is first come, first served. This plan does not hold a place.Mark visitedPlan without thisAllow ~5 min upstairs218:55–19:05 · 10 minArchive DrawersOpen drawers of mill labels, workers’ notes and print samples. The small details are the pleasure here.For your companionFirst floor · stairs only, no lift · quiet, self-guided and mostly standingFind one trace of a person who worked here before.Mark visitedPlan without thisA close fit — keep an eye on the time.You’ll finish around 19:05, with 0 minutes before 19:05. Give yourself longer between rooms if you need it. You’re free to head out whenever you like.Walking time is included as a rough planning allowance, not a measured accessible route. Room space and individual pace are unknown. Ask the welcome desk for directions. Rebuilding a route starts again at the demo time, 18:20, and clears visited marks.↑ Adjust our choices0 of 2 stops visited",
+    "errors": []
+  }
+}

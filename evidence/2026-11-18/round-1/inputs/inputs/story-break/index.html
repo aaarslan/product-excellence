@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Story Break</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font: 16px/1.5 Arial, sans-serif; color: #222; background: #eee; margin: 0; }
+    main { max-width: 760px; margin: 24px auto; padding: 24px; background: white; }
+    h1 { margin-top: 0; }
+    button, textarea { font: inherit; }
+    button { cursor: pointer; margin: 3px 5px 3px 0; padding: 7px 11px; }
+    .prompts { padding: 12px; background: #f3f3f3; border: 1px solid #ccc; }
+    .prompts p { margin: 6px 0; }
+    textarea { width: 100%; min-height: 210px; padding: 10px; display: block; }
+    .toolbar { margin: 12px 0; }
+    #status { min-height: 24px; }
+    .story { border-top: 1px solid #ddd; padding: 10px 0; }
+    .story strong { display: block; }
+    .story small { color: #555; }
+    @media (max-width: 600px) { main { margin: 0; padding: 16px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Story Break</h1>
+    <p>Deal three prompts. Write a short story. Save it here.</p>
+    <section class="prompts" aria-label="Story prompts">
+      <p><strong>Character:</strong> <span id="character"></span></p>
+      <p><strong>Place:</strong> <span id="place"></span></p>
+      <p><strong>Complication:</strong> <span id="trouble"></span></p>
+      <button id="deal" type="button">Deal cards</button>
+    </section>
+    <div class="toolbar">
+      <span id="time">5:00</span>
+      <button id="timer" type="button">Start timer</button>
+    </div>
+    <label for="text">Your story</label>
+    <textarea id="text" placeholder="Once upon a time..."></textarea>
+    <div class="toolbar">
+      <button id="save" type="button">Save story</button>
+      <button id="new" type="button">New story</button>
+    </div>
+    <p id="status" role="status"></p>
+    <section aria-labelledby="saved-heading">
+      <h2 id="saved-heading">Saved stories</h2>
+      <div id="library"></div>
+    </section>
+  </main>
+  <script>
+  (() => {
+    'use strict';
+    const DRAFT_KEY = 'storybreak.draft.v1';
+    const STORIES_KEY = 'storybreak.stories.v1';
+    const deck = {
+      character: ['a fox with a suitcase', 'a very small dragon', 'an impatient gardener', 'a robot who likes jokes', 'a lost pirate', 'a shy giant', 'a detective with muddy boots', 'a cat who runs a shop'],
+      place: ['an empty train station', 'a bakery after closing', 'a garden on the roof', 'a library inside a tree', 'a floating house', 'a beach in the rain', 'a museum at midnight', 'a village above the clouds'],
+      trouble: ['a shadow goes missing', 'every door opens somewhere new', 'a parcel keeps getting bigger', 'nobody can say the word yes', 'the last train refuses to leave', 'an ordinary stone starts talking', 'all the clocks run backwards', 'a tiny storm follows someone']
+    };
+    const byId = id => document.getElementById(id);
+    const pick = items => items[Math.floor(Math.random() * items.length)];
+    const freshPrompt = () => Object.fromEntries(Object.entries(deck).map(([key, items]) => [key, pick(items)]));
+    const read = (key, fallback) => {
+      try { return JSON.parse(localStorage.getItem(key)) || fallback; }
+      catch { return fallback; }
+    };
+    const persist = (key, value) => {
+      try { localStorage.setItem(key, JSON.stringify(value)); return true; }
+      catch { byId('status').textContent = 'This browser could not save your work.'; return false; }
+    };
+    let draft = read(DRAFT_KEY, { prompt: freshPrompt(), text: '', updatedAt: new Date().toISOString() });
+    let stories = read(STORIES_KEY, []);
+    if (!draft.prompt || typeof draft.text !== 'string') draft = { prompt: freshPrompt(), text: '', updatedAt: new Date().toISOString() };
+    if (!Array.isArray(stories)) stories = [];
+    let remaining = 300;
+    let timerId = null;
+
+    function saveDraft() {
+      draft.updatedAt = new Date().toISOString();
+      persist(DRAFT_KEY, draft);
+    }
+    function renderDraft() {
+      ['character', 'place', 'trouble'].forEach(key => { byId(key).textContent = draft.prompt[key] || ''; });
+      byId('text').value = draft.text;
+    }
+    function renderTimer() {
+      byId('time').textContent = `${Math.floor(remaining / 60)}:${String(remaining % 60).padStart(2, '0')}`;
+      byId('timer').textContent = timerId ? 'Pause timer' : 'Start timer';
+    }
+    function stopTimer() {
+      if (timerId) clearInterval(timerId);
+      timerId = null;
+      renderTimer();
+    }
+    function startTimer() {
+      if (timerId) return;
+      if (remaining <= 0) remaining = 300;
+      timerId = setInterval(() => {
+        remaining -= 1;
+        if (remaining <= 0) {
+          remaining = 0;
+          stopTimer();
+          byId('status').textContent = 'Time is up.';
+        }
+        renderTimer();
+      }, 1000);
+      renderTimer();
+    }
+    function renderLibrary() {
+      const library = byId('library');
+      library.replaceChildren();
+      if (!stories.length) {
+        const empty = document.createElement('p');
+        empty.textContent = 'No saved stories yet.';
+        library.append(empty);
+        return;
+      }
+      stories.forEach(story => {
+        const row = document.createElement('div');
+        row.className = 'story';
+        const title = document.createElement('strong');
+        title.textContent = story.title;
+        const date = document.createElement('small');
+        date.textContent = new Date(story.createdAt).toLocaleDateString();
+        const open = document.createElement('button');
+        open.type = 'button';
+        open.textContent = 'Open';
+        open.addEventListener('click', () => {
+          draft = { prompt: { ...story.prompt }, text: story.text, updatedAt: new Date().toISOString() };
+          saveDraft();
+          renderDraft();
+          byId('status').textContent = 'Opened story in the editor.';
+        });
+        const remove = document.createElement('button');
+        remove.type = 'button';
+        remove.textContent = 'Delete';
+        remove.addEventListener('click', () => {
+          stories = stories.filter(item => item.id !== story.id);
+          persist(STORIES_KEY, stories);
+          renderLibrary();
+        });
+        row.append(title, date, document.createElement('br'), open, remove);
+        library.append(row);
+      });
+    }
+    byId('text').addEventListener('input', event => {
+      draft.text = event.target.value;
+      saveDraft();
+    });
+    byId('deal').addEventListener('click', () => {
+      draft.prompt = freshPrompt();
+      saveDraft();
+      renderDraft();
+      remaining = 300;
+      startTimer();
+      renderTimer();
+    });
+    byId('timer').addEventListener('click', () => timerId ? stopTimer() : startTimer());
+    byId('new').addEventListener('click', () => {
+      draft = { prompt: freshPrompt(), text: '', updatedAt: new Date().toISOString() };
+      saveDraft();
+      renderDraft();
+      remaining = 300;
+      stopTimer();
+      byId('status').textContent = '';
+    });
+    byId('save').addEventListener('click', () => {
+      if (!draft.text.trim()) {
+        byId('status').textContent = 'Write something first.';
+        return;
+      }
+      const title = draft.text.trim().split(/\s+/).slice(0, 7).join(' ');
+      stories.unshift({ id: `story-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`, title, prompt: { ...draft.prompt }, text: draft.text, createdAt: new Date().toISOString() });
+      persist(STORIES_KEY, stories);
+      renderLibrary();
+      byId('status').textContent = 'Story saved.';
+    });
+    renderDraft();
+    renderTimer();
+    renderLibrary();
+  })();
+  </script>
+</body>
+</html>

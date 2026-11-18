@@ -1,0 +1,21 @@
+{
+  "method": "Coordinator’s focused check of the main recovery distinction, using unchanged actual application scripts in jsdom. Different mechanisms are observed rather than required to implement the same behavior.",
+  "limits": "No browser rendering, real keyboard, actual visitor behavior, native dialog, offline file URL, or comparative visual judgment.",
+  "results": [
+    {
+      "run": "r13",
+      "result": "pass",
+      "observed": "Second-stop replacement at 18:58 retains the exact first stop/time and the 19:20 target; one Undo restores the complete original route."
+    },
+    {
+      "run": "r15",
+      "result": "observed",
+      "observed": "Second-stop replacement opens a form at original time 18:20 and ground floor with only that stop omitted. Visitor must enter current time/floor and omit any completed rooms."
+    },
+    {
+      "run": "r14",
+      "result": "observed",
+      "observed": "Removing the second stop clears prior visited marks and explicitly rebuilds from 18:20."
+    }
+  ]
+}

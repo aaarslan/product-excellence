@@ -1,0 +1,44 @@
+{
+  "status": "final_frozen",
+  "version": 1,
+  "frozen_at_utc": "2026-11-18T15:36:58.505076+00:00",
+  "independence": "No candidate skills, candidate outputs, repositories, attachments, prior tasks/results, or other agents files were inspected during authorship.",
+  "files": [
+    {
+      "path": "case-1/TASK.md",
+      "sha256": "175a3bdc9a7502d6768672509fe17e3cd87a3f993c9f2a523f09c4f82a25519c",
+      "bytes": 1309,
+      "words_whitespace_count": 223
+    },
+    {
+      "path": "case-1/CONTEXT.md",
+      "sha256": "50d8d20879fbd1233568189fa7367fb3f75ca129caa525fe78e38874b5484f59",
+      "bytes": 2906,
+      "words_whitespace_count": 477
+    },
+    {
+      "path": "case-2/TASK.md",
+      "sha256": "b73d1cdc30792ce85343471e941a3eae642fab9515c369bb2f13464d8f540755",
+      "bytes": 1070,
+      "words_whitespace_count": 181
+    },
+    {
+      "path": "case-2/CONTEXT.md",
+      "sha256": "fc3385c2bef9fb3ed9f425a26d00004d88ae6fc23ec5ede08a1f5438e94ac4ca",
+      "bytes": 3485,
+      "words_whitespace_count": 574
+    },
+    {
+      "path": "judge/RUBRIC.md",
+      "sha256": "a86e01119cf7aa1d3aae95302b437cf503477fd8c802d63d33f4ed01458ae686",
+      "bytes": 12997,
+      "words_whitespace_count": 1891
+    },
+    {
+      "path": "ATTESTATION.md",
+      "sha256": "90c9155146a64b98b22e923d8372ce5af8d06c7739db8291666642012fd40f21",
+      "bytes": 830,
+      "words_whitespace_count": 118
+    }
+  ]
+}

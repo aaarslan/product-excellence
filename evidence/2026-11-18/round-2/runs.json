@@ -1,0 +1,66 @@
+{
+  "prepared_at_utc": "2026-11-18T15:37:34.984357+00:00",
+  "allocation": "Fresh SystemRandom shuffle of all three arms within each case before outputs",
+  "runs": [
+    {
+      "run": "r13",
+      "case": "case-1",
+      "arm": "candidate",
+      "path": "/workspace/scratch/6ecb29bfb4b0/local-work-v2/r13",
+      "input_sha256": {
+        "CONTEXT.md": "50d8d20879fbd1233568189fa7367fb3f75ca129caa525fe78e38874b5484f59",
+        "TASK.md": "175a3bdc9a7502d6768672509fe17e3cd87a3f993c9f2a523f09c4f82a25519c"
+      }
+    },
+    {
+      "run": "r14",
+      "case": "case-1",
+      "arm": "none",
+      "path": "/workspace/scratch/6ecb29bfb4b0/local-work-v2/r14",
+      "input_sha256": {
+        "CONTEXT.md": "50d8d20879fbd1233568189fa7367fb3f75ca129caa525fe78e38874b5484f59",
+        "TASK.md": "175a3bdc9a7502d6768672509fe17e3cd87a3f993c9f2a523f09c4f82a25519c"
+      }
+    },
+    {
+      "run": "r15",
+      "case": "case-1",
+      "arm": "current",
+      "path": "/workspace/scratch/6ecb29bfb4b0/local-work-v2/r15",
+      "input_sha256": {
+        "CONTEXT.md": "50d8d20879fbd1233568189fa7367fb3f75ca129caa525fe78e38874b5484f59",
+        "TASK.md": "175a3bdc9a7502d6768672509fe17e3cd87a3f993c9f2a523f09c4f82a25519c"
+      }
+    },
+    {
+      "run": "r16",
+      "case": "case-2",
+      "arm": "none",
+      "path": "/workspace/scratch/6ecb29bfb4b0/local-work-v2/r16",
+      "input_sha256": {
+        "CONTEXT.md": "fc3385c2bef9fb3ed9f425a26d00004d88ae6fc23ec5ede08a1f5438e94ac4ca",
+        "TASK.md": "b73d1cdc30792ce85343471e941a3eae642fab9515c369bb2f13464d8f540755"
+      }
+    },
+    {
+      "run": "r17",
+      "case": "case-2",
+      "arm": "current",
+      "path": "/workspace/scratch/6ecb29bfb4b0/local-work-v2/r17",
+      "input_sha256": {
+        "CONTEXT.md": "fc3385c2bef9fb3ed9f425a26d00004d88ae6fc23ec5ede08a1f5438e94ac4ca",
+        "TASK.md": "b73d1cdc30792ce85343471e941a3eae642fab9515c369bb2f13464d8f540755"
+      }
+    },
+    {
+      "run": "r18",
+      "case": "case-2",
+      "arm": "candidate",
+      "path": "/workspace/scratch/6ecb29bfb4b0/local-work-v2/r18",
+      "input_sha256": {
+        "CONTEXT.md": "fc3385c2bef9fb3ed9f425a26d00004d88ae6fc23ec5ede08a1f5438e94ac4ca",
+        "TASK.md": "b73d1cdc30792ce85343471e941a3eae642fab9515c369bb2f13464d8f540755"
+      }
+    }
+  ]
+}

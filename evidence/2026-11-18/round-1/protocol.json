@@ -1,0 +1,26 @@
+{
+  "study": "Product Excellence revision development comparison",
+  "planned_cases": [
+    "browser implementation",
+    "new product concept",
+    "nonvisual constrained product decision",
+    "small-scope boundary"
+  ],
+  "arms": [
+    "no added skill",
+    "committed skill at 969eb34",
+    "frozen candidate"
+  ],
+  "one_run_per_arm_per_case": true,
+  "review": "anonymized artifact review with criteria written by separate case author before outputs; second independent review for main implementation",
+  "comparability": "same case input, tool environment, inherited parent model settings, fresh context, output budget; single-task workers",
+  "release_gate": "Useful material improvements over the committed skill in more than one type of task, with no unresolved severe regression in the core journey, explicit constraints, or evidence honesty. Qualitative development decision, not statistical superiority. If a defect requires instruction revision, preserve the failed frozen run and use a new held-out case.",
+  "known_limits": [
+    "Selected synthetic fixtures",
+    "Single execution per arm/task",
+    "LLM reviewers rather than real users",
+    "Shared filesystem with instructed separation, not security isolation",
+    "No per-arm token, cost, or pinned model snapshot exposed"
+  ],
+  "no_external_effects": "local artifacts only; no publication, messages, deployment, or paid API by workers"
+}

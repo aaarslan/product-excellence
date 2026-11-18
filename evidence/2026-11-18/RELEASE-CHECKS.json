@@ -1,0 +1,36 @@
+{
+  "recorded_at_utc": "2026-11-18T16:10:03.095110+00:00",
+  "candidate_sha256": "2f4c82f12a73765b23f4eecdd2bd1df2cb1a0c17af5f579e75ebf8a3156d89bd",
+  "candidate_words": 1470,
+  "checks": {
+    "skill_format": "Bundled quick_validate.py passed in the same final verification batch",
+    "relative_link_targets": {
+      "files_checked": 13,
+      "missing": []
+    },
+    "historical_evaluation_archive": "Byte-for-byte match to 969eb34:EVALUATION.md",
+    "case_inputs": "All preserved task/note/fixture hashes match the prepared run manifests",
+    "round_two_outputs": "All file hashes match the frozen completion manifest",
+    "portable_scripts": "Re-executed all documented coordinator and independent-review scripts using pinned jsdom. Initial schedule validations remain without faults; recorded quality limitations remain in reviews.",
+    "installation": "Skills CLI 1.9.0 project copies for Codex and Claude Code match the final source exactly",
+    "svg_header": "Rendered through sharp and visually inspected; no browser application layout claim",
+    "whitespace": "Edited source/documentation and packaged scripts are clean. The frozen raw r04/RESULT.md retains its original extra blank line at EOF; it is intentionally not normalized."
+  },
+  "not_verified": [
+    "Actual application browser/layout/keyboard/accessibility behavior",
+    "Real user preference or adoption",
+    "Current host discovery and implicit activation",
+    "General comparative superiority"
+  ],
+  "disposition": "Draft PR; broad release gate unmet",
+  "independent_final_reporting_review": {
+    "scope": [
+      "README.md",
+      "EVALUATION.md",
+      "evidence/2026-11-18/README.md"
+    ],
+    "result": "Follow-up release audit found no material contradictions, overclaims, broken local links, or remaining placeholders. It confirmed the unmet gate, draft status, exact-version distinctions, reviewer disagreement, ties, and verification limits.",
+    "local_links_reported_checked": 75,
+    "product_tests_rerun": false
+  }
+}

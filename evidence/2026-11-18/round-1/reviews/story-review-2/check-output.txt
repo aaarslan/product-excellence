@@ -1,0 +1,261 @@
+{
+  "method": "jsdom with a synthetic HTTPS origin and mocked timers, scroll methods, object URLs, and dialog open/close. No rendered browser, real keyboard, accessibility tree, downloads, or file-origin/offline execution was exercised.",
+  "variants": {
+    "A": {
+      "results": [
+        {
+          "name": "Empty storage has three nonempty prompts, no sample library, no running countdown",
+          "status": "pass"
+        },
+        {
+          "name": "Begin with supplied assistance without mandatory setup",
+          "status": "pass"
+        },
+        {
+          "name": "Change only place with a written sentence; preserve other two prompts and exact text",
+          "status": "pass"
+        },
+        {
+          "name": "Finish four sentences, search, reopen full reading text, and reload draft plus story",
+          "status": "pass"
+        },
+        {
+          "name": "Legacy dragon draft and both complete saved stories keep exact text and all original prompt strings",
+          "status": "pass"
+        },
+        {
+          "name": "New story preserves meaningful old draft and can resume it from the shelf after reload",
+          "status": "pass"
+        },
+        {
+          "name": "Opening and editing a saved story preserves the meaningful current draft and original finished version",
+          "status": "pass"
+        },
+        {
+          "name": "Removal preserves complete story; restore works after reload and does not replace the draft",
+          "status": "pass"
+        },
+        {
+          "name": "Optional timer expiry neither blocks editing nor destroys or automatically finishes words",
+          "status": "pass"
+        },
+        {
+          "name": "Failure while archiving for New story leaves the meaningful editor and original stored draft intact",
+          "status": "pass"
+        },
+        {
+          "name": "Failure replacing draft after archive succeeds still preserves old editor and retrievable words",
+          "status": "pass"
+        },
+        {
+          "name": "Failed finished-story save keeps editor text, does not claim a persisted new story, and leaves legacy stories intact",
+          "status": "pass"
+        },
+        {
+          "name": "Malformed existing JSON is not overwritten after writing and attempting Finish/New",
+          "status": "pass"
+        }
+      ],
+      "static": {
+        "externalResources": [],
+        "cssRequests": false,
+        "scriptRequests": false,
+        "formLabels": [
+          {
+            "id": "text",
+            "name": "2. Follow the story"
+          },
+          {
+            "id": "title",
+            "name": "A title, if you have one"
+          },
+          {
+            "id": "duration",
+            "name": "Round length"
+          },
+          {
+            "id": "search",
+            "name": "Find a story"
+          }
+        ],
+        "containsResponsiveRules": true,
+        "containsFocusVisibleRule": true,
+        "activeDraftOnShelf": true,
+        "promptUndo": true,
+        "initialErrors": []
+      }
+    },
+    "B": {
+      "results": [
+        {
+          "name": "Empty storage has three nonempty prompts, no sample library, no running countdown",
+          "status": "pass"
+        },
+        {
+          "name": "Begin with supplied assistance without mandatory setup",
+          "status": "pass"
+        },
+        {
+          "name": "Change only place with a written sentence; preserve other two prompts and exact text",
+          "status": "pass"
+        },
+        {
+          "name": "Finish four sentences, search, reopen full reading text, and reload draft plus story",
+          "status": "pass"
+        },
+        {
+          "name": "Legacy dragon draft and both complete saved stories keep exact text and all original prompt strings",
+          "status": "pass"
+        },
+        {
+          "name": "New story preserves meaningful old draft and can resume it from the shelf after reload",
+          "status": "pass"
+        },
+        {
+          "name": "Opening and editing a saved story preserves the meaningful current draft and original finished version",
+          "status": "pass"
+        },
+        {
+          "name": "Removal preserves complete story; restore works after reload and does not replace the draft",
+          "status": "pass"
+        },
+        {
+          "name": "Optional timer expiry neither blocks editing nor destroys or automatically finishes words",
+          "status": "pass"
+        },
+        {
+          "name": "Failure while archiving for New story leaves the meaningful editor and original stored draft intact",
+          "status": "pass"
+        },
+        {
+          "name": "Failure replacing draft after archive succeeds still preserves old editor and retrievable words",
+          "status": "pass"
+        },
+        {
+          "name": "Failed finished-story save keeps editor text, does not claim a persisted new story, and leaves legacy stories intact",
+          "status": "pass"
+        },
+        {
+          "name": "Malformed existing JSON is not overwritten after writing and attempting Finish/New",
+          "status": "pass"
+        }
+      ],
+      "static": {
+        "externalResources": [],
+        "cssRequests": false,
+        "scriptRequests": false,
+        "formLabels": [
+          {
+            "id": "title",
+            "name": "Story title (optional)"
+          },
+          {
+            "id": "text",
+            "name": "Your story"
+          },
+          {
+            "id": "timed-round",
+            "name": "Try an 8-minute round"
+          },
+          {
+            "id": "search",
+            "name": "Find a title, character, or story"
+          }
+        ],
+        "containsResponsiveRules": true,
+        "containsFocusVisibleRule": true,
+        "activeDraftOnShelf": true,
+        "promptUndo": true,
+        "initialErrors": []
+      }
+    },
+    "C": {
+      "results": [
+        {
+          "name": "Empty storage has three nonempty prompts, no sample library, no running countdown",
+          "status": "pass"
+        },
+        {
+          "name": "Begin with supplied assistance without mandatory setup",
+          "status": "pass"
+        },
+        {
+          "name": "Change only place with a written sentence; preserve other two prompts and exact text",
+          "status": "pass"
+        },
+        {
+          "name": "Finish four sentences, search, reopen full reading text, and reload draft plus story",
+          "status": "pass"
+        },
+        {
+          "name": "Legacy dragon draft and both complete saved stories keep exact text and all original prompt strings",
+          "status": "pass"
+        },
+        {
+          "name": "New story preserves meaningful old draft and can resume it from the shelf after reload",
+          "status": "pass"
+        },
+        {
+          "name": "Opening and editing a saved story preserves the meaningful current draft and original finished version",
+          "status": "pass"
+        },
+        {
+          "name": "Removal preserves complete story; restore works after reload and does not replace the draft",
+          "status": "pass"
+        },
+        {
+          "name": "Optional timer expiry neither blocks editing nor destroys or automatically finishes words",
+          "status": "pass"
+        },
+        {
+          "name": "Failure while archiving for New story leaves the meaningful editor and original stored draft intact",
+          "status": "pass"
+        },
+        {
+          "name": "Failure replacing draft after archive succeeds still preserves old editor and retrievable words",
+          "status": "pass"
+        },
+        {
+          "name": "Failed finished-story save keeps editor text, does not claim a persisted new story, and leaves legacy stories intact",
+          "status": "pass"
+        },
+        {
+          "name": "Malformed existing JSON is not overwritten after writing and attempting Finish/New",
+          "status": "pass"
+        }
+      ],
+      "static": {
+        "externalResources": [],
+        "cssRequests": false,
+        "scriptRequests": false,
+        "formLabels": [
+          {
+            "id": "title",
+            "name": "Story title, optional"
+          },
+          {
+            "id": "text",
+            "name": "Your story"
+          },
+          {
+            "id": "timed",
+            "name": "Make it a timed round"
+          },
+          {
+            "id": "minutes",
+            "name": "Round length"
+          },
+          {
+            "id": "search",
+            "name": "Find a story by title, character, place, or words"
+          }
+        ],
+        "containsResponsiveRules": true,
+        "containsFocusVisibleRule": true,
+        "activeDraftOnShelf": false,
+        "promptUndo": false,
+        "initialErrors": []
+      }
+    }
+  }
+}

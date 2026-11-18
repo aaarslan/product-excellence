@@ -1,0 +1,12 @@
+{
+  "name": "product-excellence-development-evaluation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Optional recorded-study checks; never installed with the skill",
+  "engines": {
+    "node": ">=24"
+  },
+  "dependencies": {
+    "jsdom": "27.2.0"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "frozen_at_utc": "2026-11-18T14:53:20.086536+00:00",
+  "baseline_commit": "969eb34fc4e18f3e9d9ca2553ec43520ea7bac1c",
+  "candidate_words": 1339,
+  "current_words": 1034,
+  "sha256": {
+    "current": "065809057187309a70866be249f49b9da1ccc75f8263c59b089b9e080988748b",
+    "candidate": "9fbf261cc43e91b68aad02828b9958f6d982f24be95234985341e8c962d067e6"
+  },
+  "comparison": "no skill vs current vs candidate",
+  "worker_context": "fresh subagents, no parent-history fork; same inherited model settings; no exact backend model snapshot or seed available",
+  "note": "Frozen before task designer returns cases. No output observed."
+}

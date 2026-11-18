@@ -1,0 +1,21 @@
+{
+  "frozen_at_utc": "2026-11-18T15:03:39.505706+00:00",
+  "files": {
+    "RUN_DESIGN.md": "8c0b942e2446f838544897f27376a9ee017e58f578de4c202510b12c9d36c77e",
+    "inputs/SCOPE_PROMPTS.md": "510a58c723710eff5b2ee93c6320f911b25e3ff89af4c1f742ba072b11b7de0f",
+    "inputs/lending-cupboard/EVIDENCE.md": "cc6119e3556aec6377600ca7ad1a6f3f74acf7d37d9af771a172386901da4fec",
+    "inputs/lending-cupboard/TASK.md": "cb65699dec104e1087f622a2f07c096693a88a9d025495964e8bde0ec95042fb",
+    "inputs/story-break/EVIDENCE.md": "66ee493255361fe3f1bf1a3b0ec17e563b31fa0896d595c9e40fac89d2026e16",
+    "inputs/story-break/TASK.md": "537b7535860ca8b85e27d4e1ed827dfec94bd6e3446c7a2a34c5cffb4c5bf396",
+    "inputs/story-break/index.html": "b0edd5a30c4cf620a258854ecc40a8f41f620e94926115e56b7d8a966ba62e4e",
+    "inputs/story-break/sample-storage.json": "5f61a90637610ba911adafbe9a407e435d3d9e01fd5dae76d597540a9b2a3492",
+    "inputs/worktree-command/EVIDENCE.md": "79be7b5b768023cdfb84f0f310356d2a59776ecdca991bfd990c9c3fed1600e5",
+    "inputs/worktree-command/TASK.md": "e009bae55b3b5525bfca43c132dd83e3d371af7becbc75f7505ea3d6af75effe",
+    "judge/RUBRIC.md": "82fbfb1190425c64bce6267e028b86c682e410445655eb948745f8de74e203a3"
+  },
+  "changes_from_initial_freeze": [
+    "RUN_DESIGN.md",
+    "judge/RUBRIC.md"
+  ],
+  "note": "Independent designer shortened rubric wording while first workers were starting; no worker outputs were read. Initial hashes retained. Cases and candidate unchanged."
+}
